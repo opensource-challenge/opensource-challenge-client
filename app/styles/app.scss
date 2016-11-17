@@ -18,10 +18,17 @@ body > .ember-view {
   max-width: 760px;
   margin: 0 auto;
   hyphens: auto;
+  text-align: justify;
 
-  @media (max-width: 420px) {
+  @supports not (hyphens: auto) {
     > p {
-      text-align: justify;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: 421px) {
+    > p {
+      text-align: left;
     }
   }
 }
