@@ -20,6 +20,18 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    torii: {
+      sessionServiceName: 'session',
+      remoteServiceName: 'iframe',
+      providers: {
+        'github-oauth2': {
+          apiKey: 'c8992decd49d183b23d7',
+          scope: 'user',
+          redirectUri: 'http://localhost:4200/'
+        }
+      }
     }
   };
 
@@ -43,7 +55,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.torii.providers['github-oauth2'].apiKey = '6c73fd2b010ef9ef3d0c'
+    ENV.torii.providers['github-oauth2'].redirectUri = 'https://www.opensource-challenge.ch/'
   }
 
   return ENV;

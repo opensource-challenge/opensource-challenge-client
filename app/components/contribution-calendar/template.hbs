@@ -1,0 +1,3 @@
+{{#each-in (group-by 'date' items) as |date items|}}
+  {{calendar-entry date=date items=items}}
+{{/each-in}}

@@ -1,0 +1,44 @@
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+@custom-selector :--any-link :link, :visited, a[data-ember-action];
+
+:root {
+  font-size: 18px;
+  font-family: var(--font-family-default);
+  color: var(--font-color-default);
+}
+
+:--any-link {
+  cursor: pointer;
+  color: var(--primary);
+}
+
+:--any-link:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+:link {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+address {
+  font-style: normal;
+}
+
+input, button, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+:--heading {
+  font-family: var(--font-family-serif);
+}
+
+p {
+  line-height: 1.65;
+}

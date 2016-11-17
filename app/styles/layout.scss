@@ -1,0 +1,23 @@
+.layout-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  flex: 1;
+}
+
+.content-padding {
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .content-padding {
+    padding: 0 2rem;
+  }
+}

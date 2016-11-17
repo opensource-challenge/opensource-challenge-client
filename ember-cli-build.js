@@ -2,7 +2,6 @@
 'use strict'
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app')
-const autoprefixer = require('autoprefixer')
 const cssnext = require('postcss-cssnext')
 
 module.exports = function(defaults) {

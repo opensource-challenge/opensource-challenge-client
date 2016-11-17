@@ -1,0 +1,13 @@
+{{#each items as |contributor|}}
+  <div class="contributor">
+    <a class="contributor__link" href={{contributor.website}}>
+      <div class="contributor__caption">
+        <div class="contributor__caption__content">
+          <p>{{contributor.name}}</p>
+          <i class="fa fa-angle-double-up fa-3x"></i>
+        </div>
+      </div>
+      <img class="contributor__image" src={{contributor.picture}} alt="">
+    </a>
+  </div>
+{{/each}}

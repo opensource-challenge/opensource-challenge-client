@@ -1,0 +1,35 @@
+.bm-content {
+  @extend .layout-column;
+}
+
+.bm-header {
+  background-color: var(--primary);
+  background-image: url(pictures/menu-background.svg),
+                    url(pictures/puzzle_classic_bg_rgb.svg);
+  background-repeat: no-repeat;
+  background-size: 93px, 116px;
+  background-position: left, 9.5rem 0.5rem;
+  height: 124px;
+}
+
+.bm-menu {
+  background-color: $white;
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.bm-menu-list {
+  margin: 0;
+  padding: 0;
+}
+
+.bm-menu-list > li > a {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0;
+}
+.bm-menu-list > li:first-child {
+  margin-top: 0.25rem;
+}

@@ -1,0 +1,53 @@
+{{#if media.isDesktop}}
+  <header class="page-header {{componentCssClassName}}">
+    {{yield}}
+
+    {{#if media.isDesktop}}
+      <ul class="page-header__menu flex">
+        {{#each menuItems as |item|}}
+          <li>
+            {{link-to item.title item.route}}
+          </li>
+        {{/each}}
+        <li>
+          {{#if session.isAuthenticated}}
+            <a {{action logout}}>Logout</a>
+          {{else}}
+            <a {{action login}}>Sign in</a>
+          {{/if}}
+        </li>
+      </ul>
+    {{/if}}
+  </header>
+
+  {{yield to='inverse'}}
+{{else}}
+  {{#burger-menu class="flex" itemAnimation="push" as |b|}}
+    {{#b.menu itemTagName="li" as |menu|}}
+      <header class="bm-header"></header>
+      <ul class="bm-menu-list layout-column">
+        {{#each menuItems as |item|}}
+          {{#menu.item}}
+            {{link-to item.title item.route}}
+          {{/menu.item}}
+        {{/each}}
+        {{#menu.item}}
+          {{#if session.isAuthenticated}}
+            <a {{action logout}}>Logout</a>
+          {{else}}
+            <a {{action login}}>Sign in</a>
+          {{/if}}
+        {{/menu.item}}
+      </ul>
+    {{/b.menu}}
+
+    {{#b.outlet}}
+      <header class="page-header {{componentCssClassName}}">
+        <a class="menu-toggle fa fa-bars" {{action b.state.actions.toggle}}></a>
+        {{yield}}
+      </header>
+
+      {{yield to='inverse'}}
+    {{/b.outlet}}
+  {{/burger-menu}}
+{{/if}}
