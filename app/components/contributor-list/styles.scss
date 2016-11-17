@@ -37,7 +37,6 @@
   display: block;
   transition: transform 300ms;
   transform: scale(1.06);
-  z-index: -1;
 }
 
 @media (max-width: 506px) {
@@ -64,6 +63,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(34, 34, 34, 0.666);
+  z-index: 1;
 }
 
 .contributor__caption__content {
