@@ -1,0 +1,44 @@
+$white: #fff;
+$black: #000;
+
+$c-puzzle-1: rgb(30, 90, 150);
+$c-puzzle-2: rgb(59, 123, 190);
+$c-puzzle-3: rgb(35, 139, 202);
+$c-puzzle-4: rgb(63, 168, 224);
+$c-puzzle-5: rgb(70, 188, 192);
+$c-puzzle-6: rgb(44, 151, 166);
+$c-puzzle-7: rgb(105, 185, 120);
+$c-puzzle-8: rgb(97, 180, 75);
+
+$c-info: $c-puzzle-6;
+$c-warning: orange;
+$c-danger: red;
+
+$font-dark: #222;
+$font-light: #eeeeec;
+
+$font-family-sans: Roboto, 'Liberation Sans', sans-serif;
+$font-family-serif: 'Roboto Slab', 'DejaVu Serif', serif;
+$font-family-mono: 'Operator Mono',
+  'Fira Code',
+  'Ubuntu Mono',
+  'Droid Sans Mono',
+  'Liberation Mono',
+  'Source Code Pro',
+  Menlo,
+  Monaco,
+  Consolas,
+  monospace;
+
+:root {
+  --primary: $c-puzzle-1;
+  --secondary: $c-puzzle-4;
+
+  --info: $c-info;
+  --warning: $c-warning;
+  --danger: $c-danger;
+
+  --font-color-default: $font-dark;
+  --font-color-dark: $font-dark;
+  --font-color-light: $font-light;
+}
