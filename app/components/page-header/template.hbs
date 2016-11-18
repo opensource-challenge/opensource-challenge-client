@@ -2,22 +2,20 @@
   <header class="page-header {{componentCssClassName}}">
     {{yield}}
 
-    {{#if media.isDesktop}}
-      <ul class="page-header__menu flex">
-        {{#each menuItems as |item|}}
-          <li>
-            {{link-to item.title item.route}}
-          </li>
-        {{/each}}
+    <ul class="page-header__menu flex">
+      {{#each menuItems as |item|}}
         <li>
-          {{#if session.isAuthenticated}}
-            <a {{action logout}}>Logout</a>
-          {{else}}
-            <a {{action login}}>Sign in</a>
-          {{/if}}
+          {{link-to item.title item.route}}
         </li>
-      </ul>
-    {{/if}}
+      {{/each}}
+      <li>
+        {{#if session.isAuthenticated}}
+          <a {{action logout}}>Logout</a>
+        {{else}}
+          <a {{action login}}>Sign in</a>
+        {{/if}}
+      </li>
+    </ul>
   </header>
 
   {{yield to='inverse'}}
@@ -27,7 +25,7 @@
   {{#burger-menu class="flex" itemAnimation="push" as |b|}}
     {{#b.menu itemTagName="li" as |menu|}}
       <header class="bm-header"></header>
-      <ul class="bm-menu-list layout-column">
+      <ul class="bm-menu-list layout-column flex">
         {{#each menuItems as |item|}}
           {{#menu.item}}
             {{link-to item.title item.route}}
