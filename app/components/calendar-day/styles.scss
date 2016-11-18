@@ -1,11 +1,57 @@
 :--component {
-  width: 200px;
-  height: 200px;
+  margin: 0.5rem;
+}
+
+.calendar-day__caption {
+  z-index: 0;
+}
+
+.calendar-day__number {
+  font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, Roboto, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 150px;
+  height: 150px;
+  font-size: 8rem;
+  transition: transform 300ms, color 300ms;
+  z-index: 2;
 }
 
-.calendar-day + div {
-  position: absolute;
+@media (max-width: 506px) {
+  .calendar-day__number {
+    width: 120px;
+    height: 120px;
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 716px) {
+  .calendar-day__number {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.hover-box__link:hover > .calendar-day__number,
+.hover-box__link.active > .calendar_day__number {
+  color: var(--font-color-light);
+}
+
+.hover-box__link:hover .hover-box__content,
+.hover-box__link.active .hover-box__content {
+  transform: scale(0.3) translateY(1.25rem);
+}
+
+.hover-box__link .fa-calendar-o {
+  transform: scale(2);
+  opacity: 0;
+  transition: transform 300ms, opacity 300ms;
+}
+.hover-box__link:hover .fa-calendar-o,
+.hover-box__link.active .fa-calendar-o {
+  transform: translateY(0) scale(1);
+  opacity: 1;
 }

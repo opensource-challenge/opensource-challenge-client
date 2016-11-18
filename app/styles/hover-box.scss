@@ -1,0 +1,45 @@
+.hover-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-box__link, .hover-box__link:hover {
+  color: var(--font-color-light);
+  text-decoration: none;
+}
+
+.hover-box__link:hover .hover-box__caption,
+.hover-box__link.active .hover-box__caption {
+  opacity: 1;
+}
+
+.hover-box__link:hover .hover-box__content,
+.hover-box__link.active .hover-box__content {
+  transform: scale(1);
+}
+
+.hover-box__content {
+  display: block;
+  transition: transform 300ms;
+  transform: scale(1.06);
+  color: var(--font-color-dark);
+}
+
+.hover-box__caption {
+  transition: opacity 300ms;
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(34, 34, 34, 0.666);
+  z-index: 1;
+}
+
+.hover-box__caption__content {
+  text-align: center;
+}

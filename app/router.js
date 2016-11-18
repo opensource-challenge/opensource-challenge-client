@@ -17,6 +17,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('about')
   this.route('contributors')
+  this.route('day', { path: '/day/:day' })
 })
 
 export default Router

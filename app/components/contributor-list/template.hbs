@@ -1,13 +1,14 @@
 {{#each items as |contributor|}}
-  <div class="contributor">
-    <a class="contributor__link" href={{contributor.website}}>
-      <div class="contributor__caption">
-        <div class="contributor__caption__content">
+  <div class="contributor hover-box">
+    <a class="contributor__link hover-box__link" href={{contributor.website}}>
+      <div class="contributor__caption hover-box__caption">
+        <div class="contributor__caption__content hover-box__caption__content">
           <p>{{contributor.name}}</p>
           <i class="fa fa-angle-double-up fa-3x"></i>
         </div>
       </div>
-      <img class="contributor__image" src={{contributor.picture}} alt="">
+      <img class="contributor__image hover-box__content"
+          src={{contributor.picture}} alt="">
     </a>
   </div>
 {{/each}}

@@ -3,4 +3,17 @@
 
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 1.7rem;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 420px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
