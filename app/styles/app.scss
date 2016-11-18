@@ -85,3 +85,30 @@ body > .ember-view {
     padding-left: 0;
   }
 }
+
+.dummy-contributor-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dummy-contributor {
+  width: 200px;
+  height: 150px;
+  margin: 1rem;
+  background-color: #9fb9c0
+}
+
+@media (max-width: 506px) {
+  .dummy-contributor {
+    width: 245px;
+    height: 183px;
+  }
+}
+
+@media (min-width: 716px) {
+  .dummy-contributor {
+    width: 300px;
+    height: 225px;
+  }
+}
