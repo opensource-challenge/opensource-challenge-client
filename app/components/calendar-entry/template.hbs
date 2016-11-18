@@ -1,14 +1,20 @@
-<div class="layout-row">
-  {{#with item.user as |user|}}
-    {{#with user.picture as |picture|}}
-      <div>
-        <div>{{user.name}}</div>
-        <img src={{picture}}>
-      </div>
-    {{/with}}
+{{#with item.user as |user|}}
+  <header>
+    <div class="avatar-wrapper">
+      <img class="avatar" src={{picture}}>
+      <div class="username">{{user.name}}</div>
+    </div>
+  </header>
+{{/with}}
+<div class="layout-column">
+  {{#with item.link as |link|}}
+    <a class="contribution-link" href={{link}}>{{link}}</a>
   {{/with}}
-  <div class="layout-column">
-    <a href={{item.link}}>{{item.link}}</a>
-    <div>{{item.description}}</div>
-  </div>
+  <section class="justify-mobile">
+    {{~markdown-to-html item.description
+      headerLevelStart = 2
+      simplifiedAutoLink = true
+      tasklists = true
+      ~}}
+  </section>
 </div>

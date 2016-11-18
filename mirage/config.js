@@ -6,6 +6,12 @@ export default function() {
   this.get('/users')
   this.post('/users')
 
-  this.get('/contributions')
+  this.get('/contributions', ({ contributions }, request) => {
+    if (request.queryParams && request.queryParams['filter[date]']) {
+      return contributions.where({ date: request.queryParams['filter[date]'] })
+    }
+
+    return contributions.all()
+  })
   this.post('/contributions')
 }

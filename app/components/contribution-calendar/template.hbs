@@ -1,5 +1,5 @@
 <h1>Adventskalender</h1>
 
-{{#each-in (group-by 'date' items) as |date items|}}
+{{#each-in (group-by 'date' (sort-by 'date' items)) as |date items|}}
   {{~calendar-day date=date items=items~}}
 {{/each-in}}

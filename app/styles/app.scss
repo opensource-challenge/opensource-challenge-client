@@ -13,23 +13,32 @@ body > .ember-view {
   overflow: hidden;
 }
 
-.about-page {
-  @extend .content-padding;
-
-  max-width: 760px;
-  margin: 0 auto;
-  hyphens: auto;
-  text-align: justify;
+.justify-mobile {
+  p {
+    hyphens: auto;
+    text-align: justify;
+  }
 
   @supports not (hyphens: auto) {
-    > p {
+    p {
       text-align: left;
     }
   }
 
   @media (min-width: 421px) {
-    > p {
+    p {
       text-align: left;
     }
   }
 }
+
+.about-page {
+  @extend .content-padding;
+
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.text-center { text-align: center }
+.text-start { text-align: left }
+.text-end { text-align: right }

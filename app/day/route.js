@@ -1,4 +1,12 @@
-import Ember from 'ember';
+import Ember from 'ember'
 
-export default Ember.Route.extend({
-});
+const { Route } = Ember
+
+export default Route.extend({
+  model({ date }) {
+    return this.store.query('contribution', {
+      include: 'user',
+      filter: { date }
+    })
+  }
+})
