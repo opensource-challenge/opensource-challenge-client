@@ -35,10 +35,40 @@ body > .ember-view {
 .about-page {
   @extend .content-padding;
 
-  max-width: 760px;
+  max-width: 960px;
   margin: 0 auto;
+}
+
+.calendar-day-heading {
+  display: flex;
+  align-items: center;
+  max-width: 960px;
+  padding-left: 1rem;
+  margin: 0 auto;
+  text-align: left;
+}
+.calendar-day-heading > div {
+  margin-left: 0;
+}
+.calendar-day-heading .calendar-day__number {
+  width: 4rem;
+  height: 3.5rem;
+  font-size: 3rem;
+}
+.calendar-day-heading .hover-box__link .fa-calendar-o {
+  font-size: 2rem;
+}
+.calendar-day-heading .hover-box__link:hover .hover-box__content,
+.calendar-day-heading .hover-box__link.active .hover-box__content {
+  transform: scale(0.3) translateY(1.3rem);
 }
 
 .text-center { text-align: center }
 .text-start { text-align: left }
 .text-end { text-align: right }
+
+@media (min-width: 992px) {
+  .calendar-day-heading {
+    padding-left: 0;
+  }
+}

@@ -8,7 +8,8 @@ export default Component.extend({
   menuItems: [
     {
       title: 'Adventskalender',
-      route: 'index'
+      route: 'index',
+      currentWhen: 'index day'
     },
     {
       title: 'About',

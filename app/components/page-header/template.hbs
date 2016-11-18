@@ -5,7 +5,7 @@
     <ul class="page-header__menu flex">
       {{#each menuItems as |item|}}
         <li>
-          {{link-to item.title item.route}}
+          {{link-to item.title item.route current-when=item.currentWhen}}
         </li>
       {{/each}}
       <li>
@@ -28,7 +28,7 @@
       <ul class="bm-menu-list layout-column flex">
         {{#each menuItems as |item|}}
           {{#menu.item}}
-            {{link-to item.title item.route}}
+            {{link-to item.title item.route current-when=item.currentWhen}}
           {{/menu.item}}
         {{/each}}
         {{#menu.item}}

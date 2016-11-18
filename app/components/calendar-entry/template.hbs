@@ -1,12 +1,12 @@
 {{#with item.user as |user|}}
   <header>
-    <div class="avatar-wrapper">
+    <a href={{user.website}} class="avatar-wrapper">
       <img class="avatar" src={{picture}}>
       <div class="username">{{user.name}}</div>
-    </div>
+    </a>
   </header>
 {{/with}}
-<div class="layout-column">
+<div class="layout-column contribution-content">
   {{#with item.link as |link|}}
     <a class="contribution-link" href={{link}}>{{link}}</a>
   {{/with}}

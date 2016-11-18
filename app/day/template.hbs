@@ -1,4 +1,7 @@
-<h1 class="text-center">{{model.query.filter.date}}</h1>
+<h1 class="calendar-day-heading">
+  {{~calendar-day date=model.query.filter.date~}}
+  {{moment-format model.query.filter.date 'DD.MM.YYYY'}}
+</h1>
 
 {{#each model as |item|}}
   {{calendar-entry item=item}}

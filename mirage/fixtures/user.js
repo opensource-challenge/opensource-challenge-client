@@ -82,5 +82,33 @@ export default [
     picture: 'https://www.puzzle.ch/wp-content/uploads/2015/08/Studer-Roland-400x300.jpg',
     name: 'Roland Studer',
     company: 'Hitobito AG'
+  },
+  {
+    id: '13',
+    website: 'https://www.puzzle.ch/de/blog/articles/author/pmatti',
+    picture: 'https://www.puzzle.ch/wp-content/uploads/2015/07/Matti-Philipp-400x300.jpg',
+    name: 'Philipp Matti',
+    company: 'Puzzle ITC GmbH'
+  },
+  {
+    id: '14',
+    website: 'https://www.puzzle.ch/de/blog/articles/author/mhofer',
+    picture: 'https://www.puzzle.ch/wp-content/uploads/2015/10/Hofer-Mathis-400x300.jpg',
+    name: 'Mathis Hofer',
+    company: 'Puzzle ITC GmbH'
+  },
+  {
+    id: '15',
+    website: 'https://www.puzzle.ch/de/blog/articles/author/craaflaub',
+    picture: 'https://www.puzzle.ch/wp-content/uploads/2015/07/Raaflaub-400x300.jpg',
+    name: 'Christoph Raaflaub',
+    company: 'Puzzle ITC GmbH'
+  },
+  {
+    id: '16',
+    website: 'https://www.puzzle.ch/de/blog/articles/author/jbinder',
+    picture: 'https://www.puzzle.ch/wp-content/uploads/2015/07/Binder-Jannis-400x300.jpg',
+    name: 'Janiss Binder',
+    company: 'Puzzle ITC GmbH'
   }
 ]
