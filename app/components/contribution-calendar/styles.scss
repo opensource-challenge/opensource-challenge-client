@@ -1,3 +1,6 @@
 :--component {
   @extend .content-padding;
+
+  display: flex;
+  flex-wrap: wrap;
 }

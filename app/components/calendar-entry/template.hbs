@@ -1,22 +1,14 @@
-<div class="calendar-entry">
-  <div class="calendar-entry__caption">
-    <div class="calendar-entry__content">
-      <i class="fa fa-calendar-o fa-3x"></i>
-    </div>
-  </div>
-  <div class="calendar-entry__number">{{moment-format date 'D'}}</div>
-</div>
-<div hidden>
-  {{#each items as |item|}}
-    <div>
-      {{#with item.user as |user|}}
-        {{#with user.picture as |picture|}}
-          <div><img src={{picture}}></div>
-        {{/with}}
+<div class="layout-row">
+  {{#with item.user as |user|}}
+    {{#with user.picture as |picture|}}
+      <div>
         <div>{{user.name}}</div>
-      {{/with}}
-      <div>{{item.description}}</div>
-      <div><a href={{item.link}}>{{item.link}}</a></div>
-    </div>
-  {{/each}}
+        <img src={{picture}}>
+      </div>
+    {{/with}}
+  {{/with}}
+  <div class="layout-column">
+    <a href={{item.link}}>{{item.link}}</a>
+    <div>{{item.description}}</div>
+  </div>
 </div>
