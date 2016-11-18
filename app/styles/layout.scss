@@ -12,6 +12,16 @@
   flex: 1;
 }
 
+.layout-row-flex {
+  @extend .layout-row;
+  @extend .flex;
+}
+
+.layout-column-flex {
+  @extend .layout-column;
+  @extend .flex;
+}
+
 .content-padding {
   padding: 0 1rem;
 }

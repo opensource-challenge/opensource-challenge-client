@@ -2,6 +2,7 @@
   margin: 0 1rem 1rem;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 
 .avatar-wrapper {
@@ -30,7 +31,7 @@
 @media (min-width: 992px) {
   :--component {
     flex-direction: row;
-    max-width: 960px;
+    width: 960px;
     margin-left: auto;
     margin-right: auto;
   }

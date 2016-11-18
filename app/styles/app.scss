@@ -32,6 +32,17 @@ body > .ember-view {
   }
 }
 
+.intro-header {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.intro-header > h1 {
+  text-transform: uppercase;
+}
+.intro-header > p {
+  font-size: 1.25em;
+}
+
 .about-page {
   @extend .content-padding;
 
@@ -42,10 +53,12 @@ body > .ember-view {
 .calendar-day-heading {
   display: flex;
   align-items: center;
+  width: 100%;
   max-width: 960px;
   padding-left: 1rem;
   margin: 0 auto;
   text-align: left;
+  flex-shrink: 0;
 }
 .calendar-day-heading > div {
   margin-left: 0;

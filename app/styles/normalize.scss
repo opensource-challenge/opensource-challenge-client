@@ -1,14 +1,25 @@
 @custom-selector :--heading h1, h2, h3, h4, h5, h6;
 @custom-selector :--any-link :link, :visited, a[data-ember-action];
 
+* {
+  box-sizing: border-box;
+}
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
 :root {
   font-size: 18px;
   font-family: var(--font-family-default);
   color: var(--font-color-default);
 }
 
-:--any-link {
+:link, :visited, button, [data-ember-action] {
   cursor: pointer;
+}
+
+:--any-link {
   color: var(--primary);
 }
 
@@ -37,6 +48,8 @@ input, button, textarea {
 
 :--heading {
   font-family: var(--font-family-serif);
+  margin-top: 0.666rem;
+  margin-bottom: 0.666rem;
 }
 
 p {

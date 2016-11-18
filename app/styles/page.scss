@@ -26,11 +26,11 @@
 }
 
 .page-content__outlet {
-  @extend .layout-column;
+  @extend .layout-column-flex;
 }
 .page-content__outlet > .liquid-child {
+  @extend .layout-column-flex;
   overflow-y: auto;
-  flex: 1;
 }
 .page-content__outlet > .liquid-child > :first-child {
   padding-top: 1rem;
