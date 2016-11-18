@@ -1,6 +1,9 @@
 <h1 class="calendar-day-heading">
   {{~calendar-day date=model.query.filter.date~}}
   {{moment-format model.query.filter.date 'DD.MM.YYYY'}}
+  {{#link-to 'post-contribution' (query-params date=model.query.filter.date)}}
+    <i class="fa fa-plus"></i>
+  {{/link-to}}
 </h1>
 
 {{#each model as |item|}}

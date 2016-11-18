@@ -1,0 +1,49 @@
+:--component {
+  padding: 0 1rem;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+input, textarea {
+  width: 100%;
+}
+
+input[type="date"] {
+  width: 10ch;
+}
+
+input {
+  max-width: 26rem;
+}
+
+.textarea-field {
+  @extend .layout-column-flex;
+}
+
+textarea {
+  font-family: var(--font-family-mono);
+  min-height: 10em;
+  height: 100%;
+}
+
+.form-button--submit {
+  align-self: center;
+}
+
+@media (max-width: 320px) {
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :--component {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  align-self: flex-start;
+}

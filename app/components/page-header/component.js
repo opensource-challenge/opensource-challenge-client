@@ -9,7 +9,7 @@ export default Component.extend({
     {
       title: 'Adventskalender',
       route: 'index',
-      currentWhen: 'index day'
+      currentWhen: 'index day post-contribution'
     },
     {
       title: 'About',

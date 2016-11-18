@@ -1,0 +1,42 @@
+input:not([type="radio"], [type="checkbox"]) {
+  border: none;
+  border-bottom: 1px solid currentColor;
+  padding: 0.2rem;
+}
+
+textarea {
+  border: none;
+  border-bottom: 1px solid currentColor;
+  padding: 0.2rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-primary, button[type="submit"] {
+  border: 1px solid var(--primary);
+  background-color: var(--secondary);
+  color: $white;
+  padding: 0.4rem 0.75rem;
+
+  &:hover, &.pending {
+    color: $white;
+    background-color: var(--primary);
+    text-decoration: none;
+  }
+
+  &[disabled] {
+    border-color: black;
+    background-color: gray;
+    cursor: not-allowed;
+  }
+}
+
+.form-field > label {
+  display: block;
+}
+
+.form-field {
+  margin: 0.5rem 0;
+}

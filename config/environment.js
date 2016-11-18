@@ -22,6 +22,10 @@ module.exports = function(environment) {
       // when it is created
     },
 
+    'ember-simple-auth': {
+      authenticationRoute: 'index'
+    },
+
     torii: {
       sessionServiceName: 'session',
       remoteServiceName: 'iframe',
@@ -32,6 +36,10 @@ module.exports = function(environment) {
           redirectUri: 'http://localhost:4200/'
         }
       }
+    },
+
+    'ember-form-for': {
+      errorsPath: 'error.PROPERTY_NAME.validation'
     }
   };
 

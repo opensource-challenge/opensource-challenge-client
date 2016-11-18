@@ -18,6 +18,7 @@ Router.map(function() {
   this.route('about')
   this.route('contributors', function() {})
   this.route('day', { path: '/day/:date' })
+  this.route('post-contribution')
 })
 
 export default Router

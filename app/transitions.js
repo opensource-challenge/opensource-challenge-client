@@ -19,4 +19,10 @@ export default function() {
     this.use('toLeft'),
     this.reverse('toRight')
   )
+
+  this.transition(
+    this.toRoute('post-contribution'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  )
 }

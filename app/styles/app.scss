@@ -4,6 +4,7 @@
 @import 'page';
 @import 'burger-menu';
 @import 'hover-box';
+@import 'form';
 @import 'pod-styles';
 
 body > .ember-view {
@@ -34,7 +35,7 @@ body > .ember-view {
 
 .intro-header {
   max-width: 760px;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
 }
 .intro-header > h1 {
   text-transform: uppercase;
@@ -62,6 +63,9 @@ body > .ember-view {
 }
 .calendar-day-heading > div {
   margin-left: 0;
+}
+.calendar-day-heading > a {
+  margin-left: auto;
 }
 .calendar-day-heading .calendar-day__number {
   width: 4rem;

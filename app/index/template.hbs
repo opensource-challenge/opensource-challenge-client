@@ -4,6 +4,14 @@
     Wer schafft es im Advent jeden Tag einen Beitrag zu einem Open Source
     Projekt zu leisten?
   </p>
+
+  {{#link-to
+    'post-contribution'
+    (query-params date=(moment-format now 'YYYY-MM-DD'))
+    class="btn-primary"
+    }}
+    <i class="fa fa-plus"></i> Jetzt einen neuen Beitrag erfassen
+  {{/link-to}}
 </header>
 
 {{contribution-calendar items=model}}

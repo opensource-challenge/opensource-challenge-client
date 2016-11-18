@@ -1,0 +1,14 @@
+<h2>Contribution erfassen</h2>
+
+{{#with (changeset contribution ContributionValidations) as |changeset|}}
+  {{#form-for
+    changeset
+    class="layout-column-flex"
+    submit=(action 'save')
+    as |f|}}
+    {{f.date-field "date" label="Datum" placeholder="2016-12-31" required=true}}
+    {{f.url-field "link" label="Link" placeholder="https://www.…"}}
+    {{f.textarea-field "description" label="Beschreibung" placeholder="Beschreibe hier deine Open Source Tätigkeit." required=true}}
+    {{f.submit disabled=(or changeset.isInvalid changeset.isPristine)}}
+  {{/form-for}}
+{{/with}}
