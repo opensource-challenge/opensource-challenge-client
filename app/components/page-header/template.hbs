@@ -12,7 +12,7 @@
         {{#if session.isAuthenticated}}
           <a {{action logout}}>Logout</a>
         {{else}}
-          <a {{action login}}>Sign in</a>
+          {{#link-to 'login'}}Sign in{{/link-to}}
         {{/if}}
       </li>
     </ul>
@@ -35,7 +35,7 @@
           {{#if session.isAuthenticated}}
             <a {{action logout}}>Logout</a>
           {{else}}
-            <a {{action login}}>Sign in</a>
+            {{#link-to 'login'}}Sign in{{/link-to}}
           {{/if}}
         {{/menu.item}}
       </ul>

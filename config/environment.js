@@ -34,6 +34,11 @@ module.exports = function(environment) {
           apiKey: 'c8992decd49d183b23d7',
           scope: 'user',
           redirectUri: 'http://localhost:4200/'
+        },
+        'google-oauth2-bearer': {
+          apiKey: '586953290562-c896enmb9em22uv4bc4p63h97pp111h3.apps.googleusercontent.com',
+          scope: 'profile email',
+          redirectUri: 'http://localhost:4200/'
         }
       }
     },

@@ -7,11 +7,14 @@ export default Route.extend(ApplicationRouteMixin, {
   session: inject.service(),
 
   actions: {
-    login() {
-      this.get('session').authenticate('authenticator:torii', 'github')
+    loginWithGoogle() {
+      return this.get('session').authenticate('authenticator:torii', 'google')
+    },
+    loginWithGithub() {
+      return this.get('session').authenticate('authenticator:torii', 'github')
     },
     logout() {
-      this.get('session').invalidate()
+      return this.get('session').invalidate()
     }
   }
 })
