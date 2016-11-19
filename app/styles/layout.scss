@@ -26,6 +26,11 @@
   padding: 0 1rem;
 }
 
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) {
   .content-padding {
     padding: 0 2rem;

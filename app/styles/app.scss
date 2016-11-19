@@ -44,13 +44,6 @@ body > .ember-view {
   font-size: 1.25em;
 }
 
-.about-page {
-  @extend .content-padding;
-
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 .calendar-day-heading {
   display: flex;
   align-items: center;
