@@ -28,7 +28,6 @@ module.exports = function(environment) {
 
     torii: {
       sessionServiceName: 'session',
-      remoteServiceName: 'iframe',
       providers: {
         'github-oauth2': {
           apiKey: 'c8992decd49d183b23d7',
