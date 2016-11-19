@@ -1618,9 +1618,9 @@ ember-async-button@1.0.2:
     ember-cli-babel "^5.1.6"
     ember-cli-htmlbars "^1.0.3"
 
-ember-burger-menu@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/ember-burger-menu/-/ember-burger-menu-0.1.0.tgz#3d8485a7415c262fd09058af107820c99a1c4568"
+ember-burger-menu@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ember-burger-menu/-/ember-burger-menu-0.2.0.tgz#850e11f326f1a6772988807779e6c247281655cc"
   dependencies:
     ember-cli-babel "^5.1.7"
     ember-cli-htmlbars "^1.0.10"
