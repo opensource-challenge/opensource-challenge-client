@@ -19,7 +19,7 @@ Router.map(function() {
   this.route('contributors', function() {})
   this.route('day', { path: '/day/:date' })
   this.route('post-contribution')
-  this.route('login');
+  this.route('login')
 })
 
 export default Router
