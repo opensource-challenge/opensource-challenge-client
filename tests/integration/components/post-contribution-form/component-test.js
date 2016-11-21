@@ -1,6 +1,6 @@
-import { expect } from 'chai';
-import { describeComponent, it } from 'ember-mocha';
-import hbs from 'htmlbars-inline-precompile';
+import { expect } from 'chai'
+import { describeComponent, it } from 'ember-mocha'
+import hbs from 'htmlbars-inline-precompile'
 
 describeComponent('post-contribution-form', 'Integration | Component | post contribution form',
   {
@@ -8,17 +8,15 @@ describeComponent('post-contribution-form', 'Integration | Component | post cont
   },
   function() {
     it('renders', function() {
-      // Set any properties with this.set('myProperty', 'value');
-      // Handle any actions with this.on('myAction', function(val) { ... });
-      // Template block usage:
-      // this.render(hbs`
-      //   {{#post-contribution-form}}
-      //     template content
-      //   {{/post-contribution-form}}
-      // `);
+      this.set('model', {
+        user: {},
+        date: '2016-11-21',
+        link: 'https://github.com/',
+        description: 'Some github contribution'
+      })
 
-      this.render(hbs`{{post-contribution-form}}`);
-      expect(this.$()).to.have.length(1);
-    });
+      this.render(hbs`{{post-contribution-form contribution=model}}`)
+      expect(this.$()).to.have.length(1)
+    })
   }
-);
+)
