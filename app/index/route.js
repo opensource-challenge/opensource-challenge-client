@@ -9,8 +9,6 @@ export default Route.extend({
   },
 
   model() {
-    return this.store.findAll('contribution', {
-      include: 'user'
-    })
+    return this.store.findAll('contribution')
   }
 })

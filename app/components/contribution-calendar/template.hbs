@@ -1,5 +1,10 @@
 <h1>Adventskalender</h1>
 
+<p>
+  Contributions: <strong>{{items.length}}</strong><br>
+  Contributors: <strong>{{contributorCount}}</strong>
+</p>
+
 {{#each-in (group-by 'date' (sort-by 'date' items)) as |date items|}}
   {{~calendar-day date=date items=items~}}
 {{/each-in}}
