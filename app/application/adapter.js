@@ -5,6 +5,7 @@ import DataAdapterMixin
 const { JSONAPIAdapter } = DS
 
 export default JSONAPIAdapter.extend(DataAdapterMixin, {
+  host: 'http://localhost:4000',
   namespace: 'api/v1',
   authorizer: 'authorizer:osc',
 

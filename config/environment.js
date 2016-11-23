@@ -44,6 +44,15 @@ module.exports = function(environment) {
 
     'ember-form-for': {
       errorsPath: 'error.PROPERTY_NAME.validation'
+    },
+
+    fastboot: {
+      hostWhitelist: [
+        'localhost',
+        'localhost:3000',
+        'localhost:4000',
+        'localhost:4200'
+      ],
     }
   };
 

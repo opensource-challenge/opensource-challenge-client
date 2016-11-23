@@ -11,8 +11,13 @@ export default Route.extend(ApplicationRouteMixin, {
   ajax: inject.service(),
   torii: inject.service(),
   currentUser: inject.service(),
+  fastboot: inject.service(),
 
   beforeModel() {
+    if (!this.get('fastboot.isFastBoot')) {
+      return
+    }
+
     return this._loadCurrentUser()
   },
 
