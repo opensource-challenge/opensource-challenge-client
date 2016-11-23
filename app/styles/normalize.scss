@@ -15,6 +15,10 @@
   color: var(--font-color-default);
 }
 
+a {
+  cursor: default;
+}
+
 :link, :visited, button, [data-ember-action] {
   cursor: pointer;
 }
