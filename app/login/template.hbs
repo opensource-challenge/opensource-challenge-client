@@ -1,5 +1,5 @@
 <div class="content content-padding">
-  {{#form-for model submit=(route-action "login") as |f|}}
+  {{#form-for (changeset model LoginValidations) submit=(route-action "login") as |f|}}
     {{f.email-field "email" required=true}}
     {{f.password-field "password" required=true}}
     {{f.submit "Login"}}

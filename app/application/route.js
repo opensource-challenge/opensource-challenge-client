@@ -1,10 +1,13 @@
 import Ember from 'ember'
 import ApplicationRouteMixin
   from 'ember-simple-auth/mixins/application-route-mixin'
+import LoginValidations from '../validations/login'
 
 const { Route, inject } = Ember
 
 export default Route.extend(ApplicationRouteMixin, {
+  LoginValidations,
+
   ajax: inject.service(),
   torii: inject.service(),
   currentUser: inject.service(),
@@ -39,11 +42,16 @@ export default Route.extend(ApplicationRouteMixin, {
   },
 
   actions: {
-    login({ email, password }) {
-      return this.session.authenticate('authenticator:osc', {
-        username: email,
-        password
-      })
+    login(data) {
+      return data.validate()
+        .then(() => {
+          if (data.get('isValid')) {
+            return this.session.authenticate('authenticator:osc', {
+              username: data.get('email'),
+              password: data.get('password')
+            })
+          }
+        })
     },
     loginWithGoogle() {
       return this._toriiLogin('google')
