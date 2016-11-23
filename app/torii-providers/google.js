@@ -1,4 +1,7 @@
-import GoogleOauth2Bearer from 'torii/providers/google-oauth2-bearer'
+import GoogleOauth2 from 'torii/providers/google-oauth2'
 
-export default GoogleOauth2Bearer.extend({
+export default GoogleOauth2.extend({
+  fetch(data) {
+    return data
+  }
 })

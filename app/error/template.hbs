@@ -1,0 +1,7 @@
+{{log model}}
+{{#with model as |error|}}
+  {{#if error.isAdapterError}}
+    <pre class="error">{{error.message}}</pre>
+    <pre class="error-stack">{{error.stack}}</pre>
+  {{/if}}
+{{/with}}
