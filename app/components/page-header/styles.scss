@@ -28,18 +28,52 @@
   }
 }
 
-li > a {
+li {
+  position: relative;
+}
+
+li > span {
+  cursor: default;
+}
+
+li > a,
+li > span {
   margin: 0.25rem;
   padding: 1rem;
   font-size: 1.1rem;
 }
 
-li > :--any-link {
+li > :--any-link,
+li > span {
   color: var(--font-color-light);
 }
 
-li > a:hover, li > a.active {
+li > a:hover,
+li > a.active,
+li > span:hover {
   background-color: var(--c-puzzle-2);
   text-decoration: none;
   text-shadow: 1px 1px 1px rgba(34, 34, 34, 0.3);
+}
+
+li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+}
+li > ul {
+  transition: opacity 200ms, visibility 200ms;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 2.3rem;
+  padding: 0;
+  min-width: 100%;
+  background-color: var(--c-puzzle-1);
+  z-index: 1;
+}
+li > ul > li {
+  display: flex;
+}
+li > ul > li > a {
+  flex: 1;
 }

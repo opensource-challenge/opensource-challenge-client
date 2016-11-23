@@ -10,7 +10,12 @@
       {{/each}}
       <li>
         {{#if session.isAuthenticated}}
-          <a {{action logout}}>Logout</a>
+          {{#current-user as |user|}}
+            <span>{{user.name}}</span>
+            <ul>
+              <li><a {{action logout}}>Logout</a></li>
+            </ul>
+          {{/current-user}}
         {{else}}
           {{#link-to 'login'}}Sign in{{/link-to}}
         {{/if}}
@@ -24,7 +29,11 @@
 {{else}}
   {{#burger-menu class="flex" itemAnimation="push" as |b|}}
     {{#b.menu itemTagName="li" as |menu|}}
-      <header class="bm-header"></header>
+      <header class="bm-header">
+        {{#current-user as |user|}}
+          <span class="welcome">Willkommen {{user.name}}</span>
+        {{/current-user}}
+      </header>
       <ul class="bm-menu-list layout-column flex">
         {{#each menuItems as |item|}}
           {{#menu.item}}

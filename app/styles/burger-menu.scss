@@ -3,6 +3,12 @@
 }
 
 .bm-header {
+  display: flex;
+  align-items: flex-end;
+  color: var(--font-color-light);
+  font-size: 0.9rem;
+  padding: 0.5rem;
+
   background-color: var(--primary);
   background-image: url(pictures/menu-background.svg),
                     url(pictures/puzzle_classic_bg_rgb.svg);
