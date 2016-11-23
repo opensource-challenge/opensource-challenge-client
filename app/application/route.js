@@ -20,13 +20,13 @@ export default Route.extend(ApplicationRouteMixin, {
     this._super(...arguments)
 
     this._loadCurrentUser()
-      .catch(() =>
-        this.session.invalidate()
-      )
   },
 
   _loadCurrentUser() {
     return this.get('currentUser').load()
+      .catch(() =>
+        this.session.invalidate()
+      )
   },
 
   _toriiLogin(provider) {
