@@ -6,5 +6,15 @@ const { JSONAPIAdapter } = DS
 
 export default JSONAPIAdapter.extend(DataAdapterMixin, {
   namespace: 'api/v1',
-  authorizer: 'authorizer:osc'
+  authorizer: 'authorizer:osc',
+
+  urlForCreateRecord(modelName/*, snapshot*/) {
+    switch (modelName) {
+      case 'user':
+      case 'users':
+        return this._super(...arguments).replace('users', 'register')
+      default:
+        return this._super(...arguments)
+    }
+  }
 })

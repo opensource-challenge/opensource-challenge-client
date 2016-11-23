@@ -20,8 +20,11 @@ export default Route.extend(ApplicationRouteMixin, {
   },
 
   actions: {
-    login(user, password) {
-      return this.session.authenticate('authenticator:osc', { user, password })
+    login({ email, password }) {
+      return this.session.authenticate('authenticator:osc', {
+        username: email,
+        password
+      })
     },
     loginWithGoogle() {
       return this._toriiLogin('google')
