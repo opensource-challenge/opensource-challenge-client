@@ -29,7 +29,7 @@ export default OAuth2PasswordGrant.extend({
       this.makeRequest(serverTokenEndpoint, data)
         .then(response => {
           run(() => {
-            if (!this._validate(response)) {
+            if (!response.access_token) {
               reject('access_token is missing in server response')
             }
 

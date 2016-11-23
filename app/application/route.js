@@ -7,16 +7,35 @@ const { Route, inject } = Ember
 export default Route.extend(ApplicationRouteMixin, {
   ajax: inject.service(),
   torii: inject.service(),
+  currentUser: inject.service(),
+
+  beforeModel() {
+    return this._loadCurrentUser()
+  },
+
+  sessionAuthenticated() {
+    this._super(...arguments)
+
+    this._loadCurrentUser()
+      .catch(() =>
+        this.session.invalidate()
+      )
+  },
+
+  _loadCurrentUser() {
+    return this.get('currentUser').load()
+  },
 
   _toriiLogin(provider) {
     return this.get('torii')
       .open(provider)
       .then(({ authorizationCode }) => {
-        this.session.authenticate('authenticator:osc', {
+        return this.session.authenticate('authenticator:osc', {
           provider,
           authorizationCode
         })
       })
+      .catch(err => this.transitionTo('error', err))
   },
 
   actions: {

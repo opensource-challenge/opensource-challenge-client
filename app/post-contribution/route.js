@@ -6,7 +6,7 @@ import AuthenticatedRouteMixin
 const { Route, inject } = Ember
 
 export default Route.extend(AuthenticatedRouteMixin, {
-  session: inject.service(),
+  currentUser: inject.service(),
 
   queryParams: {
     date: {
@@ -15,7 +15,7 @@ export default Route.extend(AuthenticatedRouteMixin, {
   },
 
   model({ date = moment().format('YYYY-MM-DD') }) {
-    let user = this.get('session.user')
+    let user = this.get('currentUser.user')
 
     return this.store.createRecord('contribution', { user, date })
   },
