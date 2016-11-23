@@ -10,7 +10,10 @@
     (query-params date=(moment-format now 'YYYY-MM-DD'))
     class="btn-primary"
     }}
-    <i class="fa fa-plus"></i> Jetzt einen neuen Beitrag erfassen
+    <i class="fa fa-plus"></i>
+    Jetzt einen neuen
+    {{#if media.isMobile}}<br>{{/if}}
+    Beitrag erfassen
   {{/link-to}}
 </header>
 

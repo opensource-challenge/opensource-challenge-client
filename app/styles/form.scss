@@ -15,10 +15,18 @@ button {
 }
 
 .btn-primary, button[type="submit"] {
+  display: inline-flex;
   border: 1px solid var(--primary);
   background-color: var(--secondary);
   color: $white;
   padding: 0.4rem 0.75rem;
+
+  & > .fa {
+    align-self: center;
+  }
+  & > .fa:first-child {
+    margin-right: 0.5rem;
+  }
 
   &:hover, &.pending {
     color: $white;
