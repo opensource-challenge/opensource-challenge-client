@@ -5,4 +5,7 @@ import UnauthenticatedRouteMixin
 const { Route } = Ember
 
 export default Route.extend(UnauthenticatedRouteMixin, {
+  setupController(controller) {
+    controller.set('model', { email: '', password: '' })
+  }
 })
