@@ -1,4 +1,4 @@
-# Opensource-challenge-client
+# Opensource-challenge-client [![Build Status](https://api.travis-ci.org/topaxi/opensource-challenge-client.svg?branch=master)](https://travis-ci.org/topaxi/opensource-challenge-client) [![Test Coverage](https://codeclimate.com/github/topaxi/opensource-challenge-client/badges/coverage.svg)](https://codeclimate.com/github/topaxi/opensource-challenge-client/coverage) [![Code Climate](https://codeclimate.com/github/topaxi/opensource-challenge-client/badges/gpa.svg)](https://codeclimate.com/github/topaxi/opensource-challenge-client)
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
