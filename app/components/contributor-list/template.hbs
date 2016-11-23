@@ -11,4 +11,19 @@
           src={{contributor.picture}} alt="">
     </a>
   </div>
+{{else}}
+  <div class="text-center">
+    <p>Es hat noch niemand einen Beitrag gemacht!</p>
+
+    {{#link-to
+      'post-contribution'
+      (query-params date=(moment-format now 'YYYY-MM-DD'))
+      class="btn-primary"
+      }}
+      <i class="fa fa-plus"></i>
+      Jetzt einen neuen
+      {{#if media.isMobile}}<br>{{/if}}
+      Beitrag erfassen
+    {{/link-to}}
+  </div>
 {{/each}}
