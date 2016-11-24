@@ -69,6 +69,7 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV.torii.providers['github-oauth2'].apiKey = '6c73fd2b010ef9ef3d0c'
     ENV.torii.providers['github-oauth2'].redirectUri = 'https://www.opensource-challenge.ch/'
+    ENV.APP.host = 'https://www.opensource-challenge.ch'
   }
 
   return ENV;

@@ -1,3 +1,4 @@
+import ENV from '../config/environment'
 import DS from 'ember-data'
 import DataAdapterMixin
   from 'ember-simple-auth/mixins/data-adapter-mixin'
@@ -5,6 +6,7 @@ import DataAdapterMixin
 const { JSONAPIAdapter } = DS
 
 export default JSONAPIAdapter.extend(DataAdapterMixin, {
+  host: ENV.APP.host,
   namespace: 'api/v1',
   authorizer: 'authorizer:osc',
 
