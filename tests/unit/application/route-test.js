@@ -1,14 +1,14 @@
 import { expect } from 'chai';
-import { describeModule, it } from 'ember-mocha';
+import { it, describe } from 'mocha';
+import { setupTest } from 'ember-mocha';
 
-describeModule('route:application', 'Unit | Route | application',
-  {
+describe('Unit | Route | application', function() {
+  setupTest('route:application', {
     needs: [ 'service:session' ]
-  },
-  function() {
-    it('exists', function() {
-      let route = this.subject();
-      expect(route).to.be.ok;
-    });
-  }
-);
+  });
+
+  it('exists', function() {
+    let route = this.subject();
+    expect(route).to.be.ok;
+  });
+});
