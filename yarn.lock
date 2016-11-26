@@ -3658,13 +3658,13 @@ linkify-it@~1.2.0:
   dependencies:
     uc.micro "^1.0.1"
 
-liquid-fire@0.26.4:
-  version "0.26.4"
-  resolved "https://registry.yarnpkg.com/liquid-fire/-/liquid-fire-0.26.4.tgz#cc7dca96704eaeeddaf383e6944a32bacb5673c6"
+liquid-fire@0.26.5:
+  version "0.26.5"
+  resolved "https://registry.yarnpkg.com/liquid-fire/-/liquid-fire-0.26.5.tgz#858abb61c3477c4b1c497b9c26e2f3d1dcd4bc83"
   dependencies:
     broccoli-funnel "^1.0.1"
     broccoli-merge-trees "^1.0.0"
-    ember-cli-babel "^5.1.6"
+    ember-cli-babel "^5.1.7"
     ember-cli-htmlbars "^1.0.10"
     ember-cli-version-checker "^1.1.6"
     ember-getowner-polyfill "^1.0.0"
