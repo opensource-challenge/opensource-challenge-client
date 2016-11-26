@@ -7,23 +7,16 @@ const { Promise } = RSVP
 export default Service.extend({
   session: inject.service(),
   store: inject.service(),
+  ajax: inject.service(),
 
   load() {
-    return new Promise((resolve, reject) => {
-      let jwt = this.get('session.data.authenticated.access_token')
-
-      if (!jwt) {
-        resolve()
-        return
-      }
-
-      let data = JSON.parse(atob(jwt.split('.')[1]))
-      let userId = /User:(\d+)/.exec(data.sub)[1]
-
-      this.get('store').find('user', userId)
+    if (this.get('session.isAuthenticated')) {
+      return this.get('ajax')
+        .request('/users/current')
+        .then(res => this.get('store').pushPayload(res))
         .then(user => this.set('user', user))
-        .then(resolve)
-        .catch(reject)
-    })
+    }
+
+    return Promise.resolve()
   }
 })

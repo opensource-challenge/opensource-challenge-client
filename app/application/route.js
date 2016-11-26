@@ -16,6 +16,12 @@ export default Route.extend(ApplicationRouteMixin, {
     return this._loadCurrentUser()
   },
 
+  model() {
+    return this.get('ajax')
+      .request('/challenges/current')
+      .then(res => this.store.pushPayload(res))
+  },
+
   sessionAuthenticated() {
     this._super(...arguments)
 
