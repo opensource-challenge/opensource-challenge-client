@@ -13,7 +13,7 @@ export default Service.extend({
     if (this.get('session.isAuthenticated')) {
       return this.get('ajax')
         .request('/users/current')
-        .then(res => this.get('store').pushPayload(res))
+        .then(res => this.get('store').push(res))
         .then(user => this.set('user', user))
     }
 

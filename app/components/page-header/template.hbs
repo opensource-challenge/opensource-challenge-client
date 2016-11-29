@@ -9,16 +9,14 @@
         </li>
       {{/each}}
       <li>
-        {{#if session.isAuthenticated}}
-          {{#current-user as |user|}}
-            <span>{{user.name}}</span>
-            <ul>
-              <li><a {{action logout}}>Logout</a></li>
-            </ul>
-          {{/current-user}}
+        {{#current-user as |user|}}
+          <span>{{user.name}}</span>
+          <ul>
+            <li><a {{action logout}}>Logout</a></li>
+          </ul>
         {{else}}
           {{#link-to 'login'}}Sign in{{/link-to}}
-        {{/if}}
+        {{/current-user}}
       </li>
     </ul>
   </header>
