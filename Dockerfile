@@ -52,7 +52,7 @@ RUN cd /tmp/builddir && \
 COPY . /tmp/builddir
 
 RUN cd /tmp/builddir && ember build --prod && \
-    mv /tmp/builddir/dist /opt/app-root/src && \
+    mv /tmp/builddir/dist/* /opt/app-root/src/ && \
     rm -rf /tmp/builddir
 
 USER 1001
