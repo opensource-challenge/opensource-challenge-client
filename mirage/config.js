@@ -1,6 +1,8 @@
 import { Response } from 'ember-cli-mirage'
 
 export default function() {
+  this.passthrough('/write-coverage')
+
   this.urlPrefix = ''
   this.namespace = '/api/v1'
   this.timing = 400
