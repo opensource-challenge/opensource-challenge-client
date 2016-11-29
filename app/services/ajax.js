@@ -12,7 +12,9 @@ export default AjaxService.extend({
 
   headers: computed('session.data.authenticated.access_token', {
     get() {
-      let headers = {}
+      let headers = {
+        Accept: 'application/vnd.api+json,application/json'
+      }
       let token = this.get('session.data.authenticated.access_token')
 
       if (token) {
