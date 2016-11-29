@@ -1,13 +1,10 @@
 <div class="content content-padding">
-  {{#form-for (changeset model LoginValidations) submit=(route-action "login") as |f|}}
-    {{f.email-field "email" required=true}}
-    {{f.password-field "password" required=true}}
-    {{f.submit "Login"}}
-  {{/form-for}}
+  {{!#form-for (changeset model LoginValidations) submit=(route-action "login") as |f|}}
+    {{!f.email-field "email" required=true}}
+    {{!f.password-field "password" required=true}}
+    {{!f.submit "Login"}}
+  {{!/form-for}}
   <p>
-    {{#async-button class="btn-primary" action=(route-action "loginWithGoogle")}}
-      <i class="fa fa-google"></i> Login with Google
-    {{/async-button}}
     {{#async-button class="btn-primary" action=(route-action "loginWithGithub")}}
       <i class="fa fa-github"></i> Login with Github
     {{/async-button}}
