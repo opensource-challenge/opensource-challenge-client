@@ -22,36 +22,39 @@ export default Route.extend(ApplicationRouteMixin, {
     this._loadCurrentUser()
   },
 
-  _loadCurrentUser() {
-    return this.get('currentUser').load()
-      .catch(() =>
-        this.session.invalidate()
-      )
+  async _loadCurrentUser() {
+    try {
+      return this.get('currentUser').load()
+    }
+    catch (err) {
+      this.session.invalidate()
+    }
   },
 
-  _toriiLogin(provider) {
-    return this.get('torii')
-      .open(provider)
-      .then(({ authorizationCode }) => {
-        return this.session.authenticate('authenticator:osc', {
-          provider,
-          authorizationCode
-        })
+  async _toriiLogin(provider) {
+    try {
+      let { authorizationCode } = await this.get('torii').open(provider)
+
+      return this.session.authenticate('authenticator:osc', {
+        provider,
+        authorizationCode
       })
-      .catch(err => this.transitionTo('error', err))
+    }
+    catch (err) {
+      this.transitionTo('error', err)
+    }
   },
 
   actions: {
-    login(data) {
-      return data.validate()
-        .then(() => {
-          if (data.get('isValid')) {
-            return this.session.authenticate('authenticator:osc', {
-              username: data.get('email'),
-              password: data.get('password')
-            })
-          }
+    async login(data) {
+      await data.validate()
+
+      if (data.get('isValid')) {
+        return this.session.authenticate('authenticator:osc', {
+          username: data.get('email'),
+          password: data.get('password')
         })
+      }
     },
     loginWithGoogle() {
       return this._toriiLogin('google')

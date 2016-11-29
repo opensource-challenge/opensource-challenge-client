@@ -9,6 +9,8 @@ export default Route.extend({
   },
 
   model() {
-    return this.store.findAll('contribution')
+    return this.store.findRecord('challenge', 'current', {
+      include: 'contributions'
+    })
   }
 })

@@ -1,15 +1,15 @@
 import { expect } from 'chai';
-import { describeModule, it } from 'ember-mocha';
+import { it, describe } from 'mocha';
+import { setupTest } from 'ember-mocha';
 
-describeModule('route:post-contribution', 'Unit | Route | post contribution',
-  {
+describe('Unit | Route | post contribution', function() {
+  setupTest('route:post-contribution', {
     // Specify the other units that are required for this test.
     // needs: ['controller:foo']
-  },
-  function() {
-    it('exists', function() {
-      let route = this.subject();
-      expect(route).to.be.ok;
-    });
-  }
-);
+  });
+
+  it('exists', function() {
+    let route = this.subject();
+    expect(route).to.be.ok;
+  });
+});

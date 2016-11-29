@@ -27,11 +27,10 @@ export default Route.extend(AuthenticatedRouteMixin, {
   },
 
   actions: {
-    save(record) {
-      return record.save()
-        .then(() => {
-          this.transitionTo('day', record.get('date'))
-        })
+    async save(record) {
+      await record.save()
+
+      this.transitionTo('day', record.get('date'))
     }
   }
 })

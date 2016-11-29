@@ -2,10 +2,10 @@ import { expect } from 'chai';
 import { it, describe } from 'mocha';
 import { setupModelTest } from 'ember-mocha';
 
-describe('Unit | Model | contribution', function() {
-  setupModelTest('contribution', {
+describe('Unit | Model | challenge', function() {
+  setupModelTest('challenge', {
     // Specify the other units that are required for this test.
-      needs: ['model:user']
+      needs: ['model:contribution']
   });
 
   // Replace this with your real tests.
