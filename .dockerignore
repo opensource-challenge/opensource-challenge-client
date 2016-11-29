@@ -1,0 +1,6 @@
+.git
+dist
+coverage
+Dockerfile
+node_modules
+bower_components
