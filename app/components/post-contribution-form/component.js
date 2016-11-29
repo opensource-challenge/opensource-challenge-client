@@ -12,13 +12,12 @@ export default Component.extend({
   validations: [],
 
   actions: {
-    save(changeset) {
-      return changeset.validate()
-        .then(() => {
-          if (changeset.get('isValid')) {
-            return this.sendAction('onsave', changeset)
-          }
-        })
+    async save(changeset) {
+      await changeset.validate()
+
+      if (changeset.get('isValid')) {
+        return this.sendAction('onsave', changeset)
+      }
     }
   }
 })
