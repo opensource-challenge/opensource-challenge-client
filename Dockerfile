@@ -2,7 +2,6 @@ FROM centos/nginx-18-centos7
 
 USER root
 
-
 # This image will be initialized with "npm run $NPM_RUN"
 # See https://docs.npmjs.com/misc/scripts, and your repo's package.json
 # file for possible values of NPM_RUN
@@ -44,17 +43,18 @@ RUN set -ex && \
   rm -rf ~/node-v${NODE_VERSION}-linux-x64.tar.gz ~/SHASUMS256.txt.asc /tmp/node-v${NODE_VERSION} ~/.npm ~/.node-gyp ~/.gnupg \
     /usr/share/man /tmp/* /usr/local/lib/node_modules/npm/man /usr/local/lib/node_modules/npm/doc /usr/local/lib/node_modules/npm/html
 
+RUN npm install -g bower ember-cli yarn
+COPY package.json bower.json yarn.lock /tmp/builddir/
+RUN cd /tmp/builddir && \
+    NODE_ENV=development yarn install && \
+    bower install --allow-root
 
-COPY . /tmp
+COPY . /tmp/builddir
 
-RUN cd /tmp && npm install -g bower ember-cli && npm install && bower install  --allow-root
-RUN ls -la /tmp/node_modules/
-RUN cd /tmp && ember build --prod 
+RUN cd /tmp/builddir && ember build --prod && \
+    mv /tmp/builddir/dist /opt/app-root/src && \
+    rm -rf /tmp/builddir
 
-RUN mv /tmp/dist /opt/app-root/src
-
-#RUN cd /tmp && npm install -g bower ember-cli && npm install && bower install  --allow-root && ember build --prod && mv /tmp/dist /opt/app-root/src
-
-USER 
+USER 1001
 
 CMD $STI_SCRIPTS_PATH/run
