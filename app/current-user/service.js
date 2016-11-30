@@ -1,8 +1,6 @@
 import Ember from 'ember'
-import RSVP from 'rsvp'
 
 const { Service, inject } = Ember
-const { Promise } = RSVP
 
 export default Service.extend({
   session: inject.service(),
