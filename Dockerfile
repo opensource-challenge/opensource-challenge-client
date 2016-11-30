@@ -43,7 +43,7 @@ RUN set -ex && \
   rm -rf ~/node-v${NODE_VERSION}-linux-x64.tar.gz ~/SHASUMS256.txt.asc /tmp/node-v${NODE_VERSION} ~/.npm ~/.node-gyp ~/.gnupg \
     /usr/share/man /tmp/* /usr/local/lib/node_modules/npm/man /usr/local/lib/node_modules/npm/doc /usr/local/lib/node_modules/npm/html
 
-COPY nginx/nginx.conf /opt/app-root/etc/nginx.d
+COPY nginx/opensourcechallenge.conf /opt/app-root/etc/nginx.d
 
 RUN npm install -g bower ember-cli yarn
 COPY package.json bower.json yarn.lock /tmp/builddir/
