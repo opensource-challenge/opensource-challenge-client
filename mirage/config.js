@@ -25,6 +25,7 @@ export default function() {
   this.get('/challenges/current', ({ challenges }) => {
     return challenges.find('1')
   })
+  this.get('/challenges/:id')
 
   this.get('/contributions', ({ contributions }, request) => {
     if (request.queryParams && request.queryParams['filter[date]']) {
