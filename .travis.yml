@@ -28,9 +28,9 @@ install:
 script:
   - npm test
 
-after_success:
-  - npm install -g codeclimate-test-reporter
-  - codeclimate-test-reporter < coverage/lcov.info
-
-env:
-  - COVERAGE=true CODECLIMATE_REPO_TOKEN=2018541b189c3edb927aac5eb867ba14606840df1c10234894af8b535f4cd519
+#after_success:
+#  - npm install -g codeclimate-test-reporter
+#  - codeclimate-test-reporter < coverage/lcov.info
+#
+#env:
+#  - COVERAGE=true CODECLIMATE_REPO_TOKEN=2018541b189c3edb927aac5eb867ba14606840df1c10234894af8b535f4cd519
