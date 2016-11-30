@@ -11,7 +11,7 @@ export default Component.extend({
 
   contributorIds: computed('items.[]', function() {
     return this.get('items')
-      .map(i => i.belongsTo('user').id())
+      .map(i => i.belongsTo('user').link())
       .uniq()
   }),
 
