@@ -9,14 +9,12 @@ export default Service.extend({
   store: inject.service(),
   ajax: inject.service(),
 
-  load() {
+  async load() {
     if (this.get('session.isAuthenticated')) {
-      return this.get('ajax')
-        .request('/users/current')
-        .then(res => this.get('store').push(res))
-        .then(user => this.set('user', user))
-    }
+      let res = await this.get('ajax').request('/users/current')
 
-    return Promise.resolve()
+      this.get('store').pushPayload(res)
+      this.set('user', this.get('store').peekRecord('user', res.data.id))
+    }
   }
 })
