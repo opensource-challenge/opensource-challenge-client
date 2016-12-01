@@ -11,6 +11,9 @@
     <a class="contribution-link" href={{link}}>{{link}}</a>
   {{/with}}
   <section class="justify-mobile">
+    {{#with item.title as |title|}}
+      <h2>{{title}}</h2>
+    {{/with}}
     {{~markdown-to-html item.description
       headerLevelStart = 2
       simplifiedAutoLink = true
