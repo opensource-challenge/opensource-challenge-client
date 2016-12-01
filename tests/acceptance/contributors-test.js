@@ -35,4 +35,18 @@ describe('Acceptance | contributors', function() {
 
     expect($('.contributor').length).to.equal(10)
   })
+
+  it ('has correct urls', async function() {
+    server.createList('user', 10, {
+      website: 'www.puzzle.ch'
+    })
+
+    await visit('/contributors')
+
+    expect($('.contributor__link').length).to.equal(10)
+
+    $('.contributor__link').each(function(index, val) {
+      expect($(val).prop('href').indexOf('http')).to.not.equal(-1)
+    })
+  })
 })
