@@ -145,5 +145,12 @@ export default [
     website: 'https://github.com/plow',
     picture: 'https://www.puzzle.ch/wp-content/uploads/2015/07/Fankhauser-Simon-400x300.jpg',
     company: 'Puzzle ITC GmbH'
+  },
+  {
+    id: '22',
+    name: 'Stefan Heinemann',
+    website: 'senseless.codedump.ch',
+    picture: 'https://avatars3.githubusercontent.com/u/430100?v=3&s=460',
+    company: 'Adfinis SyGroup AG'
   }
 ]
