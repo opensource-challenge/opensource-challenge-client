@@ -1,20 +1,29 @@
-<header class="intro-header text-center">
-  <h1>{{model.name}}</h1>
-  <p>
-    Wer schafft es im Advent jeden Tag einen Beitrag zu einem Open Source
-    Projekt zu leisten?
-  </p>
+<section class="latest-contribution">
+  {{#each (take 1 (sort-by 'insertedAt:desc' model.contributions))
+    as |latestContribution|}}
+    Neuester Beitrag von {{latestContribution.user.name}}:
+    <strong>{{latestContribution.title}}</strong>
+  {{/each}}
+</section>
+<div class={{if media.isDesktop "layout-row" "layout-column"}}>
+  <header class="intro-header text-center">
+    <h1>{{model.name}}</h1>
+    <p>
+      Wer schafft es im Advent jeden Tag einen Beitrag zu einem Open Source
+      Projekt zu leisten?
+    </p>
 
-  {{#link-to
-    'post-contribution'
-    (query-params date=(moment-format now 'YYYY-MM-DD'))
-    class="btn-primary"
-    }}
-    <i class="fa fa-plus"></i>
-    Jetzt einen neuen
-    {{#if media.isMobile}}<br>{{/if}}
-    Beitrag erfassen
-  {{/link-to}}
-</header>
+    {{#link-to
+      'post-contribution'
+      (query-params date=(moment-format now 'YYYY-MM-DD'))
+      class="btn-primary"
+      }}
+      <i class="fa fa-plus"></i>
+      Jetzt einen neuen
+      {{#if media.isMobile}}<br>{{/if}}
+      Beitrag erfassen
+    {{/link-to}}
+  </header>
 
-{{contribution-calendar items=model.contributions}}
+  {{contribution-calendar challenge=model}}
+</div>

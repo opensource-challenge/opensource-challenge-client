@@ -5,6 +5,6 @@
   Contributors: <strong>{{contributorCount}}</strong>
 </p>
 
-{{#each-in (group-by 'date' (sort-by 'date' items)) as |date items|}}
+{{#each-in calendarDays as |date items|}}
   {{~calendar-day date=date items=items~}}
 {{/each-in}}
