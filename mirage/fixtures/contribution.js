@@ -62,6 +62,13 @@ export default [
     link: 'https://github.com/nojhan/liquidprompt/pull/409',
     description: 'Ich habe gestern meinen pull request zu liquidprompt erweitert'
   },
+  {
+    userId: "22",
+    challengeId: "1",
+    date: "2015-12-01",
+    link: null,
+    description: "Anpassen der Links im OO-Challenge client"
+  },
 
   {
     userId: '2',

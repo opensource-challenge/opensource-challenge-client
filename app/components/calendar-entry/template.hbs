@@ -1,6 +1,6 @@
 {{#with item.user as |user|}}
   <header>
-    <a href={{user.website}} class="avatar-wrapper">
+    <a href={{prefixHttp user.website}} class="avatar-wrapper">
       <img class="avatar" src={{picture}}>
       <div class="username">{{user.name}}</div>
     </a>

@@ -43,10 +43,6 @@ describe('Acceptance | contributors', function() {
 
     await visit('/contributors')
 
-    expect($('.contributor__link').length).to.equal(10)
-
-    $('.contributor__link').each(function(index, val) {
-      expect($(val).prop('href').indexOf('http')).to.not.equal(-1)
-    })
+    expect($('.contributor__link[href^=http]').length).to.equal(10)
   })
 })
