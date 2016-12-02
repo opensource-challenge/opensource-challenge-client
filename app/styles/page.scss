@@ -23,6 +23,11 @@
 
 .page-content {
   overflow: hidden;
+  background-color: $c-puzzle-7;
+  color: white;
+  & .about-page {
+    //background-color: $c-puzzle-7;
+  }
 }
 
 .page-content__outlet {

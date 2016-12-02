@@ -33,7 +33,7 @@ export default function() {
 
   this.get('/challenges')
   this.get('/challenges/current', ({ challenges }) => {
-    return challenges.find('1')
+    return challenges.find('2')
   })
   this.get('/challenges/:id')
 

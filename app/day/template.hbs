@@ -1,11 +1,15 @@
-<h1 class="calendar-day-heading">
-  {{~calendar-day date=model.query.filter.date~}}
-  {{moment-format model.query.filter.date 'DD.MM.YYYY'}}
-  {{#link-to 'post-contribution' (query-params date=model.query.filter.date)}}
-    <i class="fa fa-plus"></i>
-  {{/link-to}}
-</h1>
+<div class="m-b-1 p-b-1">
+  <h1 class="calendar-day-heading">
+    {{~calendar-day date=model.query.filter.date~}}
+    {{moment-format model.query.filter.date 'DD.MM.YYYY'}}
+    {{#link-to 'post-contribution' (query-params date=model.query.filter.date)}}
+    <div class="add-contribution">
+      <i class="fa fa-plus hover-darken"></i>
+    </div>
+    {{/link-to}}
+  </h1>
+</div>
 
 {{#each model as |item|}}
-  {{calendar-entry item=item}}
+  {{calendar-entry item=item class="calendar-entry-item"}}
 {{/each}}

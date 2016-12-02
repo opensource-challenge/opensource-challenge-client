@@ -16,8 +16,8 @@ button {
 
 .btn-primary, button[type="submit"] {
   display: inline-flex;
-  border: 1px solid var(--primary);
-  background-color: var(--secondary);
+  //border: 1px solid var(--primary);
+  background-color: darken($c-puzzle-5, 10%);
   color: $white;
   padding: 0.4rem 0.75rem;
 
@@ -30,7 +30,7 @@ button {
 
   &:hover, &.pending {
     color: $white;
-    background-color: var(--primary);
+    background-color: darken($c-puzzle-5, 15%);
     text-decoration: none;
   }
 
@@ -38,6 +38,15 @@ button {
     border-color: black;
     background-color: gray;
     cursor: not-allowed;
+  }
+  .intro & {
+    border: darken($c-puzzle-7, 10%);
+    background-color: darken($c-puzzle-7, 10%);
+
+    &:hover {
+      border: darken($c-puzzle-7, 13%);
+      background-color: darken($c-puzzle-7, 13%);
+    }
   }
 }
 

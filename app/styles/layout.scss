@@ -1,6 +1,8 @@
 .layout-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
 }
 
 .layout-column {
@@ -11,7 +13,31 @@
 .flex {
   flex: 1;
 }
-
+.flex-100 {
+  flex: 1 100%;
+}
+.col-half {
+  padding: 2rem 2rem;
+}
+.col-third {
+  padding: 2rem 2rem;
+}
+.bubbles {
+  background-color: darken($c-puzzle-7, 10%);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  justify-content: center;
+  @extend .flex;
+  @extend .layout-column;
+  font-size: 2.5rem;
+}
+.space-around {
+  justify-content: space-around;
+}
+.flex-center {
+  justify-content: center;
+}
 .layout-row-flex {
   @extend .layout-row;
   @extend .flex;
@@ -30,9 +56,40 @@
   max-width: 960px;
   margin: 0 auto;
 }
+.m-t-1 {
+  margin-top: 1rem;
+}
+.m-t-2 {
+  margin-top: 2rem;
+}
+.m-t-3 {
+  margin-top: 3rem;
+}
+.m-b-1 {
+  margin-bottom: 1rem;
+}
+.m-b-2 {
+  margin-bottom: 2rem;
+}
+.m-b-3 {
+  margin-bottom: 3rem;
+}
+.m-y-1 {
+  margin: 1rem 0;
+}
+.m-y-2 {
+  margin: 2rem 0;
+}
+.m-y-3 {
+  margin: 3rem 0;
+}
+//@media (min-width: 768px) {
+//  .content-padding {
+//    padding: 0 2rem;
+//  }
+//}
 
-@media (min-width: 768px) {
-  .content-padding {
-    padding: 0 2rem;
-  }
+//About Page
+.about-page {
+  color: white;
 }

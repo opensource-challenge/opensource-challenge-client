@@ -33,17 +33,28 @@ body > .ember-view {
   }
 }
 
-.intro-header {
-  max-width: 760px;
-  margin: 0 auto 3rem;
+.intro {
+  //max-width: 760px;
+  //margin: 0 auto 3rem;
+  background-color: var(--c-puzzle-7);
+  color: white;
 }
-.intro-header > h1 {
-  text-transform: uppercase;
+.intro > h1 {
+  //text-transform: uppercase;
+  color:white;
 }
-.intro-header > p {
-  font-size: 1.25em;
+.intro > p {
+  font-size: 1.2em;
+  padding: 0 3rem;
 }
-
+.advent-wrapper {
+  background-color: var(--c-puzzle-5);
+  color: white;
+}
+small {
+  font-size: 1rem;
+  margin-top:1rem;
+}
 .calendar-day-heading {
   display: flex;
   align-items: center;
@@ -53,6 +64,8 @@ body > .ember-view {
   margin: 0 auto;
   text-align: left;
   flex-shrink: 0;
+  border-bottom: 5px solid rgba(0,0,0,.3);
+
 }
 .calendar-day-heading > div {
   margin-left: 0;
@@ -65,12 +78,25 @@ body > .ember-view {
   height: 3.5rem;
   font-size: 3rem;
 }
+.hover-box {
+  background-color: darken($c-puzzle-5, 5%);
+  & > .context-green {
+    background-color: darken($c-puzzle-7, 10%);
+  }
+  & .disabled {
+    cursor: not-allowed;
+    opacity: .3;
+    &:hover {
+      background-color: darken($c-puzzle-5, 5%);
+    }
+  }
+}
 .calendar-day-heading .hover-box__link .fa-calendar-o {
   font-size: 2rem;
 }
 .calendar-day-heading .hover-box__link:hover .hover-box__content,
 .calendar-day-heading .hover-box__link.active .hover-box__content {
-  transform: scale(0.3) translateY(1.3rem);
+  //transform: scale(0.3) translateY(.2rem);
 }
 
 .text-center { text-align: center }
@@ -122,4 +148,29 @@ body > .ember-view {
   .dummy-contributor > .fa {
     font-size: 12rem;
   }
+}
+.latest-contribution {
+  text-align: center;
+  background-color: var(--secondary);
+  color: white;
+  font-weight: 100;
+  padding-bottom: 1rem;
+}
+.is-white {
+  color: white;
+}
+.advent-calendar {
+  //border: 10px solid $c-puzzle-6;
+}
+.context-green {
+  color: white;
+  background-color: darken($c-puzzle-7, 10%);
+  &:hover {
+    background-color: darken($c-puzzle-7, 15%);
+  }
+}
+.calendar-entry-item {
+  border-bottom: 5px solid rgba(0,0,0,.05);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }

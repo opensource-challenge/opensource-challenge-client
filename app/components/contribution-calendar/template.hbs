@@ -1,10 +1,22 @@
-<h1>Adventskalender</h1>
-
-<p>
+<h1>Der Adventskalender</h1>
+<p class="layout-row content flex-center m-y-1">
+  {{#link-to
+    'post-contribution'
+    (query-params date=(moment-format now 'YYYY-MM-DD'))
+    class="btn-primary"
+    }}
+    <i class="fa fa-plus"></i>
+    Jetzt einen neuen
+    {{#if media.isMobile}}<br>{{/if}}
+    Beitrag erfassen
+  {{/link-to}}
+</p>
+{{!-- <p>
   Contributions: <strong>{{items.length}}</strong><br>
   Contributors: <strong>{{contributorCount}}</strong>
-</p>
-
-{{#each-in calendarDays as |date items|}}
+</p> --}}
+<div class="advent-calendar">
+  {{#each-in calendarDays as |date items|}}
   {{~calendar-day date=date items=items~}}
-{{/each-in}}
+  {{/each-in}}
+</div>

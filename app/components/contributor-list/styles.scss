@@ -6,6 +6,7 @@
 
 .contributor {
   margin: 1rem;
+  min-height: 150px;
 }
 
 .fa-angle-double-up {
@@ -19,7 +20,7 @@
 }
 
 .contributor__image {
-  max-width: 200px;
+  max-width: 100px;
 }
 
 @media (max-width: 506px) {
@@ -30,10 +31,10 @@
 
 @media (min-width: 716px) {
   .contributor__image {
-    max-width: 300px;
+    max-width: 150px;
   }
 }
 
 .contributor__caption__content > p {
-  margin: 0 0 2rem;
+  margin: 0;
 }

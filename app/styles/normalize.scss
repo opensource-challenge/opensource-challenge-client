@@ -24,11 +24,14 @@ a {
 }
 
 :--any-link {
-  color: var(--primary);
+  color: var(--c-puzzle-9);
+  & .hover-darken:hover {
+    color: darken($c-puzzle-9, 5%);
+  }
 }
 
 :--any-link:hover {
-  color: var(--secondary);
+  color: var(--c-puzzle-9);
   text-decoration: underline;
 }
 
@@ -51,7 +54,7 @@ input, button, textarea {
 }
 
 :--heading {
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-sans);
   margin-top: 0.666rem;
   margin-bottom: 0.666rem;
 }
