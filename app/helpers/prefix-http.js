@@ -1,7 +1,7 @@
 import Ember from 'ember'
 
 export function prefixHttp([ url ]) {
-  if (url === undefined) {
+  if (url == null) {
     return ''
   }
   return url.indexOf('http') === 0 ? url : `http://${url}`
