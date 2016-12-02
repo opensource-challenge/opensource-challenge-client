@@ -23,7 +23,7 @@
 
 .page-content {
   overflow: hidden;
-  background-color: $c-puzzle-7;
+  //background-color: $c-puzzle-7;
   color: white;
   & .about-page {
     //background-color: $c-puzzle-7;
@@ -59,4 +59,13 @@
   color: var(--font-color-dark-mute);
   font-size: 0.7rem;
   line-height: 1.34;
+}
+.page-contributors {
+  background-color: $c-puzzle-5;
+}
+.page-about {
+  background-color: $c-puzzle-7;
+}
+.page-login {
+  background-color: $c-puzzle-7;
 }
