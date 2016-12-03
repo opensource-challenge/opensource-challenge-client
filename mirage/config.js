@@ -9,8 +9,17 @@ export default function() {
 
   this.get('/users')
   this.get('/users/current', ({ users }, request) => {
-    if (!request.requestHeaders.Authorization) {
+    let token = request.requestHeaders.Authorization
+
+    if (!token) {
       return new Response(401)
+    }
+
+    // Should use JWT instead of this custom thing
+    let match = /Bearer userid:(\d+)/.exec(token)
+
+    if (match) {
+      return users.find(match[1])
     }
 
     return users.find('1')
