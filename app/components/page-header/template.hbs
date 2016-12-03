@@ -23,7 +23,6 @@
 
   {{yield to='inverse'}}
 
-  {{page-footer}}
 {{else}}
   {{#burger-menu class="flex" itemAnimation="push" as |b|}}
     {{#b.menu itemTagName="li" as |menu|}}
@@ -46,8 +45,6 @@
           {{/if}}
         {{/menu.item}}
       </ul>
-
-      {{page-footer}}
     {{/b.menu}}
 
     {{#b.outlet}}

@@ -1,27 +1,36 @@
 .hover-box {
   position: relative;
   overflow: hidden;
+
+  &:hover {
+    background-color: darken($c-puzzle-5, 10%);
+  }
 }
 
 .hover-box__link, .hover-box__link:hover {
-  color: var(--font-color-light);
+  //color: var(--font-color-light);
+  //color: white;
+  //background-color: darken($c-puzzle-5, 40%);
   text-decoration: none;
+
 }
 
 .hover-box__link:hover .hover-box__caption,
 .hover-box__link.active .hover-box__caption {
   opacity: 1;
+  //background-color: darken($c-puzzle-5, 40%);
+  color: white;
 }
 
 .hover-box__link:hover .hover-box__content,
 .hover-box__link.active .hover-box__content {
-  transform: scale(1);
+  //transform: scale(1);
 }
 
 .hover-box__content {
   display: block;
-  transition: transform 300ms;
-  transform: scale(1.06);
+  //transition: transform 300ms;
+  //transform: scale(1.06);
   color: var(--font-color-dark);
 }
 

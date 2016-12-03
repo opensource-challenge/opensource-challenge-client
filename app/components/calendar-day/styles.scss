@@ -8,7 +8,7 @@
 }
 
 .calendar-day__number {
-  font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, Roboto, sans-serif;
+  //font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, Roboto, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   display: flex;
@@ -17,29 +17,35 @@
   width: 150px;
   height: 100px;
   font-size: 5rem;
-  transition: transform 300ms, color 300ms;
+  transition: transform 200ms, color 400ms, background 200ms;
   z-index: 2;
+  color: darken($c-puzzle-5, 20%);
+
+  &:hover {
+    color: white;
+  }
 }
 
 .hover-box__link:hover > .calendar-day__number,
 .hover-box__link.active > .calendar-day__number {
   color: var(--font-color-light);
+  //color: white;
 }
 
 .hover-box__link:hover .hover-box__content,
 .hover-box__link.active .hover-box__content {
-  transform: scale(0.3) translateY(1.25rem);
+  //transform: scale(0.3) translateY(1.25rem);
 }
 
 .hover-box__link .fa-calendar-o {
-  transform: scale(2);
+  //transform: scale(2);
   opacity: 0;
   font-size: 3rem;
   transition: transform 300ms, opacity 300ms;
 }
 .hover-box__link:hover .fa-calendar-o,
 .hover-box__link.active .fa-calendar-o {
-  transform: translateY(0) scale(1);
+  //transform: translateY(0) scale(1);
   opacity: 1;
 }
 
@@ -53,17 +59,17 @@
 
 @media (min-width: 716px) {
   .calendar-day__number {
-    width: 300px;
-    height: 200px;
-    font-size: 8rem;
+    width: 150px;
+    height: 80px;
+    font-size: 3rem;
   }
 
   .hover-box__link .fa-calendar-o {
-    font-size: 7rem;
+    //font-size: 7rem;
   }
 
   .hover-box__link:hover .hover-box__content,
   .hover-box__link.active .hover-box__content {
-    transform: scale(0.3) translateY(3rem);
+    //transform: scale(0.3) translateY(3rem);
   }
 }

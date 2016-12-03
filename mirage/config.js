@@ -24,6 +24,7 @@ export default function() {
 
     return users.find('1')
   })
+  this.get('/users/:id')
   this.post('/users')
 
   this.post('/tokens', ({ tokens }) => {
