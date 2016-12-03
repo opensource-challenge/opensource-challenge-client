@@ -30,6 +30,10 @@
 .hover-box__link.active > .calendar-day__number {
   color: var(--font-color-light);
   //color: white;
+  .page-day & {
+    font-size: 3rem;
+    color: $c-puzzle-9;
+  }
 }
 
 .hover-box__link:hover .hover-box__content,
