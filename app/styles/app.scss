@@ -92,10 +92,6 @@ small {
 .calendar-day-heading .hover-box__link .fa-calendar-o {
   font-size: 2rem;
 }
-.calendar-day-heading .hover-box__link:hover .hover-box__content,
-.calendar-day-heading .hover-box__link.active .hover-box__content {
-  //transform: scale(0.3) translateY(.2rem);
-}
 
 .text-center { text-align: center }
 .text-start { text-align: left }
@@ -166,9 +162,6 @@ small {
 }
 .is-white {
   color: white;
-}
-.advent-calendar {
-  //border: 10px solid $c-puzzle-6;
 }
 .context-green {
   color: white;
