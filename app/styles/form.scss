@@ -1,9 +1,13 @@
 input:not([type="radio"], [type="checkbox"]) {
   border: none;
-  border-bottom: 1px solid currentColor;
-  padding: 0.2rem;
+  border-bottom: 1px solid $c-puzzle-6;
+  padding: 0.2rem 0.5rem;
+  background-color: darken($c-puzzle-5, 5%);
+  //color: white;
 }
-
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: $c-puzzle-5;
+}
 textarea {
   border: none;
   border-bottom: 1px solid currentColor;
@@ -35,9 +39,15 @@ button {
   }
 
   &[disabled] {
-    border-color: black;
-    background-color: gray;
+    //border-color: black;
+    //background-color: gray;
     cursor: not-allowed;
+    color: $c-puzzle-5;
+    pointer-events: none;
+    &:hover {
+      background-color: inherit;
+      color: $c-puzzle-5;
+    }
   }
   .intro & {
     border: darken($c-puzzle-7, 10%);
