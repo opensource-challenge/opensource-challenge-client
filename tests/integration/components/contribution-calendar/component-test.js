@@ -1,24 +1,23 @@
-import { expect } from 'chai';
-import { it, describe } from 'mocha';
-import { setupComponentTest } from 'ember-mocha';
-import hbs from 'htmlbars-inline-precompile';
+import Ember from 'ember'
+import { expect } from 'chai'
+import { it, describe } from 'mocha'
+import { setupComponentTest } from 'ember-mocha'
+import hbs from 'htmlbars-inline-precompile'
+
+const { Object: EmberObject } = Ember
 
 describe('Integration | Component | contribution calendar', function() {
   setupComponentTest('contribution-calendar', {
     integration: true
-  });
+  })
 
   it('renders', function() {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });
-    // Template block usage:
-    // this.render(hbs`
-    //   {{#contribution-calendar}}
-    //     template content
-    //   {{/contribution-calendar}}
-    // `);
-
-    this.render(hbs`{{contribution-calendar}}`);
-    expect(this.$()).to.have.length(1);
-  });
-});
+    this.set('challenge', EmberObject.create({
+      startsOn: '2016-12-01',
+      endsOn: '2016-12-24',
+      contributions: []
+    }))
+    this.render(hbs`{{contribution-calendar challenge=challenge}}`)
+    expect(this.$()).to.have.length(1)
+  })
+})
