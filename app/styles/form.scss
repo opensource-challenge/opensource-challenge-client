@@ -12,6 +12,8 @@ textarea {
   border: none;
   border-bottom: 1px solid currentColor;
   padding: 0.2rem;
+  background-color: darken($c-puzzle-5, 5%);
+  color: white;
 }
 
 button {
