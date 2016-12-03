@@ -1,5 +1,6 @@
 .bm-content {
   @extend .layout-column;
+  background-color: transparent !important;
 }
 
 .bm-header {
