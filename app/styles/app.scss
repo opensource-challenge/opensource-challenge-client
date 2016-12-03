@@ -101,7 +101,15 @@ small {
 .text-start { text-align: left }
 .text-end { text-align: right }
 
-.absolute { position: absolute }
+@media (min-width: 992px) {
+  .index-content {
+    // chrome needs absolute here for full height background
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+  }
+}
 
 @media (min-width: 992px) {
   .calendar-day-heading {
