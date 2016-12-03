@@ -23,11 +23,7 @@
 
 .page-content {
   overflow: hidden;
-  //background-color: $c-puzzle-7;
   color: white;
-  & .about-page {
-    //background-color: $c-puzzle-7;
-  }
 }
 
 .page-content__outlet {
@@ -36,6 +32,8 @@
 .page-content__outlet > .liquid-child {
   @extend .layout-column-flex;
   overflow-y: auto;
+  // Chrome needs relative for index page full height background
+  position: relative;
 }
 .page-content__outlet > .liquid-child > :first-child {
   padding-top: 1rem;

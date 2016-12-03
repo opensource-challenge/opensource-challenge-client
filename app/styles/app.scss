@@ -34,13 +34,10 @@ body > .ember-view {
 }
 
 .intro {
-  //max-width: 760px;
-  //margin: 0 auto 3rem;
   background-color: var(--c-puzzle-7);
   color: white;
 }
 .intro > h1 {
-  //text-transform: uppercase;
   color:white;
 }
 .intro > p {
@@ -103,6 +100,8 @@ small {
 .text-center { text-align: center }
 .text-start { text-align: left }
 .text-end { text-align: right }
+
+.absolute { position: absolute }
 
 @media (min-width: 992px) {
   .calendar-day-heading {
