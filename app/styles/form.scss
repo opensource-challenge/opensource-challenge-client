@@ -16,7 +16,7 @@ button {
 
 .btn-primary, button[type="submit"] {
   display: inline-flex;
-  //border: 1px solid var(--primary);
+  border: none;
   background-color: darken($c-puzzle-5, 10%);
   color: $white;
   padding: 0.4rem 0.75rem;
