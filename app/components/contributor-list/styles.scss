@@ -7,6 +7,8 @@
 .contributor {
   margin: 1rem;
   min-height: 150px;
+  min-width: 150px;
+  background-image: url("http://placehold.it/150x150/2c97a6/fff");
 }
 
 .fa-angle-double-up {
@@ -18,9 +20,15 @@
   transform: translateY(0);
   opacity: 1;
 }
-
+img.contributor__image {
+    width: 150px;
+    height: 150px;
+    border: 2px solid $c-puzzle-6;
+}
 .contributor__image {
-  max-width: 100px;
+  max-width: 150px;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 @media (max-width: 506px) {

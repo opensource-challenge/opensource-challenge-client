@@ -80,13 +80,18 @@ small {
   & > .context-green {
     background-color: darken($c-puzzle-7, 10%);
   }
-  & .disabled {
+  .page-day & {
+    background-color: darken($c-puzzle-7, 10%);
+  }
+  &.disabled {
     cursor: not-allowed;
     opacity: .3;
     pointer-events: none;
-    &:hover {
-      background-color: darken($c-puzzle-5, 5%);
-    }
+  }
+}
+.calendar-day__number {
+  .disabled & {
+    color: $c-puzzle-5;
   }
 }
 .calendar-day-heading .hover-box__link .fa-calendar-o {
