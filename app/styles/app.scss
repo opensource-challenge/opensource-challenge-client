@@ -109,16 +109,6 @@ small {
 .text-end { text-align: right }
 
 @media (min-width: 992px) {
-  .index-content {
-    // chrome needs absolute here for full height background
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-  }
-}
-
-@media (min-width: 992px) {
   .calendar-day-heading {
     padding-left: 0;
   }
@@ -164,12 +154,22 @@ small {
     font-size: 12rem;
   }
 }
+.index-content {
+  padding-top: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.index-content > * {
+  max-width: 100%;
+}
 .latest-contribution {
+  width: 100%;
   text-align: center;
   background-color: var(--secondary);
   color: white;
   font-weight: 100;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
 }
 .is-white {
   color: white;

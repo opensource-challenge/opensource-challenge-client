@@ -32,8 +32,6 @@
 .page-content__outlet > .liquid-child {
   @extend .layout-column-flex;
   overflow-y: auto;
-  // Chrome needs relative for index page full height background
-  position: relative;
 }
 .page-content__outlet > .liquid-child > :first-child {
   padding-top: 1rem;
