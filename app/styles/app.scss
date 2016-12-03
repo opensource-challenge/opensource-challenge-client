@@ -44,6 +44,12 @@ body > .ember-view {
   font-size: 1.2em;
   padding: 0 3rem;
 }
+@media (max-width: 506px) {
+  .intro > p {
+    font-size: 1.2em;
+    padding: 0 .5rem;
+  }
+}
 .advent-wrapper {
   background-color: var(--c-puzzle-5);
   color: white;
@@ -57,7 +63,7 @@ small {
   align-items: center;
   width: 100%;
   max-width: 960px;
-  padding-left: 1rem;
+  padding: 0 1rem;
   margin: 0 auto;
   text-align: left;
   flex-shrink: 0;

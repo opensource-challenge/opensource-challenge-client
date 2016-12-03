@@ -22,6 +22,14 @@
 .col-third {
   padding: 2rem 2rem;
 }
+@media (max-width: 506px) {
+  .col-half {
+    padding: 1rem 1rem;
+  }
+  .col-third {
+    padding: 1rem 1rem;
+  }
+}
 .bubbles {
   background-color: darken($c-puzzle-7, 10%);
   border-radius: 50%;
