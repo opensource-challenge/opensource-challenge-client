@@ -7,6 +7,10 @@
 @import 'form';
 @import 'pod-styles';
 
+body {
+  transition: background-color 300ms;
+}
+
 body > .ember-view {
   @extend .layout-column;
 
