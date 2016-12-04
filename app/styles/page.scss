@@ -2,6 +2,7 @@
   background-color: var(--primary);
   padding: 1rem;
   display: flex;
+  z-index: 11;
 }
 
 .page-header__logo > svg {
