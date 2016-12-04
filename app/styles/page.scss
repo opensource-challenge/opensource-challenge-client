@@ -33,8 +33,9 @@
   @extend .layout-column-flex;
   overflow-y: auto;
 }
-.page-content__outlet > .liquid-child > :first-child {
+.page-content__outlet:not(.page-index) > .liquid-child > :first-child {
   padding-top: 1rem;
+  padding-bottom: 1rem;
   margin-top: 0;
 }
 
