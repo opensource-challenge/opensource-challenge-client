@@ -59,8 +59,6 @@ button {
   }
 
   &[disabled] {
-    //border-color: black;
-    //background-color: gray;
     cursor: not-allowed;
     color: $c-puzzle-5;
     pointer-events: none;

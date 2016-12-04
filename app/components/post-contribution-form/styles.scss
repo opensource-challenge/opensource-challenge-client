@@ -1,6 +1,5 @@
 :--component {
   padding: 0 1rem;
-  //color: var(--font-color-dark);
 }
 
 h2 {
@@ -24,8 +23,7 @@ input {
 }
 
 textarea {
-  font-family: var(--font-family-mono);
-  min-height: 10em;
+  min-height: 5em;
   height: 100%;
 }
 
