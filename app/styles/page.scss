@@ -35,8 +35,9 @@
   // Chrome needs relative for index page full height background
   position: relative;
 }
-.page-content__outlet > .liquid-child > :first-child {
+.page-content__outlet:not(.page-index) > .liquid-child > :first-child {
   padding-top: 1rem;
+  padding-bottom: 1rem;
   margin-top: 0;
 }
 
