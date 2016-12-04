@@ -1,19 +1,37 @@
-input:not([type="radio"], [type="checkbox"]) {
-  border: none;
-  border-bottom: 1px solid $c-puzzle-6;
-  padding: 0.2rem 0.5rem;
-  background-color: darken($c-puzzle-5, 5%);
-  //color: white;
-}
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: $c-puzzle-5;
 }
-textarea {
-  border: none;
-  border-bottom: 1px solid currentColor;
-  padding: 0.2rem;
+
+input:not([type="radio"], [type="checkbox"]) {
+  border: 1px solid darken($c-puzzle-5, 5%);
+  border-bottom: 1px solid $c-puzzle-6;
+  padding: 0.5rem;
   background-color: darken($c-puzzle-5, 5%);
   color: white;
+  transition: all .3s ease;
+  &:hover {
+    border: 1px solid darken($c-puzzle-5, 8%);
+    border-bottom: 1px solid $c-puzzle-6;
+  }
+  &:focus {
+    border: 1px solid $c-puzzle-6;
+  }
+}
+
+textarea {
+  border: 1px solid darken($c-puzzle-5, 5%);
+  border-bottom: 1px solid $c-puzzle-6;
+  padding: 0.5rem;
+  background-color: darken($c-puzzle-5, 5%);
+  color: white;
+  transition: all .3s ease;
+  &:hover {
+    border: 1px solid darken($c-puzzle-5, 8%);
+    border-bottom: 1px solid $c-puzzle-6;
+  }
+  &:focus {
+    border: 1px solid $c-puzzle-6;
+  }
 }
 
 button {
@@ -64,6 +82,7 @@ button {
 
 .form-field > label {
   display: block;
+  padding: .5rem 0;
 }
 
 .form-field {
