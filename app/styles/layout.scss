@@ -16,19 +16,17 @@
 .flex-100 {
   flex: 1 100%;
 }
-.col-half {
-  padding: 2rem 2rem;
-}
+.col-half,
 .col-third {
-  padding: 2rem 2rem;
+  padding: 2rem 1.5rem;
 }
+
 @media (max-width: 506px) {
-  .col-half {
-    padding: 1rem 1rem;
-  }
+  .col-half,
   .col-third {
     padding: 1rem 1rem;
   }
+
 }
 .bubbles {
   background-color: darken($c-puzzle-7, 10%);
