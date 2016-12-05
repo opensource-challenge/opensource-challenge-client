@@ -67,15 +67,19 @@ small {
   align-items: center;
   width: 100%;
   max-width: 960px;
-  padding: 0 1rem;
+  //padding: 0 1rem;
   margin: 0 auto;
   text-align: left;
   flex-shrink: 0;
   border-bottom: 5px solid rgba(0,0,0,.3);
-
 }
 .calendar-day-heading > div {
   margin-left: 0;
+}
+@media (max-width: 716px) {
+  h1.calendar-day-heading {
+    padding: 0 1rem;
+  }
 }
 .calendar-day-heading > a {
   margin-left: auto;
@@ -198,4 +202,9 @@ small {
 .party-popper {
   width: 25px;
   height: 25px;
+}
+.form-field--errors {
+  color: var(--red);
+  font-size: small;
+  padding-top: .3rem;
 }
