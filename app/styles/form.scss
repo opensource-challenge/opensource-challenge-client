@@ -77,6 +77,13 @@ button {
     }
   }
 }
+.btn-link {
+  display: inline-flex;
+  border: none;
+  align-self: center;
+  background-color: $c-puzzle-5;
+  color: darken($c-puzzle-6, 10%);
+}
 
 .form-field > label {
   display: block;
