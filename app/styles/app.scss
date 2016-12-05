@@ -15,6 +15,7 @@ body > .ember-view {
   @extend .layout-column;
 
   height: 100vh;
+  min-width: 100vw;
   overflow: hidden;
 }
 
@@ -161,15 +162,6 @@ small {
   .dummy-contributor > .fa {
     font-size: 12rem;
   }
-}
-.index-content {
-  padding-top: 0 !important;
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-}
-.index-content > * {
-  max-width: 100%;
 }
 .latest-contribution {
   width: 100%;

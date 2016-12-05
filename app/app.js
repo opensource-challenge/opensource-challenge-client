@@ -21,17 +21,4 @@ App = Ember.Application.extend({
 
 loadInitializers(App, config.modulePrefix)
 
-Ember.Route.reopen({
-  className() {
-    return `page-${Ember.String.dasherize(this.routeName.replace(/\./g, '-'))}`
-  },
-  activate() {
-    let applicationView = document.body.querySelector('body > .ember-view')
-
-    if (applicationView) {
-      applicationView.className = `${this.className()} ember-view`
-    }
-  }
-})
-
 export default App
