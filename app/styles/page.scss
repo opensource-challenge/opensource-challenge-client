@@ -61,7 +61,7 @@
 .page-index {
   background-color: $c-puzzle-7;
 }
-.page-contributors {
+[class^="page-contributors"] {
   background-color: $c-puzzle-5;
 }
 .page-about {
