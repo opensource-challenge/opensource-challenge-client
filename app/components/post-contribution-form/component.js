@@ -18,6 +18,9 @@ export default Component.extend({
       if (changeset.get('isValid')) {
         return this.sendAction('onsave', changeset)
       }
+    },
+    cancel() {
+      return this.sendAction('oncancel')
     }
   }
 })
