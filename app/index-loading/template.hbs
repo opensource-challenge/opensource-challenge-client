@@ -1,0 +1,49 @@
+<div class="page page-index">
+  <section class="latest-contribution">&nbsp;</section>
+  <div class={{if media.isDesktop "layout-row" "layout-column"}}>
+    <div class="col-half intro flex text-center">
+      <h1>&nbsp;</h1>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <div class="layout-row flex-center">
+        <div class="col-third flex-3">
+          <div class="bubbles">
+            <i class="fa fa-code fa-4"></i>
+            <small>Code</small>
+          </div>
+        </div>
+        <div class="col-third flex-3">
+          <div class="bubbles">
+            <i class="fa fa-exclamation fa-4"></i>
+            <small>Issue</small>
+          </div>
+        </div>
+        <div class="col-third flex-3">
+          <div class="bubbles">
+            <i class="fa fa-font fa-4"></i>
+            <small>Text</small>
+          </div>
+        </div>
+      </div>
+      <div class="layout-row flex-center m-b-2">
+        <div class="col-half flex-2">
+          <div class="bubbles">
+            <i class="fa fa-pencil fa-4"></i>
+            <small>Mockups</small>
+          </div>
+        </div>
+        <div class="col-half flex-2">
+          <div class="bubbles">
+            <i class="fa fa-dollar fa-4"></i>
+            <small>Geld</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{#if media.isDesktop}}
+      <div class="col-half advent-wrapper flex text-center">
+        {{contribution-calendar}}
+      </div>
+    {{/if}}
+  </div>
+</div>
