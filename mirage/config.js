@@ -27,8 +27,8 @@ export default function() {
   this.get('/users/:id')
   this.post('/users')
 
-  this.post('/tokens', ({ tokens }) => {
-    return tokens.find('1')
+  this.post('/token', ({ tokens }) => {
+    return { access_token: tokens.first().attrs.accessToken }
   })
 
   this.get('/challenges')
