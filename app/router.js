@@ -17,7 +17,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('about')
   this.route('contributors', function() {})
-  this.route('day', { path: '/day/:date' })
+  this.route('day', { path: '/day/:date' }, function() {})
   this.route('post-contribution')
   this.route('login')
 })

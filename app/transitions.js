@@ -15,7 +15,7 @@ export default function() {
 
   this.transition(
     this.fromRoute('index'),
-    this.toRoute('day'),
+    this.toRoute([ 'day', 'day_loading' ]),
     this.use('toLeft'),
     this.reverse('toRight')
   )
@@ -24,5 +24,9 @@ export default function() {
     this.toRoute('post-contribution'),
     this.use('toLeft'),
     this.reverse('toRight')
+  )
+
+  this.transition(
+    this.use('crossFade', { duration: 200 })
   )
 }
