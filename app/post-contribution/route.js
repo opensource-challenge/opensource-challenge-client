@@ -31,6 +31,15 @@ export default Route.extend(AuthenticatedRouteMixin, {
       await record.save()
 
       this.transitionTo('day', record.get('date'))
+    },
+    cancel() {
+      if (window.history.length > 1) {
+        window.history.back()
+
+        return
+      }
+
+      this.transitionTo('index')
     }
   }
 })

@@ -2,16 +2,12 @@
   padding: 0 1rem;
 }
 
-h2 {
-  margin-top: 0;
-}
-
 input, textarea {
   width: 100%;
 }
 
 input[type="date"] {
-  width: 14ch;
+  width: auto;
 }
 
 input {

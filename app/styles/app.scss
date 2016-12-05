@@ -15,6 +15,7 @@ body > .ember-view {
   @extend .layout-column;
 
   height: 100vh;
+  min-width: 100vw;
   overflow: hidden;
 }
 
@@ -67,15 +68,19 @@ small {
   align-items: center;
   width: 100%;
   max-width: 960px;
-  padding: 0 1rem;
+  //padding: 0 1rem;
   margin: 0 auto;
   text-align: left;
   flex-shrink: 0;
   border-bottom: 5px solid rgba(0,0,0,.3);
-
 }
 .calendar-day-heading > div {
   margin-left: 0;
+}
+@media (max-width: 716px) {
+  h1.calendar-day-heading {
+    padding: 0 1rem;
+  }
 }
 .calendar-day-heading > a {
   margin-left: auto;
@@ -158,24 +163,18 @@ small {
     font-size: 12rem;
   }
 }
-.index-content {
-  padding-top: 0 !important;
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-}
-.index-content > * {
-  max-width: 100%;
-}
 .latest-contribution {
   width: 100%;
   text-align: center;
   background-color: var(--secondary);
   font-weight: 100;
-  padding: 1rem 0;
+  padding: .6rem 0;
+  display: flex;
+  justify-content: center;
 }
 .latest-contribution a, .latest-contribution a:hover {
   color: white;
+  line-height: 30px;
 }
 .is-white {
   color: white;
@@ -191,4 +190,13 @@ small {
   border-bottom: 5px solid rgba(0,0,0,.05);
   margin-bottom: 1rem;
   padding-bottom: 1rem;
+}
+.party-popper {
+  width: 25px;
+  height: 25px;
+}
+.form-field--errors {
+  color: var(--red);
+  font-size: small;
+  padding-top: .3rem;
 }

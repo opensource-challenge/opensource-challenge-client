@@ -1,9 +1,13 @@
-<div class="index-content">
+<div class="page page-index">
   <section class="latest-contribution">
     {{#each (take 1 (sort-by 'insertedAt:desc' model.contributions))
-      as |latestContribution|}}{{#link-to 'day' latestContribution.date}}
-      🎉&nbsp;Neuester Beitrag von {{latestContribution.user.name}}:
-      {{latestContribution.title}}&nbsp;🎉{{/link-to}}
+      as |latestContribution|}}
+      {{party-popper class="m-x-1"}}
+      {{#link-to 'day' latestContribution.date}}
+        Neuester Beitrag von {{latestContribution.user.name}}:
+      {{latestContribution.title}}
+      {{/link-to}}
+      {{party-popper class="m-x-1"}}
     {{/each}}
   </section>
   <div class={{if media.isDesktop "layout-row" "layout-column"}}>

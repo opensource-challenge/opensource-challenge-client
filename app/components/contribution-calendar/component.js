@@ -8,10 +8,6 @@ const {
 } = Ember
 
 export default Component.extend({
-  items: computed('challenge.contributions.[]', function() {
-    return this.get('challenge.contributions')
-  }),
-
   sortedItems: computed.sort('items.[]', (a, b) =>
     Date.parse(a.get('date')) - Date.parse(b.get('date'))
   ),
@@ -33,15 +29,5 @@ export default Component.extend({
     }
 
     return days
-  }),
-
-  contributorIds: computed('items.[]', function() {
-    return this.get('items')
-      .map(i => i.belongsTo('user').link())
-      .uniq()
-  }),
-
-  contributorCount: computed('contributorIds.[]', function() {
-    return this.get('contributorIds').length
   })
 })
