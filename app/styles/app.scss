@@ -172,10 +172,13 @@ small {
   text-align: center;
   background-color: var(--secondary);
   font-weight: 100;
-  padding: 1rem 0;
+  padding: .6rem 0;
+  display: flex;
+  justify-content: center;
 }
 .latest-contribution a, .latest-contribution a:hover {
   color: white;
+  line-height: 30px;
 }
 .is-white {
   color: white;
@@ -191,4 +194,8 @@ small {
   border-bottom: 5px solid rgba(0,0,0,.05);
   margin-bottom: 1rem;
   padding-bottom: 1rem;
+}
+.party-popper {
+  width: 25px;
+  height: 25px;
 }
