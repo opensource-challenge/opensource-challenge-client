@@ -15,6 +15,12 @@ body > .ember-view {
   overflow: hidden;
 }
 
+:--any-link:hover {
+  & .hover-darken:hover {
+    color: darken($c-puzzle-9, 5%);
+  }
+}
+
 .justify-mobile {
   p {
     hyphens: auto;
