@@ -8,7 +8,6 @@
 }
 
 .calendar-day__number {
-  //font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, Roboto, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   display: flex;
@@ -29,27 +28,19 @@
 .hover-box__link:hover > .calendar-day__number,
 .hover-box__link.active > .calendar-day__number {
   color: var(--font-color-light);
-  //color: white;
   .page-day & {
     font-size: 3rem;
     color: $c-puzzle-9;
   }
 }
 
-.hover-box__link:hover .hover-box__content,
-.hover-box__link.active .hover-box__content {
-  //transform: scale(0.3) translateY(1.25rem);
-}
-
 .hover-box__link .fa-calendar-o {
-  //transform: scale(2);
   opacity: 0;
   font-size: 3rem;
   transition: transform 300ms, opacity 300ms;
 }
 .hover-box__link:hover .fa-calendar-o,
 .hover-box__link.active .fa-calendar-o {
-  //transform: translateY(0) scale(1);
   opacity: 1;
 }
 
@@ -66,14 +57,5 @@
     width: 150px;
     height: 80px;
     font-size: 3rem;
-  }
-
-  .hover-box__link .fa-calendar-o {
-    //font-size: 7rem;
-  }
-
-  .hover-box__link:hover .hover-box__content,
-  .hover-box__link.active .hover-box__content {
-    //transform: scale(0.3) translateY(3rem);
   }
 }
