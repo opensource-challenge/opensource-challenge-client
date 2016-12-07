@@ -15,7 +15,8 @@
     {{f.text-field "date" label="Datum" placeholder="2016-12-31" required=true}}
     <div class="text-center">
       {{f.button "Cancel" class="btn-link m-r-1" click=(action 'cancel')}}
-      {{f.submit disabled=(or changeset.isInvalid changeset.isPristine)}}
+      {{f.submit
+        disabled=(or changeset.isInvalid changeset.isPristine contribution.isSaving)}}
     </div>
   {{/form-for}}
 {{/with}}
