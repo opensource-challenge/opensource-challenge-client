@@ -3,6 +3,7 @@
 @import 'layout';
 @import 'page';
 @import 'burger-menu';
+@import 'hold-button';
 @import 'hover-box';
 @import 'form';
 @import 'pod-styles';
@@ -197,7 +198,7 @@ small {
   height: 25px;
 }
 .form-field--errors {
-  color: var(--c-danger);
+  color: var(--danger);
   font-size: small;
   padding-top: .3rem;
 }

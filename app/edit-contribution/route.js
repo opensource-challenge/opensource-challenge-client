@@ -17,6 +17,11 @@ export default Route.extend(AuthenticatedRouteMixin, {
 
       this.transitionTo('day', record.get('date'))
     },
+    async delete(record) {
+      await record.destroyRecord()
+
+      this.transitionTo('day', record.get('date'))
+    },
     cancel() {
       if (window.history.length > 1) {
         window.history.back()

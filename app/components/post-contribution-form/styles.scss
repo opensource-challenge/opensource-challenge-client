@@ -27,6 +27,16 @@ textarea {
   align-self: center;
 }
 
+.button-row {
+  display: flex;
+  align-items: baseline;
+  margin: 1rem 0;
+}
+
+.ember-hold-button {
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 320px) {
   h2 {
     font-size: 1.4rem;

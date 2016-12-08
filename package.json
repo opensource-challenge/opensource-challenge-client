@@ -49,6 +49,7 @@
     "ember-export-application-global": "^1.0.5",
     "ember-font-awesome": "^2.2.0",
     "ember-form-for": "2.0.0-alpha.13",
+    "ember-hold-button": "0.3.4",
     "ember-load-initializers": "^0.6.0",
     "ember-maybe-import-regenerator": "0.1.4",
     "ember-moment": "^6.1.0",

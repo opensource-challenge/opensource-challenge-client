@@ -1,7 +1,7 @@
 import Ember from 'ember'
 import ContributionValidations from '../../validations/contribution'
 
-const { Component } = Ember
+const { Component, run } = Ember
 
 export default Component.extend({
   ContributionValidations,
@@ -18,6 +18,11 @@ export default Component.extend({
       if (changeset.get('isValid')) {
         return this.sendAction('onsave', changeset)
       }
+    },
+    delete() {
+      run.later(() => {
+        this.sendAction('ondelete', this.get('contribution'))
+      }, 400)
     },
     cancel() {
       return this.sendAction('oncancel')
