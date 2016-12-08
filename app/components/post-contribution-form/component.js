@@ -11,6 +11,11 @@ export default Component.extend({
   contribution: null,
   validations: [],
 
+  formatDate: Ember.observer('selected', function() {
+    var selected = this.get('selected')
+    this.set('contribution.date', selected.format('YYYY-MM-DD'))
+  }),
+
   actions: {
     async save(changeset) {
       await changeset.validate()
