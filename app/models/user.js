@@ -1,9 +1,16 @@
-import DS from 'ember-data';
+import DS from 'ember-data'
 
-export default DS.Model.extend({
-  contributions: DS.hasMany('contribution'),
-  website: DS.attr('string'),
-  picture: DS.attr('string'),
-  name: DS.attr('string'),
-  company: DS.attr('string')
-});
+const {
+  Model,
+  attr,
+  hasMany
+} = DS
+
+export default Model.extend({
+  contributions: hasMany('contribution'),
+  website: attr('string'),
+  picture: attr('string'),
+  name: attr('string'),
+  company: attr('string'),
+  admin: attr('boolean', { defaultValue: false })
+})

@@ -11,9 +11,17 @@
     <a class="contribution-link" href={{link}}>{{link}}</a>
   {{/with}}
   <section class="justify-mobile">
-    {{#with item.title as |title|}}
-      <h2>{{title}}</h2>
-    {{/with}}
+    <div class="title">
+      {{#with item.title as |title|}}
+        <h2>{{title}}</h2>
+      {{/with}}
+      {{#if (can "edit contribution" item)}}
+        {{#link-to "edit-contribution" item}}
+          {{fa-icon "pencil"}}
+        {{/link-to}}
+      {{/if}}
+    </div>
+
     {{~markdown-to-html item.description
       headerLevelStart = 2
       simplifiedAutoLink = true

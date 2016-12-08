@@ -19,6 +19,7 @@ Router.map(function() {
   this.route('contributors', function() {})
   this.route('day', { path: '/day/:date' }, function() {})
   this.route('post-contribution')
+  this.route('edit-contribution', { path: '/contribution/:id' })
   this.route('login')
 })
 

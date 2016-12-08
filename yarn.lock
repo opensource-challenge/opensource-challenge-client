@@ -1608,6 +1608,12 @@ ember-burger-menu@0.2.0:
     ember-require-module "^0.1.1"
     ember-wormhole "^0.5.0"
 
+ember-can@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/ember-can/-/ember-can-0.8.1.tgz#f2000b7bdfa8b4a278b941d4e72cea06df5560ef"
+  dependencies:
+    ember-cli-babel "^5.1.5"
+
 ember-changeset-validations@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/ember-changeset-validations/-/ember-changeset-validations-1.2.4.tgz#2832f4c5daeebd139a8713ed30f8e902b360f286"

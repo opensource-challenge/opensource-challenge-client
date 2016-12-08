@@ -21,6 +21,7 @@
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^2.4.1",
     "ember-burger-menu": "0.2.0",
+    "ember-can": "0.8.1",
     "ember-changeset": "^1.2.0",
     "ember-changeset-validations": "^1.2.4",
     "ember-cli": "2.10.0",

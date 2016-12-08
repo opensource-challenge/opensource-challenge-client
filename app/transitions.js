@@ -21,7 +21,7 @@ export default function() {
   )
 
   this.transition(
-    this.toRoute('post-contribution'),
+    this.toRoute([ 'post-contribution', 'edit-contribution' ]),
     this.use('toLeft'),
     this.reverse('toRight')
   )
