@@ -28,5 +28,7 @@ module.exports = function(defaults) {
     }
   })
 
+  app.import('bower_components/xss/dist/xss.js')
+
   return app.toTree()
 }
