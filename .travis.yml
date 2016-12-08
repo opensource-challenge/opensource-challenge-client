@@ -33,4 +33,4 @@ after_success:
   - codeclimate-test-reporter < coverage/lcov.info
 
 env:
-  - COVERAGE=true CODECLIMATE_REPO_TOKEN=2018541b189c3edb927aac5eb867ba14606840df1c10234894af8b535f4cd519
+  - COVERAGE=true CODECLIMATE_REPO_TOKEN=b96ff2aa680633bbd0cce177b68ecbdc29470da2b8a0bb9098591091e260524b
