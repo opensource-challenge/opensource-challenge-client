@@ -43,8 +43,6 @@ RUN set -ex && \
   rm -rf ~/node-v${NODE_VERSION}-linux-x64.tar.gz ~/SHASUMS256.txt.asc /tmp/node-v${NODE_VERSION} ~/.npm ~/.node-gyp ~/.gnupg \
     /usr/share/man /tmp/* /usr/local/lib/node_modules/npm/man /usr/local/lib/node_modules/npm/doc /usr/local/lib/node_modules/npm/html
 
-COPY nginx/opensourcechallenge.conf /opt/app-root/etc/nginx.d
-
 RUN npm install -g bower ember-cli yarn
 COPY package.json bower.json yarn.lock /tmp/builddir/
 RUN cd /tmp/builddir && \
@@ -56,6 +54,8 @@ COPY . /tmp/builddir
 RUN cd /tmp/builddir && ember build --prod && \
     mv /tmp/builddir/dist/* /opt/app-root/src/ && \
     rm -rf /tmp/builddir
+
+COPY nginx/opensourcechallenge.conf /opt/app-root/etc/nginx.d
 
 USER 1001
 
