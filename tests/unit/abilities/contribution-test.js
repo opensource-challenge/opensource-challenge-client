@@ -1,22 +1,17 @@
 /* jshint expr:true */
 import { expect } from 'chai';
-import {
-  describeModule,
-  it
-} from 'ember-mocha';
+import { it, describe } from 'mocha';
+import { setupTest } from 'ember-mocha';
 
-describeModule(
-  'ability:contribution',
-  'contribution Ability',
-  {
+describe('contribution Ability', function() {
+  setupTest('ability:contribution', {
     // Specify the other units that are required for this test.
     // needs: ['service:foo']
-  },
-  function() {
-    // Replace this with your real tests.
-    it('exists', function() {
-      var ability = this.subject();
-      expect(ability).to.be.ok;
-    });
-  }
-);
+  });
+
+  // Replace this with your real tests.
+  it('exists', function() {
+    var ability = this.subject();
+    expect(ability).to.be.ok;
+  });
+});
