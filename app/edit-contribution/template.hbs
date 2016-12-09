@@ -1,7 +1,8 @@
-{{post-contribution-form
-  class = "page page-post-contribution"
-  contribution = model
-  onsave = (route-action "save")
-  oncancel = (route-action "cancel")
-  ondelete = (route-action "delete")
-  }}
+<div class="page page-post-contribution">
+  {{post-contribution-form
+    contribution = model
+    onsave = (route-action "save")
+    oncancel = (route-action "cancel")
+    ondelete = (route-action "delete")
+    }}
+</div>
