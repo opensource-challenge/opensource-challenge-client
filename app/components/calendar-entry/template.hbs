@@ -1,9 +1,9 @@
 {{#with item.user as |user|}}
   <header>
-    <a href={{prefixHttp user.website}} class="avatar-wrapper">
+    {{#link-to "contributors.profile" user class="avatar-wrapper"}}
       <img class="avatar" src={{picture}}>
       <div class="username">{{user.name}}</div>
-    </a>
+    {{/link-to}}
   </header>
 {{/with}}
 <div class="layout-column contribution-content">
@@ -22,11 +22,6 @@
       {{/if}}
     </div>
 
-    {{~markdown-to-html item.description
-      extensions = 'xssfilter'
-      headerLevelStart = 2
-      simplifiedAutoLink = true
-      tasklists = true
-      ~}}
+    {{~contribution-description description=contribution.description~}}
   </section>
 </div>

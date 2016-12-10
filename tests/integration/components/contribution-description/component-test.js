@@ -3,8 +3,8 @@ import { it, describe } from 'mocha';
 import { setupComponentTest } from 'ember-mocha';
 import hbs from 'htmlbars-inline-precompile';
 
-describe('Integration | Component | contribution bubbles', function() {
-  setupComponentTest('contribution-bubbles', {
+describe('Integration | Component | contribution description', function() {
+  setupComponentTest('contribution-description', {
     integration: true
   });
 
@@ -13,12 +13,12 @@ describe('Integration | Component | contribution bubbles', function() {
     // Handle any actions with this.on('myAction', function(val) { ... });
     // Template block usage:
     // this.render(hbs`
-    //   {{#contribution-bubbles}}
+    //   {{#contribution-description}}
     //     template content
-    //   {{/contribution-bubbles}}
+    //   {{/contribution-description}}
     // `);
 
-    this.render(hbs`{{contribution-bubbles}}`);
+    this.render(hbs`{{contribution-description}}`);
     expect(this.$()).to.have.length(1);
   });
 });

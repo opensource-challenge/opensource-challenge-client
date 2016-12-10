@@ -45,5 +45,6 @@ export default function() {
     return contributions.all()
   })
   this.post('/contributions')
+  this.get('/contributions/:id')
   this.patch('/contributions/:id')
 }

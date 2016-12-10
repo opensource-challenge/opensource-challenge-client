@@ -4,7 +4,7 @@ import startApp from '../helpers/start-app'
 import destroyApp from '../helpers/destroy-app'
 import { percySnapshot } from 'ember-percy'
 
-describe('Acceptance | day', function() {
+describe('Acceptance | contributor profile', function() {
   let application
 
   beforeEach(function() {
@@ -15,13 +15,13 @@ describe('Acceptance | day', function() {
     destroyApp(application)
   })
 
-  it('can visit /day/2015-12-06', async function() {
+  it('can visit /contributors/2', async function() {
     server.loadFixtures('challenges', 'users', 'contributions')
 
-    await visit('/day/2015-12-06')
+    await visit('/contributors/2')
 
-    percySnapshot('/day/2015-12-06')
+    percySnapshot('/contributor/profile')
 
-    expect(currentURL()).to.equal('/day/2015-12-06')
+    expect(currentURL()).to.equal('/contributors/2')
   })
 })

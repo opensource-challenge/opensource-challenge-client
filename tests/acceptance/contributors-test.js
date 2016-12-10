@@ -35,14 +35,4 @@ describe('Acceptance | contributors', function() {
 
     expect($('.contributor').length).to.equal(10)
   })
-
-  it ('has correct urls', async function() {
-    server.createList('user', 10, {
-      website: 'www.puzzle.ch'
-    })
-
-    await visit('/contributors')
-
-    expect($('.contributor__link[href^=http]').length).to.equal(10)
-  })
 })
