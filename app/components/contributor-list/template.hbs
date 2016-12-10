@@ -1,6 +1,8 @@
 {{#each (sort-by 'name' items) as |contributor|}}
   <div class="contributor hover-box">
-    <a class="contributor__link hover-box__link" href={{prefixHttp  contributor.website}}>
+    {{#link-to "contributors.profile" contributor
+      class = "contributor__link hover-box__link"
+      }}
       <div class="contributor__caption hover-box__caption">
         <div class="contributor__caption__content hover-box__caption__content">
           <p>{{contributor.name}}</p>
@@ -9,7 +11,7 @@
       </div>
       <img class="contributor__image hover-box__content"
           src={{contributor.picture}} alt="">
-    </a>
+    {{/link-to}}
   </div>
 {{else}}
   <div class="text-center">

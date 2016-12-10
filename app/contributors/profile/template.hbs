@@ -1,0 +1,21 @@
+<section class="content content-padding">
+  <div>
+    <div class="layout-row">
+      {{#with model.picture as |picture|}}
+        <img src={{picture}}>
+      {{/with}}
+      <div>
+        <h1>{{model.name}}</h1>
+        {{#with model.website as |website|}}
+          <div>
+            <a href={{prefixHttp website}}>{{website}}</a>
+          </div>
+        {{/with}}
+        {{#with model.company as |company|}}
+          <div>{{company}}</div>
+        {{/with}}
+      </div>
+  </div>
+
+  {{outlet}}
+</section>
