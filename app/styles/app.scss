@@ -220,3 +220,6 @@ small {
   object-position: 50% 50%;
   margin-right: 1rem;
 }
+.datepicker {
+  @include ember-power-calendar($cell-size: 40px);
+}
