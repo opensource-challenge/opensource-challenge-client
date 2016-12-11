@@ -13,24 +13,7 @@
       required=true
       }}
 
-    {{#basic-dropdown as |dropdown|}}
-      <input type="text"
-        id="ember-basic-dropdown-trigger-{{dropdown.uniqueId}}"
-        onclick={{dropdown.actions.toggle}}
-        value={{moment-format selected 'YYYY-MM-DD'}}
-        readonly>
-
-      {{#dropdown.content class="datepicker-demo-dropdown"}}
-        {{#power-calendar class="demo-calendar-small"
-          center=center
-          selected=changeset.date
-          onSelect=(action (mut selected) value="moment") as |calendar|}}
-            {{calendar.nav}}
-          {{calendar.days}}
-        {{/power-calendar}}
-      {{/dropdown.content}}
-
-    {{/basic-dropdown}}
+    {{date-field selectDate=(action "setDate")}}
 
     <div class="button-row">
       {{f.button "Cancel" class="btn-link m-r-1" click=(action "cancel")}}
