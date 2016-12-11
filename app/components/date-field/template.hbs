@@ -1,0 +1,17 @@
+{{#basic-dropdown as |dropdown|}}
+  <input type="text"
+    id="ember-basic-dropdown-trigger-{{dropdown.uniqueId}}"
+    onclick={{action "openDropdown" dropdown}}
+    value={{moment-format selected 'YYYY-MM-DD'}}
+    readonly>
+
+  {{#dropdown.content class="datepicker-dropdown"}}
+    {{#power-calendar class="datepicker"
+      center=center
+      selected=selected
+      onSelect=(action "chooseDate") as |calendar|}}
+        {{calendar.nav}}
+      {{calendar.days}}
+    {{/power-calendar}}
+  {{/dropdown.content}}
+{{/basic-dropdown}}

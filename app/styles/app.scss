@@ -7,6 +7,8 @@
 @import 'hover-box';
 @import 'form';
 @import 'pod-styles';
+@import 'ember-power-calendar';
+@import 'ember-basic-dropdown';
 
 body > .ember-view {
   @extend .layout-column;
@@ -217,4 +219,7 @@ small {
   object-fit: cover;
   object-position: 50% 50%;
   margin-right: 1rem;
+}
+.datepicker {
+  @include ember-power-calendar($cell-size: 40px);
 }

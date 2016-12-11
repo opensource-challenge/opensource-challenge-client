@@ -12,7 +12,9 @@
       placeholder="Beschreibe hier deinen Open Source Beitrag..."
       required=true
       }}
-    {{f.text-field "date" label="Datum" placeholder="2016-12-31" required=true}}
+
+    {{date-field selectDate=(action "setDate")}}
+
     <div class="button-row">
       {{f.button "Cancel" class="btn-link m-r-1" click=(action "cancel")}}
       {{f.submit
