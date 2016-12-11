@@ -1,12 +1,19 @@
 <section>
   {{#each (sort-by "date:desc" model.contributions) as |contribution|}}
     <div class="user-contribution">
-      <h2>
-        {{moment-format contribution.date "DD.MM.YYYY"}}
-        {{#with contribution.title as |title|}}
-          &ndash; {{title}}
-        {{/with}}
-      </h2>
+      <div class="title">
+        <h2>
+          {{moment-format contribution.date "DD.MM.YYYY"}}
+          {{#with contribution.title as |title|}}
+            &ndash; {{title}}
+          {{/with}}
+        </h2>
+        {{#if (can "edit contribution" item)}}
+          {{#link-to "edit-contribution" item}}
+            {{fa-icon "pencil"}}
+          {{/link-to}}
+        {{/if}}
+      </div>
       {{#with contribution.link as |link|}}
         <a href={{link}}>{{link}}</a>
       {{/with}}

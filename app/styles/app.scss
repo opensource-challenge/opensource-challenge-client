@@ -202,3 +202,19 @@ small {
   font-size: small;
   padding-top: .3rem;
 }
+
+.user-contribution > .title {
+  display: flex;
+}
+.user-contribution > .title > a {
+  margin-left: 0.5rem;
+  align-self: center;
+}
+
+.user-profile-picture {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  margin-right: 1rem;
+}
