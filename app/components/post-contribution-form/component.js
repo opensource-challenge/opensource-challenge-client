@@ -11,11 +11,6 @@ export default Component.extend({
   contribution: null,
   validations: [],
 
-  formatDate: Ember.observer('selected', function() {
-    var selected = this.get('selected')
-    this.set('contribution.date', selected.format('YYYY-MM-DD'))
-  }),
-
   actions: {
     async save(changeset) {
       await changeset.validate()
@@ -31,6 +26,16 @@ export default Component.extend({
     },
     cancel() {
       return this.sendAction('oncancel')
+    },
+    /**
+     * Action that receives the data from the datepicker
+     *
+     * @param {moment} date - The date selected in the datepicker
+     */
+    setDate(date) {
+      // maybe use some config here instead of hard coded format?
+      date = date.format('YYYY-MM-DD')
+      this.set('contribution.date', date)
     }
   }
 })
