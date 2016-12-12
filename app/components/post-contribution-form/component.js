@@ -27,15 +27,8 @@ export default Component.extend({
     cancel() {
       return this.sendAction('oncancel')
     },
-    /**
-     * Action that receives the data from the datepicker
-     *
-     * @param {moment} date - The date selected in the datepicker
-     */
-    setDate(date) {
-      // maybe use some config here instead of hard coded format?
-      date = date.format('YYYY-MM-DD')
-      this.set('contribution.date', date)
+    setDate(changeset, date) {
+      changeset.set('date', date.format('YYYY-MM-DD'))
     }
   }
 })

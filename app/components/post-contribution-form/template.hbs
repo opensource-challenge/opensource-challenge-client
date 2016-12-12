@@ -13,7 +13,10 @@
       required=true
       }}
 
-    {{date-field selectDate=(action "setDate")}}
+    {{date-field
+      value = changeset.date
+      change = (action "setDate" changeset)
+      }}
 
     <div class="button-row">
       {{f.button "Cancel" class="btn-link m-r-1" click=(action "cancel")}}
