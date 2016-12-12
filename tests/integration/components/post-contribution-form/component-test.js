@@ -23,11 +23,11 @@ describe('Integration | Component | post contribution form', function() {
     this.render(hbs`{{post-contribution-form contribution=model}}`)
     expect(this.$()).to.have.length(1)
 
-    expect(this.$(`[name$="[title]"]`).val()).to.equal('My Contribution')
-    expect(this.$(`[name$="[link]"]`).val()).to.equal('https://github.com/')
-    expect(this.$(`[name$="[description]"]`).val())
+    expect(this.$('[name$="[title]"]').val()).to.equal('My Contribution')
+    expect(this.$('[name$="[link]"]').val()).to.equal('https://github.com/')
+    expect(this.$('[name$="[description]"]').val())
       .to.equal('Some github contribution')
-    expect(this.$(`[name$="[date]"]`).val()).to.equal('2016-11-21')
+    expect(this.$('.date-field > input').val()).to.equal('2016-11-21')
   })
 
   it('clicking the cancel button triggers oncancel event', function() {

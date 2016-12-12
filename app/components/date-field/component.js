@@ -4,6 +4,7 @@ import moment from 'moment'
 const { Component, computed } = Ember
 
 export default Component.extend({
+  classNames: 'date-field',
   inputFormat: 'YYYY-MM-DD',
 
   value: computed('inputFormat', {
