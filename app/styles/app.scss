@@ -1,3 +1,5 @@
+@import 'ember-power-calendar';
+@import 'ember-basic-dropdown';
 @import 'variables';
 @import 'normalize';
 @import 'layout';
@@ -7,8 +9,6 @@
 @import 'hover-box';
 @import 'form';
 @import 'pod-styles';
-@import 'ember-power-calendar';
-@import 'ember-basic-dropdown';
 
 body > .ember-view {
   @extend .layout-column;
