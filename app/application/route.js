@@ -11,9 +11,20 @@ export default Route.extend(ApplicationRouteMixin, {
   ajax: inject.service(),
   torii: inject.service(),
   currentUser: inject.service(),
+  socket: inject.service(),
 
   beforeModel() {
     return this._loadCurrentUser()
+  },
+
+  afterModel() {
+    this.get('socket').on('open', () => {
+      let channel = this.get('socket').joinChannel('room:contributions')
+
+      channel.on('new:contribution', payload => {
+        this.store.pushPayload(payload)
+      })
+    })
   },
 
   sessionAuthenticated() {

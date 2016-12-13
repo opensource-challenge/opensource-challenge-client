@@ -2353,6 +2353,12 @@ ember-percy@^1.2.5:
     percy-client "^1.3.0"
     walk "^2.3.9"
 
+ember-phoenix@0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/ember-phoenix/-/ember-phoenix-0.1.6.tgz#b5f1cb77dfeafe8f2e9c16b740e3efc3f38c46c7"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+
 ember-power-calendar@0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/ember-power-calendar/-/ember-power-calendar-0.1.8.tgz#69871d2f68297928e35b097eb0bec9461bbabc44"
