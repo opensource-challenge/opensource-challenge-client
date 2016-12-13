@@ -16,6 +16,11 @@ h1 {
   text-align: center;
 }
 
+.post-contribution-btn {
+  display: flex;
+  justify-content: center;
+}
+
 @media (min-width: 420px) {
   h1 {
     font-size: 2rem;

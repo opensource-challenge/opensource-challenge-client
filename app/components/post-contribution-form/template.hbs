@@ -19,7 +19,7 @@
       }}
 
     <div class="button-row">
-      {{f.button "Cancel" class="btn-link m-r-1" click=(action "cancel")}}
+      {{f.button "Cancel" class="btn-link" click=(action "cancel")}}
       {{f.submit
         disabled=(or changeset.isInvalid changeset.isPristine changeset.isSaving)}}
     </div>

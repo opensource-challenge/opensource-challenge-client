@@ -1,17 +1,9 @@
 <div class="page page-index">
-  <section class="latest-contribution">
-    {{#each (take 1 (sort-by 'insertedAt:desc' model.contributions))
-      as |latestContribution|}}
-      {{party-popper class="m-x-1"}}
-      {{#link-to 'day' latestContribution.date}}
-        Neuester Beitrag von {{latestContribution.user.name}}:
-      {{latestContribution.title}}
-      {{/link-to}}
-      {{party-popper class="m-x-1"}}
-    {{/each}}
-  </section>
+  {{latest-contribution
+    contribution = (take-first (sort-by 'insertedAt:desc' model.contributions))
+    }}
   <div class={{if media.isDesktop "layout-row" "layout-column"}}>
-    <div class="col-half intro flex text-center">
+    <div class="page-index-content intro flex text-center">
       <h1>{{model.name}}</h1>
       <p>
         Die Herausforderung: Leiste jeden Tag im Advent (1.12 - 24.12)
@@ -29,7 +21,7 @@
 
       {{contribution-bubbles}}
     </div>
-    <div class="col-half advent-wrapper flex text-center">
+    <div class="page-index-content advent-wrapper flex text-center">
       {{contribution-calendar challenge=model}}
     </div>
   </div>

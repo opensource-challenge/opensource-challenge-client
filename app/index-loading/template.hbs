@@ -1,15 +1,20 @@
 <div class="page page-index">
-  <section class="latest-contribution">&nbsp;</section>
+  {{latest-contribution}}
   <div class={{if media.isDesktop "layout-row" "layout-column"}}>
-    <div class="col-half intro flex text-center">
+    <div class="page-index-content intro flex text-center">
       <h1>&nbsp;</h1>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
 
       {{contribution-bubbles}}
     </div>
     {{#if media.isDesktop}}
-      <div class="col-half advent-wrapper flex text-center">
+      <div class="page-index-content advent-wrapper flex text-center">
         {{contribution-calendar}}
       </div>
     {{/if}}

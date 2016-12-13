@@ -1,15 +1,13 @@
 <div class="page page-day">
-  <div class="m-b-1 p-b-1">
-    <h1 class="calendar-day-heading">
-      {{~calendar-day date=model~}}
-      {{moment-format model 'DD.MM.YYYY'}}
-      {{#link-to 'post-contribution' (query-params date=model)}}
-        <div class="add-contribution">
-          <i class="fa fa-plus hover-darken"></i>
-        </div>
-      {{/link-to}}
-    </h1>
-  </div>
+  <h1 class="content calendar-day-heading">
+    {{~calendar-day date=model~}}
+    {{moment-format model 'DD.MM.YYYY'}}
+    {{#link-to 'post-contribution' (query-params date=model)}}
+      <div class="add-contribution">
+        <i class="fa fa-plus hover-darken"></i>
+      </div>
+    {{/link-to}}
+  </h1>
 
   {{outlet}}
 </div>

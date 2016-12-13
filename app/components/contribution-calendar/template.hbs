@@ -1,6 +1,6 @@
 <h1>Der Adventskalender</h1>
 <p>Anzahl Beiträge insgesamt: {{challenge.contributions.length}}</p>
-<p class="layout-row content flex-center m-y-1">
+<p class="post-contribution-btn content">
   {{#link-to
     'post-contribution'
     (query-params date=(moment-format now 'YYYY-MM-DD'))

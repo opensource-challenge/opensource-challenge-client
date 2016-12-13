@@ -1,20 +1,18 @@
 <section class="content content-padding">
-  <div>
-    <div class="layout-row m-t-1">
-      {{#with model.picture as |picture|}}
-        <img class="user-profile-picture" src={{picture}}>
+  <div class="layout-row contributor-profile-details">
+    {{#with model.picture as |picture|}}
+      <img class="contributor-profile-picture" src={{picture}}>
+    {{/with}}
+    <div>
+      <h1>{{model.name}}</h1>
+      {{#with model.website as |website|}}
+        <div>
+          <a href={{prefixHttp website}}>{{website}}</a>
+        </div>
       {{/with}}
-      <div>
-        <h1>{{model.name}}</h1>
-        {{#with model.website as |website|}}
-          <div>
-            <a href={{prefixHttp website}}>{{website}}</a>
-          </div>
-        {{/with}}
-        {{#with model.company as |company|}}
-          <div>{{company}}</div>
-        {{/with}}
-      </div>
+      {{#with model.company as |company|}}
+        <div>{{company}}</div>
+      {{/with}}
     </div>
   </div>
 
