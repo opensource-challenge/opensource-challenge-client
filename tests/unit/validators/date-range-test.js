@@ -1,8 +1,10 @@
-import { module, test } from 'qunit';
-import validateDateRange from 'opensource-challenge-client/validators/date-range';
+import { expect } from 'chai';
+import { describe, it } from 'mocha';
+import validateDateRange from 'opensource-challenge-client/validators/date-range'
 
-module('Unit | Validator | date-range');
-
-test('it exists', function(assert) {
-  assert.ok(validateDateRange());
-});
+describe('Unit | Validator | date-range', function() {
+    it('it exists', function() {
+      expect(validateDateRange).to.be.ok
+    })
+  }
+)

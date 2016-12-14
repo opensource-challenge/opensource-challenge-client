@@ -3,6 +3,7 @@ import { expect } from 'chai'
 import { it, describe } from 'mocha'
 import { setupComponentTest } from 'ember-mocha'
 import hbs from 'htmlbars-inline-precompile'
+import moment from 'moment'
 
 const { run } = Ember
 
@@ -58,7 +59,7 @@ describe('Integration | Component | post contribution form', function() {
     this.set('model', {
       user: {},
       title: 'My Contr',
-      date: '2016-11-21',
+      date: moment().format('YYYY-MM-DD'),
       link: 'https://github.com/',
       description: 'Some github contribution'
     })
