@@ -37,6 +37,12 @@
   @extend .layout-column-flex;
   overflow-y: auto;
 }
+@supports (-webkit-overflow-scrolling: touch) {
+  .page-content__outlet > .liquid-child {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
 .page-content__outlet > .liquid-child > :first-child {
   margin-top: 0;
 }
