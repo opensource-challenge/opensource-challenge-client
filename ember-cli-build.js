@@ -12,6 +12,7 @@ module.exports = function(defaults) {
       },
       filter: {
         enabled: true,
+        map: { inline: false },
         plugins: [
           {
             module: cssnext,
