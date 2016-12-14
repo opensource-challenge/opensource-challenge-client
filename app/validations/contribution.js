@@ -4,8 +4,7 @@ import {
   validateFormat
 } from 'ember-changeset-validations/validators'
 
-import validateDateRange from '../validators/date-range'
-import moment from 'moment'
+import validateContributionDate from '../validators/contribution-date'
 
 export default {
   date: [
@@ -13,7 +12,7 @@ export default {
     validateLength({ min: 1 }),
     validateFormat({ regex: /\d{4}.\d{2}.\d{2}/ }),
     // TODO use the challenge.startsOn value
-    validateDateRange({ min: moment("2016-12-01") , max: moment() })
+    validateContributionDate()
   ],
   link: [
     validateFormat({ type: 'url', allowBlank: true })
