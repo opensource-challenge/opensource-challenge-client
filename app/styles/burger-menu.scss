@@ -44,6 +44,9 @@
     color: white;
     text-decoration: none;
   }
+  &.active {
+    background-color: $c-puzzle-2;
+  }
 
 }
 .bm-menu-list > li:first-child {
