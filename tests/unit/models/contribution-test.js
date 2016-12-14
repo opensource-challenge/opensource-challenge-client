@@ -5,7 +5,7 @@ import { setupModelTest } from 'ember-mocha';
 describe('Unit | Model | contribution', function() {
   setupModelTest('contribution', {
     // Specify the other units that are required for this test.
-      needs: ['model:user']
+    needs: [ 'model:user','model:challenge' ]
   });
 
   // Replace this with your real tests.
