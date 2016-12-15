@@ -61,7 +61,10 @@ describe('Integration | Component | post contribution form', function() {
       title: 'My Contr',
       date: moment().format('YYYY-MM-DD'),
       link: 'https://github.com/',
-      description: 'Some github contribution'
+      description: 'Some github contribution',
+      get() { // mock the model.get('challenge.startsOn')
+        return moment().subtract(1, 'days')
+      }
     })
     this.set('save', c => {
       changeset = c
@@ -99,7 +102,10 @@ describe('Integration | Component | post contribution form', function() {
       title: 'My Contr',
       date: '2016-11-21',
       link: 'https://github.com/',
-      description: 'Some github contribution'
+      description: 'Some github contribution',
+      get() { // mock the model.get('challenge.startsOn')
+        return moment().subtract(1, 'days')
+      }
     })
     this.set('save', () => saved = true)
 
