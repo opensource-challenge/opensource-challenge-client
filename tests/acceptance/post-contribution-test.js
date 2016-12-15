@@ -37,6 +37,7 @@ describe('Acceptance | post contribution', function() {
     })
 
     it('can visit /post-contribution', async function() {
+      server.loadFixtures('challenges')
       await visit('/post-contribution')
 
       percySnapshot('/post-contribution')

@@ -14,10 +14,10 @@ export default Route.extend(AuthenticatedRouteMixin, {
     }
   },
 
-  async model({ date = moment().format('YYYY-MM-DD') }) {
+  model({ date = moment().format('YYYY-MM-DD') }) {
     let user = this.get('currentUser.user')
 
-    let challenge = await this.store.findRecord('challenge', 'current')
+    let challenge = this.store.findRecord('challenge', 'current')
 
     return this.store.createRecord('contribution', { user, date, challenge })
   },
