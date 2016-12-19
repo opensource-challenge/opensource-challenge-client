@@ -18,12 +18,6 @@ body > .ember-view {
   overflow: hidden;
 }
 
-:--any-link:hover {
-  & .hover-darken:hover {
-    color: darken($c-puzzle-9, 5%);
-  }
-}
-
 .justify-mobile {
   p {
     hyphens: auto;
@@ -96,9 +90,6 @@ body > .ember-view {
 }
 .hover-box {
   background-color: darken($c-puzzle-5, 5%);
-  & > .context-green {
-    background-color: darken($c-puzzle-7, 10%);
-  }
   .page-day & {
     background-color: darken($c-puzzle-7, 10%);
   }
@@ -165,16 +156,6 @@ body > .ember-view {
   }
   .dummy-contributor > .fa {
     font-size: 12rem;
-  }
-}
-.is-white {
-  color: white;
-}
-.context-green {
-  color: white;
-  background-color: darken($c-puzzle-7, 10%);
-  &:hover {
-    background-color: darken($c-puzzle-7, 15%);
   }
 }
 .calendar-entry-item {

@@ -28,7 +28,7 @@ a {
 }
 
 :--any-link:hover {
-  color: var(--c-puzzle-9);
+  color: darken($c-puzzle-9, 5%);
   text-decoration: underline;
 }
 
