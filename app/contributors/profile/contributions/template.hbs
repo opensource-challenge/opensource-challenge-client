@@ -8,8 +8,8 @@
             &ndash; {{title}}
           {{/with}}
         </h2>
-        {{#if (can "edit contribution" item)}}
-          {{#link-to "edit-contribution" item}}
+        {{#if (can "edit contribution" contribution)}}
+          {{#link-to "edit-contribution" contribution}}
             {{fa-icon "pencil"}}
           {{/link-to}}
         {{/if}}
