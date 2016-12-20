@@ -11,6 +11,10 @@ export default Route.extend(AuthenticatedRouteMixin, {
     return this.store.findRecord('contribution', id)
   },
 
+  afterModel(model) {
+    return model.get('challenge')
+  },
+
   actions: {
     async save(record) {
       await record.save()
