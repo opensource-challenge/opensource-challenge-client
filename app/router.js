@@ -1,6 +1,5 @@
 import Ember from 'ember'
 import config from './config/environment'
-import burgerMenu from 'ember-burger-menu'
 
 const Router = Ember.Router.extend({
   location: config.locationType,
@@ -8,7 +7,7 @@ const Router = Ember.Router.extend({
   willTransition() {
     let r = this._super(...arguments)
 
-    burgerMenu.set('open', false)
+    this.set('burgerMenu.open', false)
 
     return r
   }
