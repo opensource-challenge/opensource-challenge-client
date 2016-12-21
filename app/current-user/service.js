@@ -9,10 +9,15 @@ export default Service.extend({
 
   async load() {
     if (this.get('session.isAuthenticated')) {
-      let res = await this.get('ajax').request('/users/current')
+      try {
+        let res = await this.get('ajax').request('/users/current')
 
-      this.get('store').pushPayload(res)
-      this.set('user', this.get('store').peekRecord('user', res.data.id))
+        this.get('store').pushPayload(res)
+        this.set('user', this.get('store').peekRecord('user', res.data.id))
+      }
+      catch (e) {
+        this.get('session').invalidate()
+      }
     }
   }
 })
