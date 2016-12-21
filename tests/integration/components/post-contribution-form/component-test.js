@@ -3,6 +3,7 @@ import { expect } from 'chai'
 import { it, describe } from 'mocha'
 import { setupComponentTest } from 'ember-mocha'
 import hbs from 'htmlbars-inline-precompile'
+import moment from 'moment'
 
 const { run } = Ember
 
@@ -55,13 +56,16 @@ describe('Integration | Component | post contribution form', function() {
     let saved = false
     let changeset = null
 
-    this.set('model', {
+    this.set('model', Ember.Object.create({
       user: {},
       title: 'My Contr',
-      date: '2016-11-21',
+      date: moment().format('YYYY-MM-DD'),
       link: 'https://github.com/',
-      description: 'Some github contribution'
-    })
+      description: 'Some github contribution',
+      challenge: {
+        startsOn: moment().subtract(1, 'days')
+      }
+    }))
     this.set('save', c => {
       changeset = c
       saved = true
@@ -93,13 +97,16 @@ describe('Integration | Component | post contribution form', function() {
       function() {
     let saved = false
 
-    this.set('model', {
+    this.set('model', Ember.Object.create({
       user: {},
       title: 'My Contr',
       date: '2016-11-21',
       link: 'https://github.com/',
-      description: 'Some github contribution'
-    })
+      description: 'Some github contribution',
+      challenge: {
+        startsOn: moment().subtract(1, 'days')
+      }
+    }))
     this.set('save', () => saved = true)
 
     this.render(hbs`

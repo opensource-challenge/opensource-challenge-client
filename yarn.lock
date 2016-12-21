@@ -1831,6 +1831,10 @@ ember-cli-htmlbars@^1.0.0, ember-cli-htmlbars@^1.0.1, ember-cli-htmlbars@^1.0.10
     json-stable-stringify "^1.0.0"
     strip-bom "^2.0.0"
 
+ember-cli-import-polyfill@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-import-polyfill/-/ember-cli-import-polyfill-0.1.0.tgz#2ec882a21f1e39d75bd0614d425d9aaa30ff030d"
+
 ember-cli-import-polyfill@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/ember-cli-import-polyfill/-/ember-cli-import-polyfill-0.2.0.tgz#c1a08a8affb45c97b675926272fe78cf4ca166f2"
@@ -1900,6 +1904,28 @@ ember-cli-mocha@0.13.1:
     ember-mocha "^0.11.0"
     mocha "^2.5.3"
     resolve "^1.1.7"
+
+ember-cli-moment-range@0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/ember-cli-moment-range/-/ember-cli-moment-range-0.1.4.tgz#4b2a777ae17933d5cd4e52fd5e57de9623a998de"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+    ember-cli-import-polyfill "^0.1.0"
+    ember-cli-moment-shim "^1.2.0"
+
+ember-cli-moment-shim@^1.2.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-moment-shim/-/ember-cli-moment-shim-1.3.0.tgz#da3c8a9fb1dd004f60681af069da5e53feb4a9bd"
+  dependencies:
+    broccoli-funnel "^1.0.0"
+    broccoli-merge-trees "^1.0.0"
+    broccoli-stew "^1.0.0"
+    chalk "^1.1.1"
+    ember-cli-babel "^5.0.0"
+    exists-sync "0.0.3"
+    lodash.defaults "^3.1.2"
+    moment "^2.13.0"
+    moment-timezone "^0.5.0"
 
 ember-cli-moment-shim@^2.1.0:
   version "2.2.1"
@@ -4055,7 +4081,7 @@ lodash._root@^3.0.0, lodash._root@~3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/lodash._root/-/lodash._root-3.0.1.tgz#fba1c4524c19ee9a5f8136b4609f017cf4ded692"
 
-lodash.assign@^3.2.0:
+lodash.assign@^3.0.0, lodash.assign@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-3.2.0.tgz#3ce9f0234b4b2223e296b8fa0ac1fee8ebca64fa"
   dependencies:
@@ -4087,6 +4113,13 @@ lodash.debounce@^3.1.1:
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-3.1.1.tgz#812211c378a94cc29d5aa4e3346cf0bfce3a7df5"
   dependencies:
     lodash._getnative "^3.0.0"
+
+lodash.defaults@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-3.1.2.tgz#c7308b18dbf8bc9372d701a73493c61192bd2e2c"
+  dependencies:
+    lodash.assign "^3.0.0"
+    lodash.restparam "^3.0.0"
 
 lodash.defaults@^4.1.0:
   version "4.2.0"

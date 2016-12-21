@@ -7,6 +7,7 @@ const { Route, inject } = Ember
 
 export default Route.extend(AuthenticatedRouteMixin, {
   currentUser: inject.service(),
+  currentChallenge: inject.service(),
 
   queryParams: {
     date: {
@@ -14,10 +15,12 @@ export default Route.extend(AuthenticatedRouteMixin, {
     }
   },
 
-  model({ date = moment().format('YYYY-MM-DD') }) {
+  async model({ date = moment().format('YYYY-MM-DD') }) {
     let user = this.get('currentUser.user')
 
-    return this.store.createRecord('contribution', { user, date })
+    let challenge = await this.get('currentChallenge').load()
+
+    return this.store.createRecord('contribution', { user, date, challenge })
   },
 
   deactivate() {
