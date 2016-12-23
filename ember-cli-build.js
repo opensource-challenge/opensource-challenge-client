@@ -6,6 +6,9 @@ const cssnext = require('postcss-cssnext')
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
+    fingerprint: {
+      exclude: [ 'assets/icons/' ]
+    },
     postcssOptions: {
       compile: {
         enabled: false
