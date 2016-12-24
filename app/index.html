@@ -36,15 +36,5 @@
     <script src="{{rootURL}}assets/opensource-challenge-client.js" defer></script>
 
     {{content-for "body-footer"}}
-    <script>
-      if (navigator.serviceWorker) {
-        navigator.serviceWorker.getRegistrations()
-          .then(function(registrations) {
-            registrations.forEach(function(registration) {
-              registration.unregister()
-            })
-          })
-      }
-    </script>
   </body>
 </html>
