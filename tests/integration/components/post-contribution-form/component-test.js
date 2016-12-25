@@ -63,7 +63,8 @@ describe('Integration | Component | post contribution form', function() {
       link: 'https://github.com/',
       description: 'Some github contribution',
       challenge: {
-        startsOn: moment().subtract(1, 'days')
+        startsOn: moment().subtract(1, 'days'),
+        endsOn: moment().add(10, 'days')
       }
     }))
     this.set('save', c => {
@@ -104,7 +105,8 @@ describe('Integration | Component | post contribution form', function() {
       link: 'https://github.com/',
       description: 'Some github contribution',
       challenge: {
-        startsOn: moment().subtract(1, 'days')
+        startsOn: moment().subtract(1, 'days'),
+        endsOn: moment().add(10, 'days')
       }
     }))
     this.set('save', () => saved = true)
