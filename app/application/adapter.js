@@ -1,3 +1,4 @@
+import Ember from 'ember'
 import ENV from '../config/environment'
 import DS from 'ember-data'
 import DataAdapterMixin
@@ -12,7 +13,7 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
   authorizer: 'authorizer:osc',
 
   ajaxOptions(url, type, options) {
-    return Object.assign(this._super(url, type, options), { timeout: TIMEOUT })
+    return Ember.assign(this._super(url, type, options), { timeout: TIMEOUT })
   },
 
   urlForCreateRecord(modelName/*, snapshot*/) {
