@@ -10,6 +10,14 @@
 @import 'form';
 @import 'pod-styles';
 
+.service-worker-update-notify {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 1rem;
+  z-index: 1;
+}
+
 body > .ember-view {
   @extend .layout-column;
 

@@ -17,6 +17,7 @@ Router.map(function() {
   this.route('post-contribution')
   this.route('edit-contribution', { path: '/contribution/:id' })
   this.route('login')
+  this.route('app-shell');
 })
 
 export default Router

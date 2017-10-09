@@ -9,6 +9,22 @@ module.exports = function(defaults) {
     fingerprint: {
       exclude: [ 'assets/icons/' ]
     },
+    'ember-app-shell': {
+      criticalCSSOptions: {
+        ignore: [ /font-face/, /font-family/ ],
+      },
+    },
+    'ember-service-worker': {
+      registrationStrategy: 'inline',
+    },
+    'esw-index': {
+      excludeScope: [
+        /manifest.json$/,
+        /robots.txt$/,
+        /favicon.ico$/,
+        /\.xml(?:$|\?)/,
+      ],
+    },
     postcssOptions: {
       compile: {
         enabled: false
