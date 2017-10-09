@@ -4,8 +4,7 @@ import { setupTest } from 'ember-mocha';
 
 describe('Unit | Route | edit contribution', function() {
   setupTest('route:edit-contribution', {
-    // Specify the other units that are required for this test.
-    // needs: ['controller:foo']
+    needs: [ 'service:session', 'service:currentUser' ],
   });
 
   it('exists', function() {

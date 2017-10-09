@@ -1,32 +1,26 @@
 ---
 language: node_js
 node_js:
-  - "4"
+  - "6"
 
 sudo: false
+dist: trusty
+
+addons:
+  chrome: stable
 
 cache:
-  directories:
-    - $HOME/.npm
-    - $HOME/.yarn-cache
-    - $HOME/.cache # includes bowers cache
-    - node_modules
-    - bower_components
+  yarn: true
 
 before_install:
-  - npm config set spin false
-  - npm install -g bower yarn
-  - bower --version
-  - yarn --version
-  - npm install -g phantomjs-prebuilt
-  - phantomjs --version
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
 
 install:
-  - yarn install
-  - bower install
+  - yarn install --non-interactive
 
 script:
-  - npm test
+  - yarn test
 
 after_success:
   - npm install -g codeclimate-test-reporter

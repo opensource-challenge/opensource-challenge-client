@@ -32,7 +32,7 @@ module.exports = function(defaults) {
     }
   })
 
-  app.import('bower_components/xss/dist/xss.js')
+  app.import('node_modules/xss/dist/xss.js')
 
   return app.toTree()
 }

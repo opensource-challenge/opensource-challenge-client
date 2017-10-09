@@ -5,12 +5,7 @@ USER root
 # This image will be initialized with "npm run $NPM_RUN"
 # See https://docs.npmjs.com/misc/scripts, and your repo's package.json
 # file for possible values of NPM_RUN
-ENV NPM_RUN=start \
-    NODE_VERSION=6.3.1 \
-    NPM_CONFIG_LOGLEVEL=info \
-    NPM_CONFIG_PREFIX=$HOME/.npm-global \
-    PATH=$HOME/node_modules/.bin/:$HOME/.npm-global/bin/:$PATH \
-    NPM_VERSION=3 \
+ENV NODE_VERSION=8.6.0 \
     DEBUG_PORT=5858 \
     NODE_ENV=production \
     DEV_MODE=false
@@ -38,20 +33,19 @@ RUN set -ex && \
   curl -o SHASUMS256.txt.asc -sSL https://nodejs.org/dist/v${NODE_VERSION}/SHASUMS256.txt.asc && \
   gpg --batch -d SHASUMS256.txt.asc | grep " node-v${NODE_VERSION}-linux-x64.tar.gz\$" | sha256sum -c - && \
   tar -zxf node-v${NODE_VERSION}-linux-x64.tar.gz -C /usr/local --strip-components=1 && \
-  npm install -g npm@${NPM_VERSION} && \
-  find /usr/local/lib/node_modules/npm -name test -o -name .bin -type d | xargs rm -rf; \
+  curl -o /etc/yum.repos.d/yarn.repo -sS https://dl.yarnpkg.com/rpm/yarn.repo && \
+  curl --silent --location https://rpm.nodesource.com/setup_6.x | bash && \
+  yum install -y yarn && \
   rm -rf ~/node-v${NODE_VERSION}-linux-x64.tar.gz ~/SHASUMS256.txt.asc /tmp/node-v${NODE_VERSION} ~/.npm ~/.node-gyp ~/.gnupg \
     /usr/share/man /tmp/* /usr/local/lib/node_modules/npm/man /usr/local/lib/node_modules/npm/doc /usr/local/lib/node_modules/npm/html
 
-RUN npm install -g bower ember-cli yarn
-COPY package.json bower.json yarn.lock /tmp/builddir/
+COPY package.json yarn.lock /tmp/builddir/
 RUN cd /tmp/builddir && \
-    NODE_ENV=development yarn install && \
-    bower install --allow-root
+    NODE_ENV=development yarn install
 
 COPY . /tmp/builddir
 
-RUN cd /tmp/builddir && ember build --prod && \
+RUN cd /tmp/builddir && yarn run build && \
     mv /tmp/builddir/dist/* /opt/app-root/src/ && \
     rm -rf /tmp/builddir
 

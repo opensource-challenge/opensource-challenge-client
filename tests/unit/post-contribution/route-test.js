@@ -4,8 +4,11 @@ import { setupTest } from 'ember-mocha';
 
 describe('Unit | Route | post contribution', function() {
   setupTest('route:post-contribution', {
-    // Specify the other units that are required for this test.
-    // needs: ['controller:foo']
+    needs: [
+      'service:session',
+      'service:currentUser',
+      'service:currentChallenge',
+    ],
   });
 
   it('exists', function() {

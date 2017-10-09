@@ -4,13 +4,6 @@ import config from './config/environment'
 const Router = Ember.Router.extend({
   location: config.locationType,
   rootURL: config.rootURL,
-  willTransition() {
-    let r = this._super(...arguments)
-
-    this.set('burgerMenu.open', false)
-
-    return r
-  }
 })
 
 Router.map(function() {

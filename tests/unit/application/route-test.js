@@ -4,7 +4,13 @@ import { setupTest } from 'ember-mocha';
 
 describe('Unit | Route | application', function() {
   setupTest('route:application', {
-    needs: [ 'service:session' ]
+    needs: [
+      'service:session',
+      'service:ajax',
+      'service:torii',
+      'service:currentUser',
+      'service:socket',
+    ]
   });
 
   it('exists', function() {

@@ -4,8 +4,7 @@ import { setupTest } from 'ember-mocha';
 
 describe('Unit | Service | ajax', function() {
   setupTest('service:ajax', {
-    // Specify the other units that are required for this test.
-    // needs: ['service:foo']
+    needs: [ 'service:session' ],
   });
 
   // Replace this with your real tests.

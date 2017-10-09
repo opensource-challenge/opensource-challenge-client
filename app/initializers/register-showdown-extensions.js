@@ -1,4 +1,5 @@
-/* global showdown, filterXSS */
+/* global filterXSS */
+import showdown from 'showdown'
 
 export function initialize() {
   showdown.extension('xssfilter', () => [
