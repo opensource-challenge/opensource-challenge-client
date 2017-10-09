@@ -25,7 +25,7 @@
 
 {{else}}
   {{#burger-menu class="flex" itemAnimation="push" as |b|}}
-    {{#b.menu itemTagName="li" as |menu|}}
+    {{#b.menu itemTagName="li" dismissOnItemClick=true as |menu|}}
       <header class="bm-header">
         {{#current-user as |user|}}
           <span class="welcome">Willkommen {{user.name}}</span>
@@ -49,7 +49,9 @@
 
     {{#b.outlet}}
       <header class="page-header {{componentCssClassName}}">
-        <a class="menu-toggle fa fa-bars" {{action b.state.actions.toggle}}></a>
+        <a class="menu-toggle" {{action b.state.actions.toggle}}>
+          {{~fa-icon 'bars'~}}
+        </a>
         {{yield}}
       </header>
 

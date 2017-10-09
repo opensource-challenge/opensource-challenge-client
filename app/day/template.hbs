@@ -3,7 +3,7 @@
     {{~calendar-day date=model~}}
     {{moment-format model 'DD.MM.YYYY'}}
     {{#link-to 'post-contribution' (query-params date=model)}}
-      <i class="fa fa-plus"></i>
+      {{~fa-icon 'plus'~}}
     {{/link-to}}
   </h1>
 

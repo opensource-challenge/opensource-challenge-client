@@ -6,7 +6,7 @@
       <div class="contributor__caption hover-box__caption">
         <div class="contributor__caption__content hover-box__caption__content">
           <p>{{contributor.name}}</p>
-          <i class="fa fa-angle-double-up fa-3x"></i>
+          {{fa-icon 'angle-double-up' size=3}}
         </div>
       </div>
       <img class="contributor__image hover-box__content"
@@ -22,7 +22,7 @@
       (query-params date=(moment-format now 'YYYY-MM-DD'))
       class="btn-primary"
       }}
-      <i class="fa fa-plus"></i>
+      {{fa-icon 'plus'}}
       Jetzt einen neuen
       {{#if media.isMobile}}<br>{{/if}}
       Beitrag erfassen
