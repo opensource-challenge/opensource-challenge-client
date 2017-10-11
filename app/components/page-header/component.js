@@ -16,6 +16,11 @@ export default Component.extend({
       route: 'about'
     },
     {
+      title: 'Archiv',
+      route: 'archive',
+      currentWhen: 'archive challenge',
+    },
+    {
       title: 'Contributors',
       route: 'contributors'
     }

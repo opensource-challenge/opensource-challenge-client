@@ -14,4 +14,6 @@ export default Model.extend({
   active: computed('startsOn', function() {
     return Date.now() >= this.get('startsOn')
   }).volatile(),
+
+  open: computed.not('closed').readOnly(),
 })

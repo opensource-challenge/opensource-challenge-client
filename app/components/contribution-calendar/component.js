@@ -8,9 +8,12 @@ const {
 } = Ember
 
 export default Component.extend({
+  archive: null,
+
   challenge: {
     startsOn: '2100-12-01',
-    endsOn: '2100-12-24'
+    endsOn: '2100-12-24',
+    active: true,
   },
 
   sortedItems: computed.sort('items.[]', (a, b) =>

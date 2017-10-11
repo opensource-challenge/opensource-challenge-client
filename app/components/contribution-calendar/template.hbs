@@ -1,6 +1,6 @@
 <h1>Der Adventskalender</h1>
 <p>Anzahl Beiträge insgesamt: {{challenge.contributions.length}}</p>
-{{#if challenge.active}}
+{{#if (and challenge.active challenge.open)}}
   <p class="post-contribution-btn content">
     {{#link-to
       'post-contribution'
@@ -16,6 +16,6 @@
 {{/if}}
 <div class="advent-calendar">
   {{#each-in calendarDays as |date items|}}
-    {{~calendar-day date=date items=items~}}
+    {{~calendar-day archive=archive challenge=challenge date=date items=items~}}
   {{/each-in}}
 </div>

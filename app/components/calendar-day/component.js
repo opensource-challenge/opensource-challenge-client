@@ -6,6 +6,8 @@ const { Component, computed } = Ember
 export default Component.extend({
   classNames: 'hover-box',
   classNameBindings: 'disabled',
+  archive: null,
+  challenge: null,
   date: null,
   disabled: computed('date', function() {
     return moment(this.get('date')).diff(moment()) > 0

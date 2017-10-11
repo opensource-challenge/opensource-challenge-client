@@ -1,0 +1,9 @@
+<div class="page page-archive-list">
+  <ul>
+    {{#each model as |challenge|}}
+      <li>
+        {{#link-to 'challenge' challenge.id}}{{challenge.name}}{{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
