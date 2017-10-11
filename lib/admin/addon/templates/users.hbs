@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Admin</td>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |user|}}
+      <tr>
+        <td>{{user.name}}</td>
+        <td>{{if user.admin '✔'}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

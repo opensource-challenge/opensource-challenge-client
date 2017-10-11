@@ -1,1 +1,16 @@
-{{outlet}}
+<div class="osc-admin">
+  <h1>Admin</h1>
+
+  <nav>
+    <ul>
+      <li>
+        {{~#link-to 'challenges'}}Challenges{{/link-to~}}
+      </li>
+      <li>
+        {{~#link-to 'users'}}Benutzer{{/link-to~}}
+      </li>
+    </ul>
+  </nav>
+
+  {{outlet}}
+</div>
