@@ -13,7 +13,7 @@ Router.map(function() {
       this.route('contributions', { path: '/' })
     })
   })
-  this.route('day', { path: '/day/:date' })
+  this.route('day', { path: '/day/:date' }, function() {})
   this.route('archive')
   this.route('challenge', { path: '/archive/:id' }, function() {
     this.route('day', { path: '/:date' }, function() {})
