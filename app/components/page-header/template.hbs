@@ -12,6 +12,11 @@
         {{#current-user as |user|}}
           <span>{{user.name}}</span>
           <ul>
+            {{#if user.admin}}
+              <li>
+                {{~#link-to 'admin'}}Admin{{/link-to~}}
+              </li>
+            {{/if}}
             <li><a {{action logout}}>Logout</a></li>
           </ul>
         {{else}}
@@ -37,6 +42,13 @@
             {{link-to item.title item.route current-when=item.currentWhen}}
           {{/menu.item}}
         {{/each}}
+        {{#current-user as |user|}}
+          {{#if user.admin}}
+            {{#menu.item}}
+              {{~#link-to 'admin'}}Admin{{/link-to~}}
+            {{/menu.item}}
+          {{/if}}
+        {{/current-user}}
         {{#menu.item}}
           {{#if session.isAuthenticated}}
             <a {{action logout}}>Logout</a>
