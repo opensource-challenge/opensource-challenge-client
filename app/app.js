@@ -11,7 +11,21 @@ window.Promise = Promise
 const App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver
+  Resolver,
+  engines: {
+    admin: {
+      dependencies: {
+        externalRoutes: {
+          index: 'index',
+        },
+        services: [
+          'store',
+          'session',
+          'current-user',
+        ],
+      },
+    },
+  },
 })
 
 loadInitializers(App, config.modulePrefix)
