@@ -47,7 +47,7 @@
     "ember-engines": "^0.5.14",
     "ember-export-application-global": "^2.0.0",
     "ember-font-awesome": "^4.0.0-alpha.10",
-    "ember-form-for": "2.0.0-alpha.17",
+    "ember-form-for": "github:topaxi/ember-form-for#fix-engine-usage",
     "ember-hold-button": "0.3.4",
     "ember-load-initializers": "^1.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",

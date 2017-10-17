@@ -8,6 +8,7 @@ const {
 
 export default Model.extend({
   contributions: hasMany('contribution'),
+  email: attr('string'),
   website: attr('string'),
   picture: attr('string'),
   name: attr('string'),

@@ -8,7 +8,7 @@
   <tbody>
     {{#each model as |user|}}
       <tr>
-        <td>{{user.name}}</td>
+        <td>{{#link-to 'edit-user' user.id}}{{user.name}}{{/link-to}}</td>
         <td>{{if user.admin '✔'}}</td>
       </tr>
     {{/each}}

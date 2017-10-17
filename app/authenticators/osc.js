@@ -24,7 +24,6 @@ export default OAuth2PasswordGrant.extend({
     return new RSVP.Promise((resolve, reject) => {
       let data = { 'grant_type': provider, authorizationCode }
       let serverTokenEndpoint = this.get('serverTokenEndpoint')
-      let useXhr = this.get('rejectWithXhr')
 
       this.makeRequest(serverTokenEndpoint, data)
         .then(response => {
@@ -41,8 +40,8 @@ export default OAuth2PasswordGrant.extend({
 
             resolve(response)
           })
-        }, xhr => {
-          run(null, reject, useXhr ? xhr : (xhr.responseJSON || xhr.responseText))
+        }, _xhr => {
+          run(null, reject, this.get('rejectWithResponse'))
         })
     })
   }

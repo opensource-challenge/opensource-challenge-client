@@ -32,12 +32,12 @@ module.exports = function(environment) {
         'github-oauth2': {
           apiKey: 'c8992decd49d183b23d7',
           scope: 'user:email',
-          redirectUri: 'http://localhost:4200/'
+          redirectUri: 'http://localhost:4200/torii/redirect.html'
         },
         'google-oauth2': {
           apiKey: '586953290562-c896enmb9em22uv4bc4p63h97pp111h3.apps.googleusercontent.com',
           scope: 'profile email',
-          redirectUri: 'http://localhost:4200/'
+          redirectUri: 'http://localhost:4200/torii/redirect.html'
         }
       }
     },
@@ -68,7 +68,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.torii.providers['github-oauth2'].apiKey = '7f166632ccdce89409ae'
-    ENV.torii.providers['github-oauth2'].redirectUri = 'https://www.opensource-challenge.ch/'
+    ENV.torii.providers['github-oauth2'].redirectUri = 'https://www.opensource-challenge.ch/torii/redirect.html'
   }
 
   return ENV;

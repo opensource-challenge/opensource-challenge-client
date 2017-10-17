@@ -9,5 +9,12 @@ module.exports = {
     browser: true
   },
   rules: {
-  }
+    'no-unused-vars': [
+      'error',
+      {
+        varsIgnorePattern: '^_',
+        argsIgnorePattern: '^_',
+      },
+    ],
+  },
 };
