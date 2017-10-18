@@ -13,7 +13,7 @@
         <td>{{challenge.name}}</td>
         <td>{{moment-format challenge.startsOn 'DD.MM.YYYY'}}</td>
         <td>{{moment-format challenge.endsOn 'DD.MM.YYYY'}}</td>
-        <td>{{if challenge.closed '✔'}}</td>
+        <td class="text-center">{{if challenge.closed '✔'}}</td>
       </tr>
     {{/each}}
   </tbody>

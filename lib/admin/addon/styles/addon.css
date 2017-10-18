@@ -1,3 +1,25 @@
 .osc-admin {
   color: #333;
+  padding: 0 2rem 5rem;
+}
+
+.osc-admin nav > ul {
+  display: flex;
+  list-style: none;
+}
+.osc-admin nav > ul > li {
+  padding: 0.5rem;
+}
+.osc-admin nav > ul > li > .active {
+  text-decoration: underline;
+}
+
+.osc-admin table {
+  border-collapse: collapse;
+}
+.osc-admin tbody > tr {
+  border-top: 1px solid #999;
+}
+.osc-admin td, .osc-admin th {
+  padding: 0.33rem;
 }
