@@ -4,5 +4,5 @@ const { Component, inject } = Ember
 
 export default Component.extend({
   tagName: '',
-  currentUser: inject.service()
+  currentUser: inject.service(),
 })

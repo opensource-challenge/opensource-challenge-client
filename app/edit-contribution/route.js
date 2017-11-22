@@ -1,6 +1,5 @@
 import Ember from 'ember'
-import AuthenticatedRouteMixin
-  from 'ember-simple-auth/mixins/authenticated-route-mixin'
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin'
 
 const { Route, inject } = Ember
 
@@ -34,6 +33,6 @@ export default Route.extend(AuthenticatedRouteMixin, {
       }
 
       this.transitionTo('index')
-    }
-  }
+    },
+  },
 })

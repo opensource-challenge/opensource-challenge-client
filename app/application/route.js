@@ -1,6 +1,5 @@
 import Ember from 'ember'
-import ApplicationRouteMixin
-  from 'ember-simple-auth/mixins/application-route-mixin'
+import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin'
 import LoginValidations from '../validations/login'
 
 const { Route, inject } = Ember
@@ -36,8 +35,7 @@ export default Route.extend(ApplicationRouteMixin, {
   async _loadCurrentUser() {
     try {
       return this.get('currentUser').load()
-    }
-    catch (err) {
+    } catch (err) {
       this.session.invalidate()
     }
   },
@@ -48,10 +46,9 @@ export default Route.extend(ApplicationRouteMixin, {
 
       return this.session.authenticate('authenticator:osc', {
         provider,
-        authorizationCode
+        authorizationCode,
       })
-    }
-    catch (err) {
+    } catch (err) {
       this.transitionTo('error', err)
     }
   },
@@ -63,7 +60,7 @@ export default Route.extend(ApplicationRouteMixin, {
       if (data.get('isValid')) {
         return this.session.authenticate('authenticator:osc', {
           username: data.get('email'),
-          password: data.get('password')
+          password: data.get('password'),
         })
       }
     },
@@ -75,6 +72,6 @@ export default Route.extend(ApplicationRouteMixin, {
     },
     logout() {
       return this.session.invalidate()
-    }
-  }
+    },
+  },
 })

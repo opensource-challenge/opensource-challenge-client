@@ -1,10 +1,6 @@
 import DS from 'ember-data'
 
-const {
-  Model,
-  attr,
-  hasMany
-} = DS
+const { Model, attr, hasMany } = DS
 
 export default Model.extend({
   contributions: hasMany('contribution'),
@@ -13,5 +9,5 @@ export default Model.extend({
   picture: attr('string'),
   name: attr('string'),
   company: attr('string'),
-  admin: attr('boolean', { defaultValue: false })
+  admin: attr('boolean', { defaultValue: false }),
 })

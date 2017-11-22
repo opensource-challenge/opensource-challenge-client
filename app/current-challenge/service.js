@@ -16,8 +16,11 @@ export default Service.extend({
     let res = await this.get('ajax').request('/challenges/current')
 
     this.get('store').pushPayload(res)
-    this.set('challenge', this.get('store').peekRecord('challenge', res.data.id))
+    this.set(
+      'challenge',
+      this.get('store').peekRecord('challenge', res.data.id),
+    )
 
     return this.get('challenge')
-  }
+  },
 })

@@ -9,7 +9,7 @@ const { run } = Ember
 
 describe('Integration | Component | post contribution form', function() {
   setupComponentTest('post-contribution-form', {
-    integration: true
+    integration: true,
   })
 
   it('prefilled form', function() {
@@ -18,7 +18,7 @@ describe('Integration | Component | post contribution form', function() {
       title: 'My Contribution',
       date: '2016-11-21',
       link: 'https://github.com/',
-      description: 'Some github contribution'
+      description: 'Some github contribution',
     })
 
     this.render(hbs`{{post-contribution-form contribution=model}}`)
@@ -26,7 +26,9 @@ describe('Integration | Component | post contribution form', function() {
 
     expect(this.$('[name$="[title]"]')).to.have.value('My Contribution')
     expect(this.$('[name$="[link]"]')).to.have.value('https://github.com/')
-    expect(this.$('[name$="[description]"]')).to.have.value('Some github contribution')
+    expect(this.$('[name$="[description]"]')).to.have.value(
+      'Some github contribution',
+    )
     expect(this.$('.date-field > input')).to.have.value('2016-11-21')
   })
 
@@ -38,9 +40,9 @@ describe('Integration | Component | post contribution form', function() {
       title: 'My Contribution',
       date: '2016-11-21',
       link: 'https://github.com/',
-      description: 'Some github contribution'
+      description: 'Some github contribution',
     })
-    this.set('cancel', () => cancelled = true)
+    this.set('cancel', () => (cancelled = true))
 
     this.render(hbs`
       {{post-contribution-form contribution=model oncancel=(action cancel)}}
@@ -55,17 +57,20 @@ describe('Integration | Component | post contribution form', function() {
     let saved = false
     let changeset = null
 
-    this.set('model', Ember.Object.create({
-      user: {},
-      title: 'My Contr',
-      date: moment().format('YYYY-MM-DD'),
-      link: 'https://github.com/',
-      description: 'Some github contribution',
-      challenge: {
-        startsOn: moment().subtract(1, 'days'),
-        endsOn: moment().add(10, 'days')
-      }
-    }))
+    this.set(
+      'model',
+      Ember.Object.create({
+        user: {},
+        title: 'My Contr',
+        date: moment().format('YYYY-MM-DD'),
+        link: 'https://github.com/',
+        description: 'Some github contribution',
+        challenge: {
+          startsOn: moment().subtract(1, 'days'),
+          endsOn: moment().add(10, 'days'),
+        },
+      }),
+    )
     this.set('save', c => {
       changeset = c
       saved = true
@@ -80,34 +85,33 @@ describe('Integration | Component | post contribution form', function() {
     run(() =>
       this.$(`[name$="[title]"]`)
         .val('My Contribution')
-        .trigger('input')
+        .trigger('input'),
     )
 
-    run(() =>
-      this.$('form button[type="submit"]').click()
-    )
+    run(() => this.$('form button[type="submit"]').click())
 
     expect(saved).to.be.true
-    expect(changeset.get('title'))
-      .to.equal('My Contribution')
+    expect(changeset.get('title')).to.equal('My Contribution')
   })
 
-  it('clicking submit on an invalid changeset does not trigger onsave event',
-      function() {
+  it('clicking submit on an invalid changeset does not trigger onsave event', function() {
     let saved = false
 
-    this.set('model', Ember.Object.create({
-      user: {},
-      title: 'My Contr',
-      date: '2016-11-21',
-      link: 'https://github.com/',
-      description: 'Some github contribution',
-      challenge: {
-        startsOn: moment().subtract(1, 'days'),
-        endsOn: moment().add(10, 'days')
-      }
-    }))
-    this.set('save', () => saved = true)
+    this.set(
+      'model',
+      Ember.Object.create({
+        user: {},
+        title: 'My Contr',
+        date: '2016-11-21',
+        link: 'https://github.com/',
+        description: 'Some github contribution',
+        challenge: {
+          startsOn: moment().subtract(1, 'days'),
+          endsOn: moment().add(10, 'days'),
+        },
+      }),
+    )
+    this.set('save', () => (saved = true))
 
     this.render(hbs`
       {{post-contribution-form contribution=model onsave=(action save)}}
@@ -116,12 +120,10 @@ describe('Integration | Component | post contribution form', function() {
     run(() =>
       this.$(`[name$="[date]"]`)
         .val('invalid date')
-        .trigger('input')
+        .trigger('input'),
     )
 
-    run(() =>
-      this.$('form button[type="submit"]').click()
-    )
+    run(() => this.$('form button[type="submit"]').click())
 
     expect(saved).to.be.false
   })

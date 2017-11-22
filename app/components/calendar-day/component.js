@@ -11,5 +11,5 @@ export default Component.extend({
   date: null,
   disabled: computed('date', function() {
     return moment(this.get('date')).diff(moment()) > 0
-  })
+  }),
 })

@@ -9,5 +9,5 @@ export default Model.extend({
   date: attr('string'),
   link: attr('string'),
   description: attr('string'),
-  insertedAt: attr('date')
+  insertedAt: attr('date'),
 })

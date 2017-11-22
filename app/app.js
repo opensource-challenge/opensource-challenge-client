@@ -18,11 +18,7 @@ const App = Ember.Application.extend({
         externalRoutes: {
           index: 'index',
         },
-        services: [
-          'store',
-          'session',
-          'current-user',
-        ],
+        services: ['store', 'session', 'current-user'],
       },
     },
   },

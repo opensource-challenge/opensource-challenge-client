@@ -7,11 +7,8 @@ export default function validateContributionDate() {
     return validateDateRange({
       min: moment(model.get('challenge.startsOn')),
       max: moment(
-        Math.min(
-          moment(),
-          moment(model.get('challenge.endsOn')).endOf('day')
-        )
-      )
+        Math.min(moment(), moment(model.get('challenge.endsOn')).endOf('day')),
+      ),
     })(key, newValue, oldValue, changes, model)
-  };
+  }
 }

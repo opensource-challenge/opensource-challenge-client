@@ -7,11 +7,11 @@ const cssnext = require('postcss-cssnext')
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     fingerprint: {
-      exclude: [ 'assets/icons/' ]
+      exclude: ['assets/icons/'],
     },
     'ember-app-shell': {
       criticalCSSOptions: {
-        ignore: [ /font-face/, /font-family/ ],
+        ignore: [/font-face/, /font-family/],
       },
     },
     'ember-service-worker': {
@@ -27,7 +27,7 @@ module.exports = function(defaults) {
     },
     postcssOptions: {
       compile: {
-        enabled: false
+        enabled: false,
       },
       filter: {
         enabled: true,
@@ -36,16 +36,12 @@ module.exports = function(defaults) {
           {
             module: cssnext,
             options: {
-              browsers: [
-                '> 1%',
-                'last 3 versions',
-                'Firefox ESR'
-              ]
-            }
-          }
-        ]
-      }
-    }
+              browsers: ['> 1%', 'last 3 versions', 'Firefox ESR'],
+            },
+          },
+        ],
+      },
+    },
   })
 
   app.import('node_modules/xss/dist/xss.js')

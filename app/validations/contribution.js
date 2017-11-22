@@ -1,7 +1,7 @@
 import {
   validatePresence,
   validateLength,
-  validateFormat
+  validateFormat,
 } from 'ember-changeset-validations/validators'
 
 import validateContributionDate from '../validators/contribution-date'
@@ -11,12 +11,8 @@ export default {
     validatePresence(true),
     validateLength({ min: 1 }),
     validateFormat({ regex: /\d{4}.\d{2}.\d{2}/ }),
-    validateContributionDate()
+    validateContributionDate(),
   ],
-  link: [
-    validateFormat({ type: 'url', allowBlank: true })
-  ],
-  description: [
-    validatePresence(true)
-  ]
+  link: [validateFormat({ type: 'url', allowBlank: true })],
+  description: [validatePresence(true)],
 }

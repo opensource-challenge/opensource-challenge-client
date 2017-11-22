@@ -4,5 +4,5 @@ export function initialize(app) {
 
 export default {
   name: 'inject-session-into-abilities',
-  initialize
+  initialize,
 }

@@ -1,16 +1,16 @@
-import { expect } from 'chai';
-import { it, describe } from 'mocha';
-import { setupTest } from 'ember-mocha';
+import { expect } from 'chai'
+import { it, describe } from 'mocha'
+import { setupTest } from 'ember-mocha'
 
 describe('Unit | Service | socket', function() {
   setupTest('service:socket', {
     // Specify the other units that are required for this test.
     // needs: ['service:foo']
-  });
+  })
 
   // Replace this with your real tests.
   it('exists', function() {
-    let service = this.subject();
-    expect(service).to.be.ok;
-  });
-});
+    let service = this.subject()
+    expect(service).to.be.ok
+  })
+})

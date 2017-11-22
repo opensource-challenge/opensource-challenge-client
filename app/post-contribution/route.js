@@ -1,7 +1,6 @@
 import Ember from 'ember'
 import moment from 'moment'
-import AuthenticatedRouteMixin
-  from 'ember-simple-auth/mixins/authenticated-route-mixin'
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin'
 
 const { Route, inject } = Ember
 
@@ -11,8 +10,8 @@ export default Route.extend(AuthenticatedRouteMixin, {
 
   queryParams: {
     date: {
-      refreshModel: true
-    }
+      refreshModel: true,
+    },
   },
 
   async model({ date = moment().format('YYYY-MM-DD') }) {
@@ -43,6 +42,6 @@ export default Route.extend(AuthenticatedRouteMixin, {
       }
 
       this.transitionTo('index')
-    }
-  }
+    },
+  },
 })

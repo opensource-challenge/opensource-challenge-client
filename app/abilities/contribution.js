@@ -5,7 +5,9 @@ const { computed } = Ember
 
 export default Ability.extend({
   canEdit: computed('currentUser.user', 'model.user.id', function() {
-    return this.get('currentUser.user.id') === this.get('model.user.id') ||
+    return (
+      this.get('currentUser.user.id') === this.get('model.user.id') ||
       this.get('currentUser.user.admin')
-  })
+    )
+  }),
 })

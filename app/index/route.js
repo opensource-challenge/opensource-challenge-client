@@ -11,11 +11,11 @@ export default Route.extend({
 
   model() {
     return this.store.findRecord('challenge', 'current', {
-      include: 'contributions'
+      include: 'contributions',
     })
   },
 
   afterModel(model) {
     this.set('currentChallenge.challenge', model)
-  }
+  },
 })

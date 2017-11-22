@@ -1,4 +1,4 @@
 /* eslint-env node */
 module.exports = {
-  useBabelInstrumenter: true
+  useBabelInstrumenter: true,
 }

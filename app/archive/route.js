@@ -7,5 +7,5 @@ export default Ember.Route.extend({
         closed: true,
       },
     })
-  }
+  },
 })

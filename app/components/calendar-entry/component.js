@@ -10,5 +10,5 @@ export default Component.extend({
 
   picture: computed('item.user.picture', function() {
     return this.getWithDefault('item.user.picture', this.fallbackPicture)
-  })
+  }),
 })

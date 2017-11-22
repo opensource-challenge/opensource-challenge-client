@@ -1,12 +1,12 @@
-import { expect } from 'chai';
-import { it, describe } from 'mocha';
-import { setupComponentTest } from 'ember-mocha';
-import hbs from 'htmlbars-inline-precompile';
+import { expect } from 'chai'
+import { it, describe } from 'mocha'
+import { setupComponentTest } from 'ember-mocha'
+import hbs from 'htmlbars-inline-precompile'
 
 describe('Integration | Component | latest contribution', function() {
   setupComponentTest('latest-contribution', {
-    integration: true
-  });
+    integration: true,
+  })
 
   it('renders', function() {
     // Set any properties with this.set('myProperty', 'value');
@@ -18,7 +18,7 @@ describe('Integration | Component | latest contribution', function() {
     //   {{/latest-contribution}}
     // `);
 
-    this.render(hbs`{{latest-contribution}}`);
-    expect(this.$()).to.exist;
-  });
-});
+    this.render(hbs`{{latest-contribution}}`)
+    expect(this.$()).to.exist
+  })
+})

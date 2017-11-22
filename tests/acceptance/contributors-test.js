@@ -26,7 +26,8 @@ describe('Acceptance | contributors', function() {
 
   it('shows all contributors', async function() {
     server.createList('user', 10, {
-      picture: 'https://www.puzzle.ch/wp-content/uploads/2016/03/Senn_Damian-400x300.jpg'
+      picture:
+        'https://www.puzzle.ch/wp-content/uploads/2016/03/Senn_Damian-400x300.jpg',
     })
 
     await visit('/contributors')

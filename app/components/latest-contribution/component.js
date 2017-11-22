@@ -14,5 +14,5 @@ export default Component.extend({
     return this.get('_allContributions')
       .sortBy('insertedAt')
       .objectAt(this.get('_allContributions.length') - 1)
-  })
+  }),
 })

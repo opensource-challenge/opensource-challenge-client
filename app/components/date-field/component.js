@@ -10,7 +10,7 @@ export default Component.extend({
   value: computed('inputFormat', {
     set(prop, value) {
       return this.set('selected', moment(value, this.get('inputFormat')))
-    }
+    },
   }),
   selected: computed(function() {
     return moment()
@@ -22,6 +22,6 @@ export default Component.extend({
   actions: {
     change(date) {
       this.sendAction('change', date)
-    }
-  }
+    },
+  },
 })

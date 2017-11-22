@@ -2,8 +2,10 @@ import { describe, it, beforeEach, afterEach } from 'mocha'
 import { expect } from 'chai'
 import startApp from '../helpers/start-app'
 import destroyApp from '../helpers/destroy-app'
-import { authenticateSession, invalidateSession }
-  from 'opensource-challenge-client/tests/helpers/ember-simple-auth'
+import {
+  authenticateSession,
+  invalidateSession,
+} from 'opensource-challenge-client/tests/helpers/ember-simple-auth'
 import { percySnapshot } from 'ember-percy'
 
 describe('Acceptance | post contribution', function() {
@@ -24,11 +26,11 @@ describe('Acceptance | post contribution', function() {
   })
 
   describe('Logged in', function() {
-    beforeEach(async  function() {
+    beforeEach(async function() {
       server.loadFixtures('users')
 
       await authenticateSession(application, {
-        access_token: 'userid:1'
+        access_token: 'userid:1',
       })
     })
 

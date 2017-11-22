@@ -11,5 +11,5 @@ export default Route.extend({
         // challenge: currentChallenge,
       },
     })
-  }
+  },
 })

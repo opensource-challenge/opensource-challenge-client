@@ -9,5 +9,5 @@ export default PhoenixSocket.extend({
     let scheme = isSecure ? 'wss' : 'ws'
 
     return this._super(`${scheme}://${window.location.host}/socket`)
-  }
+  },
 })

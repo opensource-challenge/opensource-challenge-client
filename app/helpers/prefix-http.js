@@ -1,6 +1,6 @@
 import Ember from 'ember'
 
-export function prefixHttp([ url ]) {
+export function prefixHttp([url]) {
   if (url == null) {
     return ''
   }

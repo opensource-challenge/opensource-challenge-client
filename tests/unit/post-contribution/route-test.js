@@ -1,6 +1,6 @@
-import { expect } from 'chai';
-import { it, describe } from 'mocha';
-import { setupTest } from 'ember-mocha';
+import { expect } from 'chai'
+import { it, describe } from 'mocha'
+import { setupTest } from 'ember-mocha'
 
 describe('Unit | Route | post contribution', function() {
   setupTest('route:post-contribution', {
@@ -9,10 +9,10 @@ describe('Unit | Route | post contribution', function() {
       'service:currentUser',
       'service:currentChallenge',
     ],
-  });
+  })
 
   it('exists', function() {
-    let route = this.subject();
-    expect(route).to.be.ok;
-  });
-});
+    let route = this.subject()
+    expect(route).to.be.ok
+  })
+})

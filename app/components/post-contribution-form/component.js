@@ -6,7 +6,7 @@ const { Component, run } = Ember
 export default Component.extend({
   ContributionValidations,
 
-  classNames: [ 'layout-column-flex' ],
+  classNames: ['layout-column-flex'],
 
   contribution: null,
   validations: [],
@@ -29,6 +29,6 @@ export default Component.extend({
     },
     setDate(changeset, date) {
       changeset.set('date', date.format('YYYY-MM-DD'))
-    }
-  }
+    },
+  },
 })

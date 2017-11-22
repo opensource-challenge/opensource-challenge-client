@@ -2,10 +2,7 @@ import moment from 'moment'
 import Ember from 'ember'
 import groupBy from '../../utils/group-by-macro'
 
-const {
-  Component,
-  computed
-} = Ember
+const { Component, computed } = Ember
 
 export default Component.extend({
   archive: null,
@@ -16,8 +13,9 @@ export default Component.extend({
     active: true,
   },
 
-  sortedItems: computed.sort('items.[]', (a, b) =>
-    Date.parse(a.get('date')) - Date.parse(b.get('date'))
+  sortedItems: computed.sort(
+    'items.[]',
+    (a, b) => Date.parse(a.get('date')) - Date.parse(b.get('date')),
   ),
 
   groupedItems: groupBy('sortedItems', 'date'),
@@ -36,5 +34,5 @@ export default Component.extend({
     }
 
     return days
-  })
+  }),
 })

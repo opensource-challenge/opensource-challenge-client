@@ -9,11 +9,11 @@ export default Component.extend({
     {
       title: 'Adventskalender',
       route: 'index',
-      currentWhen: 'index day post-contribution'
+      currentWhen: 'index day post-contribution',
     },
     {
       title: 'About',
-      route: 'about'
+      route: 'about',
     },
     {
       title: 'Archiv',
@@ -22,7 +22,7 @@ export default Component.extend({
     },
     {
       title: 'Contributors',
-      route: 'contributors'
-    }
-  ]
+      route: 'contributors',
+    },
+  ],
 })

@@ -14,10 +14,9 @@ export default Service.extend({
 
         this.get('store').pushPayload(res)
         this.set('user', this.get('store').peekRecord('user', res.data.id))
-      }
-      catch (e) {
+      } catch (e) {
         this.get('session').invalidate()
       }
     }
-  }
+  },
 })

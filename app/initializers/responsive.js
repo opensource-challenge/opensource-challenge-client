@@ -1,4 +1,4 @@
-import { initialize } from 'ember-responsive/initializers/responsive';
+import { initialize } from 'ember-responsive/initializers/responsive'
 
 /**
  * Ember responsive initializer
@@ -11,5 +11,5 @@ import { initialize } from 'ember-responsive/initializers/responsive';
 
 export default {
   name: 'responsive',
-  initialize
-};
+  initialize,
+}

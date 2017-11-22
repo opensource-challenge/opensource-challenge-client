@@ -1,12 +1,12 @@
-import { expect } from 'chai';
-import { it, describe } from 'mocha';
-import { setupComponentTest } from 'ember-mocha';
-import hbs from 'htmlbars-inline-precompile';
+import { expect } from 'chai'
+import { it, describe } from 'mocha'
+import { setupComponentTest } from 'ember-mocha'
+import hbs from 'htmlbars-inline-precompile'
 
 describe('Integration | Component | contribution bubbles', function() {
   setupComponentTest('contribution-bubbles', {
-    integration: true
-  });
+    integration: true,
+  })
 
   it('renders', function() {
     // Set any properties with this.set('myProperty', 'value');
@@ -18,7 +18,7 @@ describe('Integration | Component | contribution bubbles', function() {
     //   {{/contribution-bubbles}}
     // `);
 
-    this.render(hbs`{{contribution-bubbles}}`);
-    expect(this.$()).to.exist;
-  });
-});
+    this.render(hbs`{{contribution-bubbles}}`)
+    expect(this.$()).to.exist
+  })
+})

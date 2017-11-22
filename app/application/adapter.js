@@ -1,8 +1,7 @@
 import Ember from 'ember'
 import ENV from '../config/environment'
 import DS from 'ember-data'
-import DataAdapterMixin
-  from 'ember-simple-auth/mixins/data-adapter-mixin'
+import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin'
 
 const { JSONAPIAdapter } = DS
 const TIMEOUT = 10000
@@ -16,7 +15,7 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
     return Ember.assign(this._super(url, type, options), { timeout: TIMEOUT })
   },
 
-  urlForCreateRecord(modelName/*, snapshot*/) {
+  urlForCreateRecord(modelName /*, snapshot*/) {
     switch (modelName) {
       case 'user':
       case 'users':
@@ -24,5 +23,5 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
       default:
         return this._super(...arguments)
     }
-  }
+  },
 })

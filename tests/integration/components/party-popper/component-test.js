@@ -1,12 +1,12 @@
-import { expect } from 'chai';
-import { it, describe } from 'mocha';
-import { setupComponentTest } from 'ember-mocha';
-import hbs from 'htmlbars-inline-precompile';
+import { expect } from 'chai'
+import { it, describe } from 'mocha'
+import { setupComponentTest } from 'ember-mocha'
+import hbs from 'htmlbars-inline-precompile'
 
 describe('Integration | Component | party popper', function() {
   setupComponentTest('party-popper', {
-    integration: true
-  });
+    integration: true,
+  })
 
   it('renders', function() {
     // Set any properties with this.set('myProperty', 'value');
@@ -18,7 +18,7 @@ describe('Integration | Component | party popper', function() {
     //   {{/party-popper}}
     // `);
 
-    this.render(hbs`{{party-popper}}`);
-    expect(this.$()).to.exist;
-  });
-});
+    this.render(hbs`{{party-popper}}`)
+    expect(this.$()).to.exist
+  })
+})
