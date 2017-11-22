@@ -33,6 +33,6 @@ describe('Acceptance | contributors', function() {
 
     percySnapshot('/contributors')
 
-    expect($('.contributor').length).to.equal(10)
+    expect($('.contributor')).to.have.length(10)
   })
 })

@@ -19,6 +19,6 @@ describe('Integration | Component | contribution description', function() {
     // `);
 
     this.render(hbs`{{contribution-description}}`);
-    expect(this.$()).to.have.length(1);
+    expect(this.$()).to.exist;
   });
 });

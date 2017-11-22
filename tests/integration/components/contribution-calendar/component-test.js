@@ -18,6 +18,6 @@ describe('Integration | Component | contribution calendar', function() {
       contributions: []
     }))
     this.render(hbs`{{contribution-calendar challenge=challenge}}`)
-    expect(this.$()).to.have.length(1)
+    expect(this.$()).to.exist;
   })
 })

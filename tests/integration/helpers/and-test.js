@@ -11,18 +11,18 @@ describe('Integration | Helper | and', function() {
   it('renders', function() {
     this.render(hbs`{{and 1 1}}`);
 
-    expect(this.$().text().trim()).to.equal('true');
+    expect(this.$()).to.have.text('true');
 
     this.render(hbs`{{and 0 1}}`);
 
-    expect(this.$().text().trim()).to.equal('false');
+    expect(this.$()).to.have.text('false');
 
     this.render(hbs`{{and 1 0}}`);
 
-    expect(this.$().text().trim()).to.equal('false');
+    expect(this.$()).to.have.text('false');
 
     this.render(hbs`{{and 1 1 0}}`);
 
-    expect(this.$().text().trim()).to.equal('false');
+    expect(this.$()).to.have.text('false');
   });
 });

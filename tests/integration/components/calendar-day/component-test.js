@@ -19,6 +19,6 @@ describe('Integration | Component | calendar day', function() {
     // `);
 
     this.render(hbs`{{calendar-day}}`);
-    expect(this.$()).to.have.length(1);
+    expect(this.$()).to.exist;
   });
 });

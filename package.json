@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
+    "chai-jquery": "^2.0.0",
     "ember-ajax": "^3.0.0",
     "ember-basic-dropdown": "^0.33.0",
     "ember-burger-menu": "^3.0.0",

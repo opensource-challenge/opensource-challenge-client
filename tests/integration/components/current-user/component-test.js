@@ -19,6 +19,6 @@ describe('Integration | Component | current user', function() {
     // `);
 
     this.render(hbs`{{current-user}}`);
-    expect(this.$()).to.have.length(1);
+    expect(this.$()).to.exist;
   });
 });

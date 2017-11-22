@@ -19,6 +19,6 @@ describe('Integration | Component | page header', function() {
     // `);
 
     this.render(hbs`{{page-header}}`);
-    expect(this.$()).to.have.length(1);
+    expect(this.$()).to.exist;
   });
 });

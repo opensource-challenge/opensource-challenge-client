@@ -19,6 +19,6 @@ describe('Integration | Component | display error', function() {
     // `);
 
     this.render(hbs`{{display-error}}`);
-    expect(this.$()).to.have.length(1);
+    expect(this.$()).to.exist;
   });
 });

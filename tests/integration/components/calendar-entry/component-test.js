@@ -10,7 +10,7 @@ describe('Integration | Component | calendar entry', function() {
 
   it('renders', function() {
     this.render(hbs`{{calendar-entry}}`)
-    expect(this.$()).to.have.length(1)
+    expect(this.$()).to.exist
   })
 
   describe('With picture', function() {
@@ -22,8 +22,8 @@ describe('Integration | Component | calendar entry', function() {
       })
       this.render(hbs`{{calendar-entry item=entry}}`)
 
-      expect(this.$('.avatar').prop('src'))
-        .to.equal('http://placekitten.com/200/200')
+      expect(this.$('.avatar'))
+        .to.have.prop('src', 'http://placekitten.com/200/200')
     })
   })
 
@@ -36,8 +36,9 @@ describe('Integration | Component | calendar entry', function() {
       })
       this.render(hbs`{{calendar-entry item=entry}}`)
 
-      expect(this.$('.avatar').prop('src'))
-        .to.equal(
+      expect(this.$('.avatar'))
+        .to.have.prop(
+          'src',
           'https://www.puzzle.ch/wp-content/uploads/2015/11/Tux-960x720.jpg'
         )
     })
@@ -50,8 +51,11 @@ describe('Integration | Component | calendar entry', function() {
       })
       this.render(hbs`{{calendar-entry item=entry}}`)
 
-      expect(this.$('.contribution-link').prop('href'))
-        .to.equal('https://github.com/topaxi/opensource-challenge-client')
+      expect(this.$('.contribution-link'))
+        .to.have.prop(
+          'href',
+          'https://github.com/topaxi/opensource-challenge-client'
+        )
     })
   })
 
@@ -62,7 +66,7 @@ describe('Integration | Component | calendar entry', function() {
       })
       this.render(hbs`{{calendar-entry item=entry}}`)
 
-      expect(this.$('.contribution-link')).to.have.length(0)
+      expect(this.$('.contribution-link')).to.not.exist
     })
   })
 })

@@ -19,6 +19,6 @@ describe('Integration | Component | contribution bubbles', function() {
     // `);
 
     this.render(hbs`{{contribution-bubbles}}`);
-    expect(this.$()).to.have.length(1);
+    expect(this.$()).to.exist;
   });
 });

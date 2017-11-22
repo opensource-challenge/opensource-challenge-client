@@ -11,6 +11,6 @@ describe('Integration | Component | contributor list', function() {
   it('renders', function() {
     this.render(hbs`{{contributor-list}}`)
 
-    expect(this.$()).to.have.length(1)
+    expect(this.$()).to.exist;
   })
 })

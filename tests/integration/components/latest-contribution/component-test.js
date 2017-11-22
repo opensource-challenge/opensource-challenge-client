@@ -19,6 +19,6 @@ describe('Integration | Component | latest contribution', function() {
     // `);
 
     this.render(hbs`{{latest-contribution}}`);
-    expect(this.$()).to.have.length(1);
+    expect(this.$()).to.exist;
   });
 });

@@ -19,6 +19,6 @@ describe('Integration | Component | date field', function() {
     // `);
 
     this.render(hbs`{{date-field}}`);
-    expect(this.$()).to.have.length(1);
+    expect(this.$()).to.exist;
   });
 });

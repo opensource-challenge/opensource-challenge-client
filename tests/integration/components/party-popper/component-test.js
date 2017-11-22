@@ -19,6 +19,6 @@ describe('Integration | Component | party popper', function() {
     // `);
 
     this.render(hbs`{{party-popper}}`);
-    expect(this.$()).to.have.length(1);
+    expect(this.$()).to.exist;
   });
 });
