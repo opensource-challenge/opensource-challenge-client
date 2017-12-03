@@ -48,7 +48,7 @@ describe('Integration | Component | post contribution form', function() {
       {{post-contribution-form contribution=model oncancel=(action cancel)}}
     `)
 
-    this.$('button[label="Cancel"]').click()
+    this.$('button[label="Abbrechen"]').click()
 
     expect(cancelled).to.be.true
   })
