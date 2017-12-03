@@ -19,9 +19,9 @@
       }}
 
     <div class="button-row">
-      {{f.button "Cancel" class="btn-link" click=(action "cancel")}}
-      {{f.submit
+      {{f.submit "Erfassen"
         disabled=(or changeset.isInvalid changeset.isPristine changeset.isSaving)}}
+      {{f.button "Abbrechen" class="btn-link" click=(action "cancel")}}
     </div>
   {{/form-for}}
 
