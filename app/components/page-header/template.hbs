@@ -1,11 +1,11 @@
 {{#if media.isDesktop}}
   <header class="page-header {{componentCssClassName}}">
-    {{yield}}
+    {{~yield~}}
 
     <ul class="page-header__menu flex">
       {{#each menuItems as |item|}}
         <li>
-          {{link-to item.title item.route current-when=item.currentWhen}}
+          {{~link-to item.title item.route current-when=item.currentWhen~}}
         </li>
       {{/each}}
       <li>
@@ -26,7 +26,7 @@
     </ul>
   </header>
 
-  {{yield to='inverse'}}
+  {{~yield to='inverse'~}}
 
 {{else}}
   {{#burger-menu class="flex" itemAnimation="push" as |b|}}
@@ -39,7 +39,7 @@
       <ul class="bm-menu-list layout-column flex">
         {{#each menuItems as |item|}}
           {{#menu.item}}
-            {{link-to item.title item.route current-when=item.currentWhen}}
+            {{~link-to item.title item.route current-when=item.currentWhen~}}
           {{/menu.item}}
         {{/each}}
         {{#current-user as |user|}}
@@ -67,7 +67,7 @@
         {{yield}}
       </header>
 
-      {{yield to='inverse'}}
+      {{~yield to='inverse'~}}
     {{/b.outlet}}
   {{/burger-menu}}
 {{/if}}
