@@ -16,6 +16,7 @@ module.exports = function(defaults) {
     },
     'ember-service-worker': {
       registrationStrategy: 'inline',
+      versionStrategy: 'every-build',
     },
     'esw-index': {
       excludeScope: [
