@@ -19,44 +19,31 @@ $font-dark: #222;
 $font-light: #eeeeec;
 $font-dark-mute: rgba(34, 34, 34, 0.666);
 
-$font-family-sans: Roboto, 'Liberation Sans', sans-serif;
-$font-family-mono: 'Operator Mono',
-  'Fira Code',
-  'Ubuntu Mono',
-  'Droid Sans Mono',
-  'Liberation Mono',
-  'Source Code Pro',
-  Menlo,
-  Monaco,
-  Consolas,
-  monospace;
+$font-family-sans: Roboto, "Liberation Sans", sans-serif;
+$font-family-mono: "Operator Mono", "Fira Code", "Ubuntu Mono", "Droid Sans Mono", "Liberation Mono", "Source Code Pro", Menlo, Monaco, Consolas, monospace;
 
 $font-family-default: $font-family-sans;
 
 :root {
-  --primary: $c-puzzle-1;
-  --secondary: $c-puzzle-4;
-
-  --info: $c-info;
-  --warning: $c-warning;
-  --danger: $c-danger;
-
-  --c-puzzle-1: $c-puzzle-1;
-  --c-puzzle-2: $c-puzzle-2;
-  --c-puzzle-3: $c-puzzle-3;
-  --c-puzzle-4: $c-puzzle-4;
-  --c-puzzle-5: $c-puzzle-5;
-  --c-puzzle-6: $c-puzzle-6;
-  --c-puzzle-7: $c-puzzle-7;
-  --c-puzzle-8: $c-puzzle-8;
-  --c-puzzle-9: $c-puzzle-9;
-
-  --font-color-default: $font-light;
-  --font-color-dark: $font-dark;
-  --font-color-light: $font-light;
-  --font-color-dark-mute: $font-dark-mute;
-
-  --font-family-default: $font-family-default;
-  --font-family-sans: $font-family-sans;
-  --font-family-mono: $font-family-mono;
+  --primary: #{$c-puzzle-1};
+  --secondary: #{$c-puzzle-4};
+  --info: #{$c-info};
+  --warning: #{$c-warning};
+  --danger: #{$c-danger};
+  --c-puzzle-1: #{$c-puzzle-1};
+  --c-puzzle-2: #{$c-puzzle-2};
+  --c-puzzle-3: #{$c-puzzle-3};
+  --c-puzzle-4: #{$c-puzzle-4};
+  --c-puzzle-5: #{$c-puzzle-5};
+  --c-puzzle-6: #{$c-puzzle-6};
+  --c-puzzle-7: #{$c-puzzle-7};
+  --c-puzzle-8: #{$c-puzzle-8};
+  --c-puzzle-9: #{$c-puzzle-9};
+  --font-color-default: #{$font-light};
+  --font-color-dark: #{$font-dark};
+  --font-color-light: #{$font-light};
+  --font-color-dark-mute: #{$font-dark-mute};
+  --font-family-default: #{$font-family-default};
+  --font-family-sans: #{$font-family-sans};
+  --font-family-mono: #{$font-family-mono};
 }

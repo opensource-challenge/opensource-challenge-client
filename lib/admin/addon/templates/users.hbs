@@ -8,8 +8,8 @@
   <tbody>
     {{#each model as |user|}}
       <tr>
-        <td>{{#link-to 'edit-user' user.id}}{{user.name}}{{/link-to}}</td>
-        <td class="text-center">{{if user.admin '✔'}}</td>
+        <td>{{#link-to "edit-user" user.id}}{{user.name}}{{/link-to}}</td>
+        <td class="text-center">{{if user.admin "✔"}}</td>
       </tr>
     {{/each}}
   </tbody>

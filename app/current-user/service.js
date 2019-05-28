@@ -1,21 +1,20 @@
-import Ember from 'ember'
-
-const { Service, inject } = Ember
+import Service, { inject as service } from '@ember/service'
 
 export default Service.extend({
-  session: inject.service(),
-  store: inject.service(),
-  ajax: inject.service(),
+  session: service(),
+  store: service(),
+  ajax: service(),
 
   async load() {
     if (this.get('session.isAuthenticated')) {
       try {
-        let res = await this.get('ajax').request('/users/current')
+        let res = await this.ajax.request('/users/current')
 
-        this.get('store').pushPayload(res)
-        this.set('user', this.get('store').peekRecord('user', res.data.id))
+        this.store.pushPayload(res)
+        this.set('user', this.store.peekRecord('user', res.data.id))
       } catch (e) {
-        this.get('session').invalidate()
+        this.session.invalidate()
+        throw e
       }
     }
   },

@@ -1,19 +1,21 @@
 {{#basic-dropdown as |dropdown|}}
-  <input type="text"
+  <input
+    type="text"
     id="ember-basic-dropdown-trigger-{{dropdown.uniqueId}}"
     onclick={{dropdown.actions.toggle}}
-    value={{if selected (moment-format selected 'YYYY-MM-DD')}}
-    readonly>
+    value={{if selected (moment-format selected "YYYY-MM-DD")}}
+    readonly
+  >
 
   {{#dropdown.content class="datepicker-dropdown"}}
     {{#power-calendar class="datepicker"
       center=center
       selected=selected
       onSelect=(pipe-action
-        (action "change" value="moment")
+        (action change value="moment")
         dropdown.actions.close
       )
-      as |calendar|}}
+    as |calendar|}}
       {{calendar.nav}}
       {{calendar.days}}
     {{/power-calendar}}

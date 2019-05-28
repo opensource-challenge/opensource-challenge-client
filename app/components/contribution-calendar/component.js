@@ -1,19 +1,19 @@
+import { sort } from '@ember/object/computed'
+import Component from '@ember/component'
+import { computed } from '@ember/object'
 import moment from 'moment'
-import Ember from 'ember'
 import groupBy from '../../utils/group-by-macro'
-
-const { Component, computed } = Ember
 
 export default Component.extend({
   archive: null,
 
-  challenge: {
+  challenge: computed(() => ({
     startsOn: '2100-12-01',
     endsOn: '2100-12-24',
     active: true,
-  },
+  })),
 
-  sortedItems: computed.sort(
+  sortedItems: sort(
     'items.[]',
     (a, b) => Date.parse(a.get('date')) - Date.parse(b.get('date')),
   ),
@@ -21,7 +21,7 @@ export default Component.extend({
   groupedItems: groupBy('sortedItems', 'date'),
 
   calendarDays: computed('challenge', 'groupedItems.[]', function() {
-    let items = this.get('groupedItems')
+    let items = this.groupedItems
 
     let start = moment(this.get('challenge.startsOn'))
     let end = moment(this.get('challenge.endsOn'))

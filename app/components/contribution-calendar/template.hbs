@@ -3,13 +3,13 @@
 {{#if (and challenge.active challenge.open)}}
   <p class="post-contribution-btn content">
     {{#link-to
-      'post-contribution'
-      (query-params date=(moment-format now 'YYYY-MM-DD'))
+      "post-contribution"
+      (query-params date=(moment-format now "YYYY-MM-DD"))
       class="btn-primary"
-      }}
-      {{fa-icon 'plus'}}
+    }}
+      {{fa-icon "plus"}}
       Jetzt einen neuen
-      {{#if media.isMobile}}<br>{{/if}}
+      {{#if (media "isMobile")}}<br>{{/if}}
       Beitrag erfassen
     {{/link-to}}
   </p>

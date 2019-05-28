@@ -1,27 +1,20 @@
-import { describe, it, beforeEach, afterEach } from 'mocha'
+import { currentURL, visit } from '@ember/test-helpers'
+import { describe, it } from 'mocha'
+import { setupApplicationTest } from 'ember-mocha'
+import { setupMirage } from 'ember-cli-mirage/test-support'
 import { expect } from 'chai'
-import startApp from '../helpers/start-app'
-import destroyApp from '../helpers/destroy-app'
 import { percySnapshot } from 'ember-percy'
 
-describe('Acceptance | index', function() {
-  let application
-
-  beforeEach(function() {
-    application = startApp()
-  })
-
-  afterEach(function() {
-    destroyApp(application)
-  })
+describe('Acceptance | index', function(hooks) {
+  setupMirage(setupApplicationTest(hooks))
 
   it('can visit /', async function() {
-    server.loadFixtures('challenges', 'users', 'contributions')
+    this.server.loadFixtures('challenges', 'users', 'contributions')
 
     await visit('/')
 
-    percySnapshot('/')
-
     expect(currentURL()).to.equal('/')
+
+    percySnapshot('/')
   })
 })

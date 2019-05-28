@@ -1,10 +1,10 @@
 {{#form-for (changeset model UserValidations) as |f|}}
-  {{f.text-field 'name' required=true}}
-  {{f.email-field 'email' required=true}}
-  {{f.url-field 'website'}}
-  {{f.url-field 'picture'}}
-  {{f.text-field 'company'}}
-  {{f.checkbox-field 'admin'}}
+  {{f.text-field "name" required=true}}
+  {{f.email-field "email" required=true}}
+  {{f.url-field "website"}}
+  {{f.url-field "picture"}}
+  {{f.text-field "company"}}
+  {{f.checkbox-field "admin"}}
 
   {{f.submit}}
 {{/form-for}}

@@ -1,8 +1,7 @@
-import Ember from 'ember'
+import { run } from '@ember/runloop';
+import { isEmpty } from '@ember/utils';
 import RSVP from 'rsvp'
 import OAuth2PasswordGrant from 'ember-simple-auth/authenticators/oauth2-password-grant'
-
-const { run, isEmpty } = Ember
 
 export default OAuth2PasswordGrant.extend({
   serverTokenEndpoint: '/api/v1/token',
@@ -19,7 +18,7 @@ export default OAuth2PasswordGrant.extend({
 
     return new RSVP.Promise((resolve, reject) => {
       let data = { grant_type: provider, authorizationCode }
-      let serverTokenEndpoint = this.get('serverTokenEndpoint')
+      let serverTokenEndpoint = this.serverTokenEndpoint
 
       this.makeRequest(serverTokenEndpoint, data).then(
         response => {
@@ -44,9 +43,9 @@ export default OAuth2PasswordGrant.extend({
           })
         },
         _xhr => {
-          run(null, reject, this.get('rejectWithResponse'))
+          run(null, reject, this.rejectWithResponse)
         },
       )
-    })
+    });
   },
 })

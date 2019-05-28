@@ -1,7 +1,7 @@
-import Ember from 'ember'
+import Component from '@ember/component'
+import { computed } from '@ember/object'
+import { run } from '@ember/runloop'
 import ContributionValidations from '../../validations/contribution'
-
-const { Component, run } = Ember
 
 export default Component.extend({
   ContributionValidations,
@@ -9,23 +9,24 @@ export default Component.extend({
   classNames: ['layout-column-flex'],
 
   contribution: null,
-  validations: [],
+  validations: computed(() => []),
+
+  onsave() {},
+  oncancel() {},
+  ondelete() {},
 
   actions: {
     async save(changeset) {
       await changeset.validate()
 
       if (changeset.get('isValid')) {
-        return this.sendAction('onsave', changeset)
+        return this.onsave(changeset)
       }
     },
     delete() {
       run.later(() => {
-        this.sendAction('ondelete', this.get('contribution'))
+        this.ondelete(this.contribution)
       }, 400)
-    },
-    cancel() {
-      return this.sendAction('oncancel')
     },
     setDate(changeset, date) {
       changeset.set('date', date.format('YYYY-MM-DD'))

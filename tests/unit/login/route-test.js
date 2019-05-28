@@ -2,13 +2,11 @@ import { expect } from 'chai'
 import { it, describe } from 'mocha'
 import { setupTest } from 'ember-mocha'
 
-describe('Unit | Route | login', function() {
-  setupTest('route:login', {
-    needs: ['service:session'],
-  })
+describe('Unit | Route | login', function(hooks) {
+  setupTest(hooks)
 
   it('exists', function() {
-    let route = this.subject()
+    let route = this.owner.lookup('route:login')
     expect(route).to.be.ok
   })
 })

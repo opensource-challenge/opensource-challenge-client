@@ -1,15 +1,14 @@
 import { expect } from 'chai'
 import { it, describe } from 'mocha'
-import { setupComponentTest } from 'ember-mocha'
+import { setupRenderingTest } from 'ember-mocha'
+import { render } from '@ember/test-helpers'
 import hbs from 'htmlbars-inline-precompile'
 
-describe('Integration | Component | contributor list', function() {
-  setupComponentTest('contributor-list', {
-    integration: true,
-  })
+describe('Integration | Component | contributor list', function(hooks) {
+  setupRenderingTest(hooks)
 
-  it('renders', function() {
-    this.render(hbs`{{contributor-list}}`)
+  it('renders', async function() {
+    await render(hbs`{{contributor-list}}`)
 
     expect(this.$()).to.exist
   })

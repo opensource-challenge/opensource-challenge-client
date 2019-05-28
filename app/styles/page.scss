@@ -1,6 +1,7 @@
 .page {
   flex: 1;
 }
+
 .page-header {
   background-color: var(--primary);
   padding: 1rem;
@@ -33,16 +34,20 @@
 .page-content__outlet {
   @extend .layout-column-flex;
 }
+
 .page-content__outlet > .liquid-child {
   @extend .layout-column-flex;
+
   overflow-y: auto;
 }
+
 @supports (-webkit-overflow-scrolling: touch) {
   .page-content__outlet > .liquid-child {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   }
 }
+
 .page-content__outlet > .liquid-child > :first-child {
   margin-top: 0;
 }
@@ -65,34 +70,43 @@
   font-size: 0.7rem;
   line-height: 1.34;
 }
+
 .page-index {
   background-color: $c-puzzle-7;
   padding-top: 0 !important;
   display: flex;
   flex-wrap: wrap;
 }
+
 .page-index > * {
   max-width: 100%;
 }
+
 .page-contributors {
   background-color: $c-puzzle-5;
 }
+
 .page-about {
   background-color: $c-puzzle-7;
 }
+
 .page-login {
   background-color: $c-puzzle-5;
 }
+
 .page-day {
   background-color: $c-puzzle-7;
 }
+
 .page-post-contribution {
   background-color: $c-puzzle-5;
 }
+
 .page-archive-list {
   background-color: $c-puzzle-7;
   padding: 5rem;
 }
+
 .page-archive-challenge {
   background-color: $c-puzzle-5;
 

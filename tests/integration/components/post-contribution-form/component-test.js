@@ -1,18 +1,16 @@
-import Ember from 'ember'
+import { click, render } from '@ember/test-helpers'
+import EmberObject from '@ember/object'
+import { run } from '@ember/runloop'
 import { expect } from 'chai'
 import { it, describe } from 'mocha'
-import { setupComponentTest } from 'ember-mocha'
+import { setupRenderingTest } from 'ember-mocha'
 import hbs from 'htmlbars-inline-precompile'
 import moment from 'moment'
 
-const { run } = Ember
+describe('Integration | Component | post contribution form', function(hooks) {
+  setupRenderingTest(hooks)
 
-describe('Integration | Component | post contribution form', function() {
-  setupComponentTest('post-contribution-form', {
-    integration: true,
-  })
-
-  it('prefilled form', function() {
+  it('prefilled form', async function() {
     this.set('model', {
       user: {},
       title: 'My Contribution',
@@ -21,7 +19,7 @@ describe('Integration | Component | post contribution form', function() {
       description: 'Some github contribution',
     })
 
-    this.render(hbs`{{post-contribution-form contribution=model}}`)
+    await render(hbs`{{post-contribution-form contribution=model}}`)
     expect(this.$()).to.have.length(1)
 
     expect(this.$('[name$="[title]"]')).to.have.value('My Contribution')
@@ -32,7 +30,7 @@ describe('Integration | Component | post contribution form', function() {
     expect(this.$('.date-field > input')).to.have.value('2016-11-21')
   })
 
-  it('clicking the cancel button triggers oncancel event', function() {
+  it('clicking the cancel button triggers oncancel event', async function() {
     let cancelled = false
 
     this.set('model', {
@@ -44,22 +42,22 @@ describe('Integration | Component | post contribution form', function() {
     })
     this.set('cancel', () => (cancelled = true))
 
-    this.render(hbs`
+    await render(hbs`
       {{post-contribution-form contribution=model oncancel=(action cancel)}}
     `)
 
-    this.$('button[label="Abbrechen"]').click()
+    await click('button[label="Abbrechen"]')
 
     expect(cancelled).to.be.true
   })
 
-  it('clicking submit on a valid changeset triggers onsave event', function() {
+  it('clicking submit on a valid changeset triggers onsave event', async function() {
     let saved = false
     let changeset = null
 
     this.set(
       'model',
-      Ember.Object.create({
+      EmberObject.create({
         user: {},
         title: 'My Contr',
         date: moment().format('YYYY-MM-DD'),
@@ -76,7 +74,7 @@ describe('Integration | Component | post contribution form', function() {
       saved = true
     })
 
-    this.render(hbs`
+    await render(hbs`
       {{post-contribution-form contribution=model onsave=(action save)}}
     `)
 
@@ -88,18 +86,18 @@ describe('Integration | Component | post contribution form', function() {
         .trigger('input'),
     )
 
-    run(() => this.$('form button[type="submit"]').click())
+    await click('form button[type="submit"]')
 
     expect(saved).to.be.true
     expect(changeset.get('title')).to.equal('My Contribution')
   })
 
-  it('clicking submit on an invalid changeset does not trigger onsave event', function() {
+  it('clicking submit on an invalid changeset does not trigger onsave event', async function() {
     let saved = false
 
     this.set(
       'model',
-      Ember.Object.create({
+      EmberObject.create({
         user: {},
         title: 'My Contr',
         date: '2016-11-21',
@@ -113,7 +111,7 @@ describe('Integration | Component | post contribution form', function() {
     )
     this.set('save', () => (saved = true))
 
-    this.render(hbs`
+    await render(hbs`
       {{post-contribution-form contribution=model onsave=(action save)}}
     `)
 
@@ -123,7 +121,7 @@ describe('Integration | Component | post contribution form', function() {
         .trigger('input'),
     )
 
-    run(() => this.$('form button[type="submit"]').click())
+    await click('form button[type="submit"]')
 
     expect(saved).to.be.false
   })

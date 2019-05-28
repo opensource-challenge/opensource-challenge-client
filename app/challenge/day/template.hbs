@@ -1,9 +1,9 @@
 <div class="page page-day">
   <h1 class="content calendar-day-heading">
     {{~calendar-day date=model~}}
-    {{moment-format model 'DD.MM.YYYY'}}
-    {{#link-to 'post-contribution' (query-params date=model)}}
-      {{fa-icon 'plus'}}
+    {{moment-format model "DD.MM.YYYY"}}
+    {{#link-to "post-contribution" (query-params date=model)}}
+      {{fa-icon "plus"}}
     {{/link-to}}
   </h1>
 

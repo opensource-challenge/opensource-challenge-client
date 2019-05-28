@@ -1,7 +1,6 @@
+import Component from '@ember/component';
+import { computed } from '@ember/object';
 import moment from 'moment'
-import Ember from 'ember'
-
-const { Component, computed } = Ember
 
 export default Component.extend({
   classNames: 'hover-box',
@@ -10,6 +9,6 @@ export default Component.extend({
   challenge: null,
   date: null,
   disabled: computed('date', function() {
-    return moment(this.get('date')).diff(moment()) > 0
+    return moment(this.date).diff(moment()) > 0;
   }),
 })

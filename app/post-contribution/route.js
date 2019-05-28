@@ -1,12 +1,11 @@
-import Ember from 'ember'
+import { inject as service } from '@ember/service'
+import Route from '@ember/routing/route'
 import moment from 'moment'
 import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin'
 
-const { Route, inject } = Ember
-
 export default Route.extend(AuthenticatedRouteMixin, {
-  currentUser: inject.service(),
-  currentChallenge: inject.service(),
+  currentUser: service(),
+  currentChallenge: service(),
 
   queryParams: {
     date: {
@@ -17,14 +16,15 @@ export default Route.extend(AuthenticatedRouteMixin, {
   async model({ date = moment().format('YYYY-MM-DD') }) {
     let user = this.get('currentUser.user')
 
-    let challenge = await this.get('currentChallenge').load()
+    let challenge = await this.currentChallenge.load()
 
     return this.store.createRecord('contribution', { user, date, challenge })
   },
 
   deactivate() {
     if (this.get('currentModel.isNew')) {
-      this.get('currentModel').destroyRecord()
+      this.store.unloadRecord(this.currentModel)
+      this.currentModel = null
     }
   },
 

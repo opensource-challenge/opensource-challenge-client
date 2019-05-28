@@ -1,7 +1,7 @@
-import Ember from 'ember'
+import { not } from '@ember/object/computed';
+import { computed } from '@ember/object';
 import DS from 'ember-data'
 
-const { computed } = Ember
 const { Model, attr, hasMany } = DS
 
 export default Model.extend({
@@ -12,8 +12,8 @@ export default Model.extend({
   closed: attr('boolean'),
 
   active: computed('startsOn', function() {
-    return Date.now() >= this.get('startsOn')
+    return Date.now() >= this.startsOn;
   }).volatile(),
 
-  open: computed.not('closed').readOnly(),
+  open: not('closed').readOnly(),
 })

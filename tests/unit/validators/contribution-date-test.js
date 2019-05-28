@@ -1,4 +1,4 @@
-import Ember from 'ember'
+import EmberObject from '@ember/object';
 import { expect } from 'chai'
 import { describe, it } from 'mocha'
 import validateContributionDate from 'opensource-challenge-client/validators/contribution-date'
@@ -11,7 +11,7 @@ describe('Unit | Validator | contribution-date', function() {
   })
 
   it('validates correct dates', function() {
-    let model = Ember.Object.create({
+    let model = EmberObject.create({
       challenge: {
         startsOn: moment().subtract(2, 'days'),
         endsOn: moment().add(2, 'days'),
@@ -28,7 +28,7 @@ describe('Unit | Validator | contribution-date', function() {
   })
 
   it('invalidates incorrect dates', function() {
-    let model = Ember.Object.create({
+    let model = EmberObject.create({
       challenge: {
         startsOn: moment().subtract(2, 'days'),
         endsOn: moment().add(2, 'days'),

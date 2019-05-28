@@ -1,5 +1,6 @@
 import RSVP from 'rsvp'
-import Ember from 'ember'
+import Application from '@ember/application'
+import { computed } from '@ember/object'
 import Resolver from './resolver'
 import loadInitializers from 'ember-load-initializers'
 import config from './config/environment'
@@ -8,11 +9,12 @@ const { Promise } = RSVP
 
 window.NativePromise = window.Promise
 window.Promise = Promise
-const App = Ember.Application.extend({
+
+const App = Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
   Resolver,
-  engines: {
+  engines: computed(() => ({
     admin: {
       dependencies: {
         externalRoutes: {
@@ -21,7 +23,7 @@ const App = Ember.Application.extend({
         services: ['store', 'session', 'current-user'],
       },
     },
-  },
+  })),
 })
 
 loadInitializers(App, config.modulePrefix)

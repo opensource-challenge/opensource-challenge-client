@@ -1,26 +1,24 @@
-import Ember from 'ember'
-
-const { Service, inject } = Ember
+import Service, { inject as service } from '@ember/service';
 
 export default Service.extend({
-  store: inject.service(),
-  ajax: inject.service(),
+  store: service(),
+  ajax: service(),
 
   challenge: null,
 
   async load() {
-    if (this.get('challenge')) {
-      return this.get('challenge')
+    if (this.challenge) {
+      return this.challenge;
     }
 
-    let res = await this.get('ajax').request('/challenges/current')
+    let res = await this.ajax.request('/challenges/current')
 
-    this.get('store').pushPayload(res)
+    this.store.pushPayload(res)
     this.set(
       'challenge',
-      this.get('store').peekRecord('challenge', res.data.id),
+      this.store.peekRecord('challenge', res.data.id),
     )
 
-    return this.get('challenge')
+    return this.challenge;
   },
 })

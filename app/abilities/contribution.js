@@ -1,7 +1,5 @@
-import Ember from 'ember'
+import { computed } from '@ember/object';
 import { Ability } from 'ember-can'
-
-const { computed } = Ember
 
 export default Ability.extend({
   canEdit: computed('currentUser.user', 'model.user.id', function() {

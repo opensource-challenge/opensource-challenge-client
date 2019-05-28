@@ -1,14 +1,15 @@
+import Application from '@ember/application';
+import { run } from '@ember/runloop';
 import { expect } from 'chai'
 import { describe, it, beforeEach } from 'mocha'
-import Ember from 'ember'
 import InjectSessionIntoAbilitiesInitializer from 'opensource-challenge-client/initializers/inject-session-into-abilities'
 
 describe('Unit | Initializer | inject session into abilities', function() {
   let application
 
   beforeEach(function() {
-    Ember.run(function() {
-      application = Ember.Application.create()
+    run(function() {
+      application = Application.create()
       application.deferReadiness()
     })
   })

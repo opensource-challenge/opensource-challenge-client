@@ -1,11 +1,8 @@
 module.exports = {
   env: {
-    embertest: true
-  },
-  globals: {
-    server: true
+    embertest: true,
   },
   rules: {
-    'no-magic-numbers': 0
-  }
+    'no-magic-numbers': 0,
+  },
 }
