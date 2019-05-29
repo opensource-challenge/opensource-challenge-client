@@ -1,5 +1,5 @@
 <section>
-  {{#each (sort-by "date:desc" model.contributions) as |contribution|}}
+  {{#each (sort-by "date:desc" this.model.contributions) as |contribution|}}
     <div class="user-contribution">
       <div class="title">
         <h2>

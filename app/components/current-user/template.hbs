@@ -1,4 +1,4 @@
-{{#with currentUser.user as |user|}}
+{{#with this.currentUser.user as |user|}}
   {{yield user}}
 {{else}}
   {{yield to="inverse"}}

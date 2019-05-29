@@ -1,10 +1,10 @@
 <h1>Der Adventskalender</h1>
-<p>Anzahl Beiträge insgesamt: {{challenge.contributions.length}}</p>
-{{#if (and challenge.active challenge.open)}}
+<p>Anzahl Beiträge insgesamt: {{this.challenge.contributions.length}}</p>
+{{#if (and this.challenge.active this.challenge.open)}}
   <p class="post-contribution-btn content">
     {{#link-to
       "post-contribution"
-      (query-params date=(moment-format now "YYYY-MM-DD"))
+      (query-params date=(moment-format this.now "YYYY-MM-DD"))
       class="btn-primary"
     }}
       {{fa-icon "plus"}}
@@ -15,7 +15,7 @@
   </p>
 {{/if}}
 <div class="advent-calendar">
-  {{#each-in calendarDays as |date items|}}
-    {{~calendar-day archive=archive challenge=challenge date=date items=items~}}
+  {{#each-in this.calendarDays as |date items|}}
+    {{~calendar-day archive=this.archive challenge=this.challenge date=date items=items~}}
   {{/each-in}}
 </div>

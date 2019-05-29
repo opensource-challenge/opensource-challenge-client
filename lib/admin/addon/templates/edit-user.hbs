@@ -1,4 +1,4 @@
-{{#form-for (changeset model UserValidations) as |f|}}
+{{#form-for (changeset this.model this.UserValidations) as |f|}}
   {{f.text-field "name" required=true}}
   {{f.email-field "email" required=true}}
   {{f.url-field "website"}}

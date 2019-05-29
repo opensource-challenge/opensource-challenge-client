@@ -1,9 +1,9 @@
 {{#if (media "isDesktop")}}
-  <header class="page-header {{componentCssClassName}}">
+  <header class="page-header {{this.componentCssClassName}}">
     {{~yield~}}
 
     <ul class="page-header__menu flex">
-      {{#each menuItems as |item|}}
+      {{#each this.menuItems as |item|}}
         <li>
           {{~link-to item.title item.route current-when=item.currentWhen~}}
         </li>
@@ -17,7 +17,7 @@
                 {{~#link-to "admin"}}Admin{{/link-to~}}
               </li>
             {{/if}}
-            <li><a {{! template-lint-disable }} {{action logout}}>Logout</a></li>
+            <li><a {{! template-lint-disable }} {{action this.logout}}>Logout</a></li>
           </ul>
         {{else}}
           {{#link-to "login"}}Sign in{{/link-to}}
@@ -37,7 +37,7 @@
         {{/current-user}}
       </header>
       <ul class="bm-menu-list layout-column flex">
-        {{#each menuItems as |item|}}
+        {{#each this.menuItems as |item|}}
           {{#menu.item}}
             {{~link-to item.title item.route current-when=item.currentWhen~}}
           {{/menu.item}}
@@ -50,8 +50,8 @@
           {{/if}}
         {{/current-user}}
         {{#menu.item}}
-          {{#if session.isAuthenticated}}
-            <a {{! template-lint-disable }} {{action logout}}>Logout</a>
+          {{#if this.session.isAuthenticated}}
+            <a {{! template-lint-disable }} {{action this.logout}}>Logout</a>
           {{else}}
             {{#link-to "login"}}Sign in{{/link-to}}
           {{/if}}
@@ -60,7 +60,7 @@
     {{/b.menu}}
 
     {{#b.outlet}}
-      <header class="page-header {{componentCssClassName}}">
+      <header class="page-header {{this.componentCssClassName}}">
         <a class="menu-toggle" {{! template-lint-disable }} {{action b.state.actions.toggle}}>
           {{fa-icon "bars"}}
         </a>

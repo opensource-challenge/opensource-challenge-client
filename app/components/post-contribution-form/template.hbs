@@ -1,6 +1,6 @@
 <h2>Contribution erfassen</h2>
 
-{{#with (changeset contribution ContributionValidations) as |contributionChangeset|}}
+{{#with (changeset this.contribution this.ContributionValidations) as |contributionChangeset|}}
   {{#form-for
     contributionChangeset
     class="layout-column-flex"
@@ -22,7 +22,7 @@
       {{f.submit "Erfassen"
         disabled=(or contributionChangeset.isInvalid contributionChangeset.isPristine contributionChangeset.isSaving)
       }}
-      {{f.button "Abbrechen" class="btn-link" click=(action oncancel)}}
+      {{f.button "Abbrechen" class="btn-link" click=(action this.oncancel)}}
     </div>
   {{/form-for}}
 

@@ -3,16 +3,16 @@
     type="text"
     id="ember-basic-dropdown-trigger-{{dropdown.uniqueId}}"
     onclick={{dropdown.actions.toggle}}
-    value={{if selected (moment-format selected "YYYY-MM-DD")}}
+    value={{if this.selected (moment-format this.selected "YYYY-MM-DD")}}
     readonly
   >
 
   {{#dropdown.content class="datepicker-dropdown"}}
     {{#power-calendar class="datepicker"
-      center=center
-      selected=selected
+      center=this.center
+      selected=this.selected
       onSelect=(pipe-action
-        (action change value="moment")
+        (action this.change value="moment")
         dropdown.actions.close
       )
     as |calendar|}}
