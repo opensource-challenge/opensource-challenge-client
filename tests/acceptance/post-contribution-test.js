@@ -33,11 +33,13 @@ describe('Acceptance | post contribution', function(hooks) {
     })
 
     it('can visit /post-contribution', async function() {
-      this.server.loadFixtures('challenges')
+      this.server.loadFixtures('challenges', 'contributions')
 
       await visit('/post-contribution?date=2018-12-03')
 
       expect(currentURL()).to.equal('/post-contribution?date=2018-12-03')
+
+      expect(document.querySelector('form')).not.to.be.null
 
       percySnapshot('/post-contribution')
     })
