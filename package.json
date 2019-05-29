@@ -82,6 +82,10 @@
     "torii": "^0.10.1",
     "xss": "^1.0.6"
   },
+  "resolutions": {
+    "ember-one-way-controls":
+      "https://codeload.github.com/marxsk/ember-one-way-controls/tar.gz/09427eeaeb57eeb7c280b821d95b9ae0735677de"
+  },
   "engines": {
     "node": "8.* || >= 10.*"
   },
