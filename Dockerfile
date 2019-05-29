@@ -41,7 +41,7 @@ RUN set -ex && \
 
 COPY package.json yarn.lock /tmp/builddir/
 RUN cd /tmp/builddir && \
-    NODE_ENV=development yarn install
+    NODE_ENV=development yarn install --frozen-lockfile
 
 COPY . /tmp/builddir
 
