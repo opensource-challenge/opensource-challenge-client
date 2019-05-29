@@ -1,11 +1,11 @@
-import Ember from 'ember'
+import EmberObject from '@ember/object';
 import { expect } from 'chai'
 import { describe, it } from 'mocha'
 import groupByMacro from 'opensource-challenge-client/utils/group-by-macro'
 
 describe('Unit | Utility | group by macro', function() {
   it('works', function() {
-    let Obj = Ember.Object.extend({
+    let Obj = EmberObject.extend({
       grouped: groupByMacro('items', 'date'),
     })
     let obj = Obj.create({

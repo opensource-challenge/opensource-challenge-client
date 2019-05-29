@@ -1,6 +1,6 @@
 <div class="page page-index">
   {{latest-contribution}}
-  <div class={{if media.isDesktop "layout-row" "layout-column"}}>
+  <div class={{if (media "isDesktop") "layout-row" "layout-column"}}>
     <div class="page-index-content intro flex text-center">
       <h1>{{model.name}}</h1>
       <p>
@@ -23,7 +23,7 @@
 
       <p>
         Unter
-        {{#link-to 'about'}}«About»{{/link-to}} findest du mehr
+        {{#link-to "about"}}«About»{{/link-to}} findest du mehr
         Informationen.
       </p>
 

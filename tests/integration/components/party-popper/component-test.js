@@ -1,14 +1,13 @@
 import { expect } from 'chai'
 import { it, describe } from 'mocha'
-import { setupComponentTest } from 'ember-mocha'
+import { setupRenderingTest } from 'ember-mocha'
+import { render } from '@ember/test-helpers'
 import hbs from 'htmlbars-inline-precompile'
 
-describe('Integration | Component | party popper', function() {
-  setupComponentTest('party-popper', {
-    integration: true,
-  })
+describe('Integration | Component | party popper', function(hooks) {
+  setupRenderingTest(hooks)
 
-  it('renders', function() {
+  it('renders', async function() {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.on('myAction', function(val) { ... });
     // Template block usage:
@@ -18,7 +17,7 @@ describe('Integration | Component | party popper', function() {
     //   {{/party-popper}}
     // `);
 
-    this.render(hbs`{{party-popper}}`)
+    await render(hbs`{{party-popper}}`)
     expect(this.$()).to.exist
   })
 })

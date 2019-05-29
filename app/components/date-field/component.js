@@ -1,7 +1,6 @@
-import Ember from 'ember'
+import Component from '@ember/component'
+import { computed } from '@ember/object'
 import moment from 'moment'
-
-const { Component, computed } = Ember
 
 export default Component.extend({
   classNames: 'date-field',
@@ -9,19 +8,15 @@ export default Component.extend({
 
   value: computed('inputFormat', {
     set(prop, value) {
-      return this.set('selected', moment(value, this.get('inputFormat')))
+      return this.set('selected', moment(value, this.inputFormat))
     },
   }),
   selected: computed(function() {
     return moment()
   }),
   center: computed(function() {
-    return this.get('selected')
+    return this.selected
   }),
 
-  actions: {
-    change(date) {
-      this.sendAction('change', date)
-    },
-  },
+  change() {},
 })

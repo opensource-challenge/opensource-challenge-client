@@ -1,14 +1,13 @@
+import { inject as service } from '@ember/service'
+import { computed } from '@ember/object'
 import ENV from '../config/environment'
-import Ember from 'ember'
 import AjaxService from 'ember-ajax/services/ajax'
 
-const { inject, computed } = Ember
-
 export default AjaxService.extend({
-  session: inject.service(),
+  session: service(),
 
   host: ENV.APP.host,
-  namespace: 'api/v1',
+  namespace: '/api/v1',
 
   headers: computed('session.data.authenticated.access_token', {
     get() {

@@ -1,7 +1,7 @@
 {{#with item.user as |user|}}
   <header>
     {{#link-to "contributors.profile" user class="avatar-wrapper"}}
-      <img class="avatar" src={{picture}}>
+      <img class="avatar" src={{picture}} alt="">
       <div class="username">{{user.name}}</div>
     {{/link-to}}
   </header>

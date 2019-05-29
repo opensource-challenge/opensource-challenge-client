@@ -2,15 +2,12 @@ import { expect } from 'chai'
 import { it, describe } from 'mocha'
 import { setupTest } from 'ember-mocha'
 
-describe('Unit | Service | socket', function() {
-  setupTest('service:socket', {
-    // Specify the other units that are required for this test.
-    // needs: ['service:foo']
-  })
+describe('Unit | Service | socket', function(hooks) {
+  setupTest(hooks)
 
   // Replace this with your real tests.
   it('exists', function() {
-    let service = this.subject()
+    let service = this.owner.lookup('service:socket')
     expect(service).to.be.ok
   })
 })

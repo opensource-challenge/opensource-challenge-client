@@ -1,14 +1,13 @@
 import { expect } from 'chai'
 import { it, describe } from 'mocha'
-import { setupComponentTest } from 'ember-mocha'
+import { setupRenderingTest } from 'ember-mocha'
+import { render } from '@ember/test-helpers'
 import hbs from 'htmlbars-inline-precompile'
 
-describe('Integration | Component | display error', function() {
-  setupComponentTest('display-error', {
-    integration: true,
-  })
+describe('Integration | Component | display error', function(hooks) {
+  setupRenderingTest(hooks)
 
-  it('renders', function() {
+  it('renders', async function() {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.on('myAction', function(val) { ... });
     // Template block usage:
@@ -18,7 +17,7 @@ describe('Integration | Component | display error', function() {
     //   {{/display-error}}
     // `);
 
-    this.render(hbs`{{display-error}}`)
+    await render(hbs`{{display-error}}`)
     expect(this.$()).to.exist
   })
 })

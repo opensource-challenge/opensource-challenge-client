@@ -1,18 +1,18 @@
-import Ember from 'ember'
-
-const { Component, computed, inject } = Ember
+import { inject as service } from '@ember/service';
+import Component from '@ember/component';
+import { computed } from '@ember/object';
 
 export default Component.extend({
-  store: inject.service(),
+  store: service(),
 
   tagName: 'section',
 
   _allContributions: computed(function() {
-    return this.get('store').peekAll('contribution')
+    return this.store.peekAll('contribution');
   }),
   contribution: computed('_allContributions.[]', function() {
-    return this.get('_allContributions')
+    return this._allContributions
       .sortBy('insertedAt')
-      .objectAt(this.get('_allContributions.length') - 1)
+      .objectAt(this.get('_allContributions.length') - 1);
   }),
 })

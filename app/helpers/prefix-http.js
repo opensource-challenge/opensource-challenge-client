@@ -1,4 +1,4 @@
-import Ember from 'ember'
+import { helper as buildHelper } from '@ember/component/helper';
 
 export function prefixHttp([url]) {
   if (url == null) {
@@ -7,4 +7,4 @@ export function prefixHttp([url]) {
   return url.indexOf('http') === 0 ? url : `http://${url}`
 }
 
-export default Ember.Helper.helper(prefixHttp)
+export default buildHelper(prefixHttp)

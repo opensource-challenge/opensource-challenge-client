@@ -1,6 +1,6 @@
 <div class="page page-index">
   {{latest-contribution}}
-  <div class={{if media.isDesktop "layout-row" "layout-column"}}>
+  <div class={{if (media "isDesktop") "layout-row" "layout-column"}}>
     <div class="page-index-content intro flex text-center">
       <h1>&nbsp;</h1>
       <p>&nbsp;</p>
@@ -13,7 +13,7 @@
 
       {{contribution-bubbles}}
     </div>
-    {{#if media.isDesktop}}
+    {{#if (media "isDesktop")}}
       <div class="page-index-content advent-wrapper flex text-center">
         {{contribution-calendar}}
       </div>

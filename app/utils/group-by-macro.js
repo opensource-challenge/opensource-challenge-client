@@ -1,7 +1,8 @@
 // BASED ON https://github.com/HeroicEric/ember-group-by
-import Ember from 'ember'
+import { A as emberArray } from '@ember/array';
 
-const { A: emberArray, computed, get, isPresent } = Ember
+import { get, computed } from '@ember/object';
+import { isPresent } from '@ember/utils';
 
 export default function groupBy(collection, property) {
   const dependentKey = `${collection}.@each.${property}`

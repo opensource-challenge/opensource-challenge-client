@@ -1,11 +1,11 @@
-import Ember from 'ember'
-
-const { Component, inject } = Ember
+import { inject as service } from '@ember/service'
+import Component from '@ember/component'
+import { computed } from '@ember/object'
 
 export default Component.extend({
   tagName: '',
-  session: inject.service(),
-  menuItems: [
+  session: service(),
+  menuItems: computed(() => [
     {
       title: 'Adventskalender',
       route: 'index',
@@ -24,5 +24,5 @@ export default Component.extend({
       title: 'Contributors',
       route: 'contributors',
     },
-  ],
+  ]),
 })

@@ -1,17 +1,14 @@
-import Ember from 'ember'
+import EmberObject from '@ember/object'
 import { expect } from 'chai'
 import { it, describe } from 'mocha'
-import { setupComponentTest } from 'ember-mocha'
+import { setupRenderingTest } from 'ember-mocha'
+import { render } from '@ember/test-helpers'
 import hbs from 'htmlbars-inline-precompile'
 
-const { Object: EmberObject } = Ember
+describe('Integration | Component | contribution calendar', function(hooks) {
+  setupRenderingTest(hooks)
 
-describe('Integration | Component | contribution calendar', function() {
-  setupComponentTest('contribution-calendar', {
-    integration: true,
-  })
-
-  it('renders', function() {
+  it('renders', async function() {
     this.set(
       'challenge',
       EmberObject.create({
@@ -20,7 +17,7 @@ describe('Integration | Component | contribution calendar', function() {
         contributions: [],
       }),
     )
-    this.render(hbs`{{contribution-calendar challenge=challenge}}`)
+    await render(hbs`{{contribution-calendar challenge=challenge}}`)
     expect(this.$()).to.exist
   })
 })

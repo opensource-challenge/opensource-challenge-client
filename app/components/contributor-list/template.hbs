@@ -1,16 +1,21 @@
-{{#each (sort-by 'name' items) as |contributor|}}
+{{#each (sort-by "name" items) as |contributor|}}
   <div class="contributor hover-box">
-    {{#link-to "contributors.profile" contributor
+    {{#link-to
+      "contributors.profile"
+      contributor
       class = "contributor__link hover-box__link"
-      }}
+    }}
       <div class="contributor__caption hover-box__caption">
         <div class="contributor__caption__content hover-box__caption__content">
           <p>{{contributor.name}}</p>
-          {{fa-icon 'angle-double-up' size=3}}
+          {{fa-icon "angle-double-up" size=3}}
         </div>
       </div>
-      <img class="contributor__image hover-box__content"
-          src={{contributor.picture}} alt="">
+      <img
+        class="contributor__image hover-box__content"
+        src={{contributor.picture}}
+        alt=""
+      >
     {{/link-to}}
   </div>
 {{else}}
@@ -18,13 +23,13 @@
     <p>Es hat noch niemand einen Beitrag gemacht!</p>
 
     {{#link-to
-      'post-contribution'
-      (query-params date=(moment-format now 'YYYY-MM-DD'))
+      "post-contribution"
+      (query-params date=(moment-format now "YYYY-MM-DD"))
       class="btn-primary"
-      }}
-      {{fa-icon 'plus'}}
+    }}
+      {{fa-icon "plus"}}
       Jetzt einen neuen
-      {{#if media.isMobile}}<br>{{/if}}
+      {{#if (media "isMobile")}}<br>{{/if}}
       Beitrag erfassen
     {{/link-to}}
   </div>

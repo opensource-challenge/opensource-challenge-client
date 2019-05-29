@@ -1,4 +1,4 @@
-{{#if media.isDesktop}}
+{{#if (media "isDesktop")}}
   <header class="page-header {{componentCssClassName}}">
     {{~yield~}}
 
@@ -14,19 +14,19 @@
           <ul>
             {{#if user.admin}}
               <li>
-                {{~#link-to 'admin'}}Admin{{/link-to~}}
+                {{~#link-to "admin"}}Admin{{/link-to~}}
               </li>
             {{/if}}
-            <li><a {{action logout}}>Logout</a></li>
+            <li><a {{! template-lint-disable }} {{action logout}}>Logout</a></li>
           </ul>
         {{else}}
-          {{#link-to 'login'}}Sign in{{/link-to}}
+          {{#link-to "login"}}Sign in{{/link-to}}
         {{/current-user}}
       </li>
     </ul>
   </header>
 
-  {{~yield to='inverse'~}}
+  {{~yield to="inverse"~}}
 
 {{else}}
   {{#burger-menu class="flex" itemAnimation="push" as |b|}}
@@ -45,15 +45,15 @@
         {{#current-user as |user|}}
           {{#if user.admin}}
             {{#menu.item}}
-              {{~#link-to 'admin'}}Admin{{/link-to~}}
+              {{~#link-to "admin"}}Admin{{/link-to~}}
             {{/menu.item}}
           {{/if}}
         {{/current-user}}
         {{#menu.item}}
           {{#if session.isAuthenticated}}
-            <a {{action logout}}>Logout</a>
+            <a {{! template-lint-disable }} {{action logout}}>Logout</a>
           {{else}}
-            {{#link-to 'login'}}Sign in{{/link-to}}
+            {{#link-to "login"}}Sign in{{/link-to}}
           {{/if}}
         {{/menu.item}}
       </ul>
@@ -61,13 +61,13 @@
 
     {{#b.outlet}}
       <header class="page-header {{componentCssClassName}}">
-        <a class="menu-toggle" {{action b.state.actions.toggle}}>
-          {{fa-icon 'bars'}}
+        <a class="menu-toggle" {{! template-lint-disable }} {{action b.state.actions.toggle}}>
+          {{fa-icon "bars"}}
         </a>
         {{yield}}
       </header>
 
-      {{~yield to='inverse'~}}
+      {{~yield to="inverse"~}}
     {{/b.outlet}}
   {{/burger-menu}}
 {{/if}}

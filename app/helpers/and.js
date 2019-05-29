@@ -1,7 +1,7 @@
-import Ember from 'ember'
+import { helper as buildHelper } from '@ember/component/helper';
 
 export function and(params) {
   return params.every(Boolean)
 }
 
-export default Ember.Helper.helper(and)
+export default buildHelper(and)

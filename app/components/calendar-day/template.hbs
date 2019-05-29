@@ -1,13 +1,19 @@
 {{#if archive}}
-  {{#link-to 'challenge.day' challenge date class="hover-box__link" disabled=disabled}}
+  {{#link-to
+    "challenge.day"
+    challenge
+    date
+    class="hover-box__link"
+    disabled=disabled
+  }}
     <div class="calendar-day__number hover-box__content">
-      {{~moment-format date 'D'~}}
+      {{~moment-format date "D"~}}
     </div>
   {{/link-to}}
 {{else}}
-  {{#link-to 'day' date class="hover-box__link" disabled=disabled}}
+  {{#link-to "day" date class="hover-box__link" disabled=disabled}}
     <div class="calendar-day__number hover-box__content">
-      {{~moment-format date 'D'~}}
+      {{~moment-format date "D"~}}
     </div>
   {{/link-to}}
 {{/if}}
