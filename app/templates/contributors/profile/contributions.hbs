@@ -18,7 +18,7 @@
         <a href={{link}}>{{link}}</a>
       {{/with}}
 
-      {{~contribution-description description=contribution.description~}}
+      <ContributionDescription @description={{contribution.description}} />
     </div>
   {{/each}}
 </section>
