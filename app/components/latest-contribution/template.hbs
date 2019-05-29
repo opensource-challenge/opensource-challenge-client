@@ -1,12 +1,12 @@
-{{#if contribution}}
-  {{#liquid-bind contribution use="toUp" as |contribution|}}
-    {{party-popper}}
+{{#if this.contribution}}
+  {{#liquid-bind this.contribution use="toUp" as |contribution|}}
+    <PartyPopper />
     {{#link-to "day" contribution.date}}
       Neuester Beitrag von {{contribution.user.name}}:
       {{contribution.title}}
     {{/link-to}}
-    {{party-popper}}
+    <PartyPopper />
   {{/liquid-bind}}
 {{else}}
-  {{party-popper class="invisible"}}
+  <PartyPopper class="invisible" />
 {{/if}}

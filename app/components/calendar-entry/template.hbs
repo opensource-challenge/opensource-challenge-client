@@ -1,27 +1,27 @@
-{{#with item.user as |user|}}
+{{#with this.item.user as |user|}}
   <header>
     {{#link-to "contributors.profile" user class="avatar-wrapper"}}
-      <img class="avatar" src={{picture}} alt="">
+      <img class="avatar" src={{this.picture}} alt="">
       <div class="username">{{user.name}}</div>
     {{/link-to}}
   </header>
 {{/with}}
 <div class="layout-column contribution-content">
-  {{#with item.link as |link|}}
+  {{#with this.item.link as |link|}}
     <a class="contribution-link" href={{link}}>{{link}}</a>
   {{/with}}
   <section class="justify-mobile">
     <div class="title">
-      {{#with item.title as |title|}}
+      {{#with this.item.title as |title|}}
         <h2>{{title}}</h2>
       {{/with}}
-      {{#if (can "edit contribution" item)}}
-        {{#link-to "edit-contribution" item}}
+      {{#if (can "edit contribution" this.item)}}
+        {{#link-to "edit-contribution" this.item}}
           {{fa-icon "pencil"}}
         {{/link-to}}
       {{/if}}
     </div>
 
-    {{~contribution-description description=item.description~}}
+    <ContributionDescription @description={{this.item.description}} />
   </section>
 </div>

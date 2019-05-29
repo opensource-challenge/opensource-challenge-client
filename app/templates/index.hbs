@@ -2,7 +2,7 @@
   {{latest-contribution}}
   <div class={{if (media "isDesktop") "layout-row" "layout-column"}}>
     <div class="page-index-content intro flex text-center">
-      <h1>{{model.name}}</h1>
+      <h1>{{this.model.name}}</h1>
       <p>
         Stell dich der Herausforderung: Leiste jeden Tag im Advent (1.12. - 24.12.)
         einen Beitrag zu einem Open Source Projekt und unterstütze damit
@@ -30,7 +30,7 @@
       {{contribution-bubbles}}
     </div>
     <div class="page-index-content advent-wrapper flex text-center">
-      {{contribution-calendar challenge=model}}
+      {{contribution-calendar challenge=this.model}}
     </div>
   </div>
 </div>

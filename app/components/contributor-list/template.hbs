@@ -1,4 +1,4 @@
-{{#each (sort-by "name" items) as |contributor|}}
+{{#each (sort-by "name" this.items) as |contributor|}}
   <div class="contributor hover-box">
     {{#link-to
       "contributors.profile"
@@ -24,7 +24,7 @@
 
     {{#link-to
       "post-contribution"
-      (query-params date=(moment-format now "YYYY-MM-DD"))
+      (query-params date=(moment-format this.now "YYYY-MM-DD"))
       class="btn-primary"
     }}
       {{fa-icon "plus"}}
