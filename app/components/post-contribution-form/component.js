@@ -1,5 +1,4 @@
 import Component from '@ember/component'
-import { computed } from '@ember/object'
 import { run } from '@ember/runloop'
 import ContributionValidations from '../../validations/contribution'
 
@@ -9,7 +8,6 @@ export default Component.extend({
   classNames: ['layout-column-flex'],
 
   contribution: null,
-  validations: computed(() => []),
 
   onsave() {},
   oncancel() {},
