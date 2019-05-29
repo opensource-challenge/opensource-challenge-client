@@ -5,7 +5,7 @@ USER root
 # This image will be initialized with "npm run $NPM_RUN"
 # See https://docs.npmjs.com/misc/scripts, and your repo's package.json
 # file for possible values of NPM_RUN
-ENV NODE_VERSION=8.6.0 \
+ENV NODE_VERSION=12.3.1 \
     DEBUG_PORT=5858 \
     NODE_ENV=production \
     DEV_MODE=false
