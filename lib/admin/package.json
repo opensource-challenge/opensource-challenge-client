@@ -7,6 +7,7 @@
     "ember-moment": "*",
     "ember-form-for": "*",
     "ember-changeset": "*",
-    "ember-changeset-validations": "*"
+    "ember-changeset-validations": "*",
+    "ember-route-action-helper": "*"
   }
 }

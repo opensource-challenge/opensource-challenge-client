@@ -7,6 +7,7 @@ const { Model, attr, hasMany } = DS
 export default Model.extend({
   contributions: hasMany('contribution', { async: true }),
   name: attr('string'),
+  shortname: attr('string'),
   startsOn: attr('date'),
   endsOn: attr('date'),
   closed: attr('boolean'),

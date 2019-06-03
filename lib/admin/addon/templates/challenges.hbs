@@ -1,6 +1,9 @@
+<LinkTo @route="admin.create-challenge">Neue Challenge erfassen</LinkTo>
+
 <table>
   <thead>
     <tr>
+      <td>Kürzel</td>
       <td>Name</td>
       <td>Start</td>
       <td>Ende</td>
@@ -10,7 +13,12 @@
   <tbody>
     {{#each this.model as |challenge|}}
       <tr>
-        <td>{{challenge.name}}</td>
+        <td>{{challenge.shortname}}</td>
+        <td>
+          <LinkTo @route="admin.edit-challenge" @model={{challenge}}>
+            {{challenge.name}}
+          </LinkTo>
+        </td>
         <td>{{moment-format challenge.startsOn "DD.MM.YYYY"}}</td>
         <td>{{moment-format challenge.endsOn "DD.MM.YYYY"}}</td>
         <td class="text-center">{{if challenge.closed "✔"}}</td>
