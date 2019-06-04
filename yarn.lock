@@ -4787,10 +4787,10 @@ ember-compatibility-helpers@^1.0.2, ember-compatibility-helpers@^1.1.1, ember-co
     ember-cli-version-checker "^2.1.1"
     semver "^5.4.1"
 
-ember-component-css@^0.6.5:
-  version "0.6.9"
-  resolved "https://registry.yarnpkg.com/ember-component-css/-/ember-component-css-0.6.9.tgz#592983f5678e4abc2c0dc01a377f812506ddac5a"
-  integrity sha512-bQoEdks22RTBehDjmqvZSuOQQvT59uEN2Zse9hsruO7lgoVtd/dk1YuJd2B0mXZyR+6TEN7/R8yeLtTubsubMQ==
+ember-component-css@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/ember-component-css/-/ember-component-css-0.7.0.tgz#0e85a0a2ec4fb3ece8fbacaeef7a616ca39169d2"
+  integrity sha512-SDSs7XA2iKxsVDa1YFUi4jOuAYfZR0RCo2KUQygUmiNcbtMuEB1CeYOx71CqGJfWGRYuShSb06rg0QfnfHX+tQ==
   dependencies:
     broccoli-concat "^3.7.3"
     broccoli-funnel "^2.0.1"
