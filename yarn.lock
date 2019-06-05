@@ -4821,10 +4821,10 @@ ember-composable-helpers@^2.0.3:
     ember-cli-babel "^7.1.0"
     resolve "^1.10.0"
 
-"ember-concurrency@^0.8.27 || ^0.9.0 || ^0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/ember-concurrency/-/ember-concurrency-0.10.0.tgz#9c7c79dca411e01466119f02d7197c0a4ff0df08"
-  integrity sha512-KhNNkUqnAN0isuAwSHaTJtmY/MdHJogSSAj7lCigzfJn2+21yafQcwzoVqf5LdMOn2+owWYURr1YiwzuOvlGyQ==
+"ember-concurrency@^0.8.27 || ^0.9.0 || ^0.10.0 || ^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ember-concurrency/-/ember-concurrency-1.0.0.tgz#3b650672fdd5dc1d45007626119135829076c2b6"
+  integrity sha512-76aKC0lo2LAPoQYz7vMRlpolWTIQerszr8PPf3JMM5cTOzPwXUtzDcjfso3JAEDdhyUF9fkv2V1DmHagFbC2YQ==
   dependencies:
     babel-core "^6.24.1"
     ember-cli-babel "^6.8.2"
@@ -5123,16 +5123,16 @@ ember-power-calendar-moment@^0.1.3:
     ember-cli-babel "^7.7.3"
     ember-cli-moment-shim "^3.7.1"
 
-ember-power-calendar@^0.13.2:
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/ember-power-calendar/-/ember-power-calendar-0.13.2.tgz#8bc504420f684a0f9e2686f407b243f445798bf0"
-  integrity sha512-qYDXL1qUfXxuurk17Ffvfc8Mpk0kG58aFc9ceWomdzcSH/3kUVsZhtptMnpF5ZMq+3VonUdxwoTKxu8ZdGHhbA==
+ember-power-calendar@^0.13.3:
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/ember-power-calendar/-/ember-power-calendar-0.13.3.tgz#daff0f668ffbe65fd59c479aa5569e58c59daafd"
+  integrity sha512-xgXEHke4yzjZ9VUkQ/Cgd5c/lAUtl8chQilKDx7FMV+1z7/uLi9hxG56e1NHHbwEI9KBUPtO+pimuPqbZ3DzEg==
   dependencies:
     ember-assign-helper "^0.2.0"
     ember-cli-babel "^7.2.0"
     ember-cli-element-closest-polyfill "^0.0.1"
     ember-cli-htmlbars "^3.0.1"
-    ember-concurrency "^0.8.27 || ^0.9.0 || ^0.10.0"
+    ember-concurrency "^0.8.27 || ^0.9.0 || ^0.10.0 || ^1.0.0"
 
 ember-require-module@^0.3.0:
   version "0.3.0"
