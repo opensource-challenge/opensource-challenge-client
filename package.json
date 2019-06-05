@@ -27,7 +27,7 @@
     "ember-basic-dropdown": "^1.0.3",
     "ember-burger-menu": "^3.0.0",
     "ember-can": "^1.1.1",
-    "ember-changeset": "^2.1.1",
+    "ember-changeset": "^2.1.2",
     "ember-changeset-validations": "^2.1.0",
     "ember-cli": "~3.10.1",
     "ember-cli-app-version": "^3.2.0",
