@@ -20,6 +20,19 @@
 .osc-admin tbody > tr {
   border-top: 1px solid #999;
 }
-.osc-admin td, .osc-admin th {
+.osc-admin td,
+.osc-admin th {
   padding: 0.33rem;
+}
+
+.osc-admin .contributions-column {
+  text-align: right;
+}
+
+.osc-admin {
+  counter-reset: rank;
+}
+.osc-admin .rank-column::before {
+  counter-increment: rank;
+  content: counter(rank);
 }

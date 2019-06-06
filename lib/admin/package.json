@@ -2,12 +2,13 @@
   "name": "admin",
   "keywords": ["ember-addon", "ember-engine"],
   "dependencies": {
-    "ember-cli-htmlbars": "*",
-    "ember-cli-babel": "*",
-    "ember-moment": "*",
-    "ember-form-for": "*",
     "ember-changeset": "*",
     "ember-changeset-validations": "*",
+    "ember-cli-htmlbars": "*",
+    "ember-cli-babel": "*",
+    "ember-font-awesome": "*",
+    "ember-form-for": "*",
+    "ember-moment": "*",
     "ember-route-action-helper": "*"
   }
 }
