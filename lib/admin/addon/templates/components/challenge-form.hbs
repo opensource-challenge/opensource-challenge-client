@@ -1,0 +1,9 @@
+{{#form-for (changeset @challenge @validations) submit=(action @onsubmit) as |f|}}
+  {{f.text-field "name" required=true}}
+  {{f.text-field "shortname" pattern="[a-z\d\-]+" required=true}}
+  {{f.date-field "startsOn" required=true}}
+  {{f.date-field "endsOn" required=true}}
+  {{f.checkbox-field "closed"}}
+
+  {{f.submit}}
+{{/form-for}}

@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <th>#</th>
+    <th>Contributor</th>
+    <th>Contributions</th>
+  </thead>
+  <tbody>
+    {{#each this.contributionsByUser as |row|}}
+      <tr>
+        <td class="rank-column"></td>
+        <td>{{row.user.name}}</td>
+        <td class="contributions-column">{{row.contributions.length}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,4 +1,4 @@
-import Service, { inject as service } from '@ember/service';
+import Service, { inject as service } from '@ember/service'
 
 export default Service.extend({
   store: service(),
@@ -8,17 +8,16 @@ export default Service.extend({
 
   async load() {
     if (this.challenge) {
-      return this.challenge;
+      return this.challenge
     }
 
-    let res = await this.ajax.request('/challenges/current')
-
-    this.store.pushPayload(res)
-    this.set(
-      'challenge',
-      this.store.peekRecord('challenge', res.data.id),
+    let res = await this.ajax.request(
+      '/challenges/current?include=contributions',
     )
 
-    return this.challenge;
+    this.store.pushPayload(res)
+    this.set('challenge', this.store.peekRecord('challenge', res.data.id))
+
+    return this.challenge
   },
 })

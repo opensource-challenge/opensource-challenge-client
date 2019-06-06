@@ -4,7 +4,9 @@
   <nav>
     <ul>
       <li>
-        {{~#link-to "admin.challenges"}}Challenges{{/link-to~}}
+        {{~#link-to "admin.challenges" current-when="challenges create-challenge challenge"~}}
+          Challenges
+        {{~/link-to~}}
       </li>
       <li>
         {{~#link-to "admin.users" current-when="users edit-user"}}Benutzer{{/link-to~}}
