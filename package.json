@@ -56,7 +56,7 @@
     "ember-hold-button": "github:topaxi/ember-hold-button",
     "ember-load-initializers": "^2.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
-    "ember-mocha": "^0.15.1",
+    "ember-mocha": "^0.16.0",
     "ember-moment": "^7.2.0",
     "ember-percy": "^1.2.5",
     "ember-phoenix": "^1.0.0",
