@@ -1,4 +1,4 @@
-<LinkTo @route="admin.create-challenge">Neue Challenge erfassen</LinkTo>
+<LinkTo @route="create-challenge">Neue Challenge erfassen</LinkTo>
 
 <table>
   <thead>
@@ -15,7 +15,7 @@
       <tr>
         <td>{{challenge.shortname}}</td>
         <td>
-          <LinkTo @route="admin.challenge" @model={{challenge.id}}>
+          <LinkTo @route="challenge" @model={{challenge.id}}>
             {{challenge.name}}
           </LinkTo>
         </td>
