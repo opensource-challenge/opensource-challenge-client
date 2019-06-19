@@ -4,12 +4,14 @@
   <nav>
     <ul>
       <li>
-        {{~#link-to "admin.challenges" current-when="challenges create-challenge challenge"~}}
+        <LinkTo @route="challenges" @current-when="challenges create-challenge challenge">
           Challenges
-        {{~/link-to~}}
+        </LinkTo>
       </li>
       <li>
-        {{~#link-to "admin.users" current-when="users edit-user"}}Benutzer{{/link-to~}}
+        <LinkTo @route="users" @current-when="users edit-user">
+          Benutzer
+        </LinkTo>
       </li>
     </ul>
   </nav>
