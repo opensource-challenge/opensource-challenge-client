@@ -70,7 +70,7 @@
     "ember-service-worker-index": "^0.7.0",
     "ember-service-worker-update-notify": "^2.1.1",
     "ember-simple-auth": "^1.8.2",
-    "ember-source": "~3.10.1",
+    "ember-source": "~3.10.2",
     "eslint-plugin-ember": "^6.6.0",
     "eslint-plugin-node": "^9.0.1",
     "faker": "^4.1.0",
