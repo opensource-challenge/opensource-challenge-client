@@ -5243,10 +5243,10 @@ ember-service-worker-update-notify@^2.1.2:
     ember-cli-babel "^6.16.0"
     ember-cli-htmlbars "^3.0.0"
 
-ember-service-worker@^0.7.1:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/ember-service-worker/-/ember-service-worker-0.7.2.tgz#aeebf3690da77ddefd0f42bd28d4ac7983749ae2"
-  integrity sha512-cIQSM+yt3dVld2KmEcp9uZR4cv1mkX2g0aOPErSs/EEHq+44IEE6ALyg+m/gdDvkZ4tZgc0/bm7rxA66xbex9A==
+ember-service-worker@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/ember-service-worker/-/ember-service-worker-0.8.0.tgz#851ccfe07c1941cfb7cb547f6c62b6259223b6c6"
+  integrity sha512-bzwWXv5My7+HnfmhVpeBcK3REngICkJXJEIdQWc3IRe65FIqFsIa4zegK6SAJr1HiMMeVmjol/Sgbjxz41Gi+w==
   dependencies:
     broccoli-caching-writer "^3.0.3"
     broccoli-file-creator "^2.1.1"
