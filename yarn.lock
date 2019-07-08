@@ -5182,12 +5182,12 @@ ember-resolver@^5.0.1:
     ember-cli-version-checker "^3.0.0"
     resolve "^1.10.0"
 
-ember-responsive@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/ember-responsive/-/ember-responsive-3.0.2.tgz#29d3864deee0b38f8be15f0a80b98080a374481b"
-  integrity sha512-gdIVMf+wjWHbteVIwLAUQ0hGkwaTRI0YLMycu2HqqiTq0ZZSDmhrldD4wwVH+IH27nIBKbGcT2lhe9NzktwEBA==
+ember-responsive@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/ember-responsive/-/ember-responsive-3.0.4.tgz#1980ae6393b3b6ebedf1c7cda1cd70eeb64ea85b"
+  integrity sha512-jnybZXFwJqz61Tgj4o8uGwKEMBm3N6o9VQJpLlg0MpMVcm1OAemftQpkfs+687Q1SgKFSuN1rwumx+xx7H5Umw==
   dependencies:
-    ember-cli-babel "^7.8.0"
+    ember-cli-babel "^6.6.0"
 
 ember-rfc176-data@^0.3.9:
   version "0.3.9"
