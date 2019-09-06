@@ -48,7 +48,7 @@
     "ember-cli-uglify": "^3.0.0",
     "ember-component-css": "^0.6.5",
     "ember-composable-helpers": "^2.0.3",
-    "ember-data": "~3.10.0",
+    "ember-data": "~3.12.0",
     "ember-engines": "^0.8.2",
     "ember-export-application-global": "^2.0.0",
     "ember-font-awesome": "^4.0.0-alpha.10",
