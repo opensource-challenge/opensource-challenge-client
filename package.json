@@ -58,7 +58,7 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-mocha": "^0.16.0",
     "ember-moment": "^7.2.0",
-    "ember-percy": "^1.2.5",
+    "ember-percy": "^1.6.0",
     "ember-phoenix": "^1.0.0",
     "ember-power-calendar": "^0.13.3",
     "ember-power-calendar-moment": "^0.1.3",
