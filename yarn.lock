@@ -5475,10 +5475,10 @@ ember-service-worker-index@^0.7.0:
     broccoli-merge-trees "^3.0.1"
     broccoli-plugin "^1.3.1"
 
-ember-service-worker-update-notify@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/ember-service-worker-update-notify/-/ember-service-worker-update-notify-2.1.2.tgz#f6aca21dbef2fc832c53915180178b64f51a7e80"
-  integrity sha512-mkvzxsFUwgnZfkoeTUwpG0nQsCgPy8Qr9V6sJ1VmOf2nrro+AJDV6TWZt7jRyUciwILY9uKgFCb0f6hhfi+ytA==
+ember-service-worker-update-notify@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/ember-service-worker-update-notify/-/ember-service-worker-update-notify-2.2.0.tgz#68cc1a11c0f21199306cb07ae05653d2307a9074"
+  integrity sha512-jIWlUuGeN+pjB6uq1YEsix6seY9SIC3ou97UvxEzFpf8+J/fplS5HP4wRfqQk/r9em2xsLu9ak1BHnpaqN4ZuA==
   dependencies:
     broccoli-replace "^0.12.0"
     ember-cli-babel "^6.16.0"
