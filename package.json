@@ -24,7 +24,7 @@
     "chai-jquery": "^2.0.0",
     "ember-ajax": "^5.0.0",
     "ember-auto-import": "^1.5.2",
-    "ember-basic-dropdown": "^1.1.3",
+    "ember-basic-dropdown": "^3.0.7",
     "ember-burger-menu": "^3.0.0",
     "ember-can": "^1.1.1",
     "ember-changeset": "^2.1.2",
