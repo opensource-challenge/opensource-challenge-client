@@ -13,9 +13,14 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
 
   get headers() {
     let { access_token: token } = this.get('session.data.authenticated')
-    return {
-      'Authorization': `Bearer ${token}`
-    };
+
+    const headers = {}
+
+    if (token) {
+      headers['Authorization'] = `Bearer ${token}`
+    }
+
+    return headers
   },
 
   ajaxOptions(url, type, options) {
