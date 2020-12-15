@@ -1,6 +1,5 @@
 import { assign } from '@ember/polyfills'
 import { inject as service } from '@ember/service'
-import { isPresent } from '@ember/utils'
 import ENV from '../config/environment'
 import JSONAPIAdapter from '@ember-data/adapter/json-api'
 import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin'
