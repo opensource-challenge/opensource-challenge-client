@@ -13,12 +13,11 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
   namespace: 'api/v1',
   session: service(),
 
-  authorize(xhr) {
+  get headers() {
     let { access_token: token } = this.get('session.data.authenticated')
-
-    if (isPresent(token)) {
-      xhr.setRequestHeader('Authorization', `Bearer ${token}`)
-    }
+    return {
+      'Authorization': `Bearer ${token}`
+    };
   },
 
   ajaxOptions(url, type, options) {
