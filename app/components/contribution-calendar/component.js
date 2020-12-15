@@ -6,18 +6,12 @@ import groupBy from '../../utils/group-by-macro'
 
 export default Component.extend({
   archive: null,
-  _challenge: null,
 
-  set challenge(value) {
-    this._challenge = value
-  },
-  get challenge() {
-    return this._challenge || {
-      startsOn: '2100-12-01',
-      endsOn: '2100-12-24',
-      active: true,
-    }
-  },
+  challenge: computed(() => ({
+    startsOn: '2100-12-01',
+    endsOn: '2100-12-24',
+    active: true,
+  })),
 
   sortedItems: sort(
     'items.[]',
