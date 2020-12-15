@@ -1,11 +1,9 @@
 import { assign } from '@ember/polyfills'
 import { inject as service } from '@ember/service'
-import { isPresent } from '@ember/utils'
 import ENV from '../config/environment'
-import DS from 'ember-data'
+import JSONAPIAdapter from '@ember-data/adapter/json-api'
 import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin'
 
-const { JSONAPIAdapter } = DS
 const TIMEOUT = 10000
 
 export default JSONAPIAdapter.extend(DataAdapterMixin, {
@@ -13,12 +11,11 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
   namespace: 'api/v1',
   session: service(),
 
-  authorize(xhr) {
+  get headers() {
     let { access_token: token } = this.get('session.data.authenticated')
-
-    if (isPresent(token)) {
-      xhr.setRequestHeader('Authorization', `Bearer ${token}`)
-    }
+    return {
+      'Authorization': `Bearer ${token}`
+    };
   },
 
   ajaxOptions(url, type, options) {
