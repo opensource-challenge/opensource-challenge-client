@@ -1,5 +1,4 @@
 import { not } from '@ember/object/computed'
-import { computed } from '@ember/object'
 import DS from 'ember-data'
 
 const { Model, attr, hasMany } = DS
@@ -11,10 +10,8 @@ export default Model.extend({
   startsOn: attr('date'),
   endsOn: attr('date'),
   closed: attr('boolean'),
-
-  active: computed('startsOn', function() {
+  get active() {
     return Date.now() >= this.startsOn
-  }).volatile(),
-
+  },
   open: not('closed').readOnly(),
 })
