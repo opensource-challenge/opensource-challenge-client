@@ -48,6 +48,7 @@ export default Route.extend(ApplicationRouteMixin, {
         authorizationCode,
       })
     } catch (err) {
+      console.warn('An error occured during the login:',err)
       this.transitionTo('error', err)
     }
   },
