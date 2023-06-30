@@ -1,3 +1,8 @@
+Goodbye to the Open Source Challenge Project! It's understandable that sometimes projects need to be put on hold or discontinued for various reasons. If you decide to relaunch it in the future, that could be an exciting opportunity to revisit the project with new insights and improvements. The world of open source is always evolving, so who knows what possibilities the future holds? Best of luck with your endeavors, and may you find success in your future endeavors!
+
+This Repo is archived.
+
+
 # Opensource-challenge-client [![Build Status](https://api.travis-ci.com/opensource-challenge/opensource-challenge-client.svg?branch=master)](https://travis-ci.com/opensource-challenge/opensource-challenge-client) [![Test Coverage](https://codeclimate.com/github/opensource-challenge/opensource-challenge-client/badges/coverage.svg)](https://codeclimate.com/github/opensource-challenge/opensource-challenge-client/coverage) [![Code Climate](https://codeclimate.com/github/opensource-challenge/opensource-challenge-client/badges/gpa.svg)](https://codeclimate.com/github/opensource-challenge/opensource-challenge-client)
 
 This README outlines the details of collaborating on this Ember application.
